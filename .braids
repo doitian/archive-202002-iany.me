@@ -1,0 +1,9 @@
+{
+  "themes/hpstr": {
+    "url": "https://github.com/dldx/hpstr-hugo-theme.git",
+    "remote": "master/braid/themes/hpstr",
+    "branch": "master",
+    "squashed": true,
+    "revision": "cd4792a70de17f1b51645f12c71ea10d7edf005a"
+  }
+}
