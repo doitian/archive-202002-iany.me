@@ -1,0 +1,59 @@
+<nav id="dl-menu" class="dl-menuwrapper" role="navigation">
+	<button class="dl-trigger">Open Menu</button>
+	<ul class="dl-menu">
+    <li><a href="{{ "/" | relURL }}"><i class="fa fa-fw fa-home"></i> Home</a></li>
+		<li>
+      <a href="#"><i class="fa fa-fw fa-user"></i> About</a>
+			<ul class="dl-submenu">
+			{{ with .Site.Params.author }}
+				<li>
+					{{ if isset . "avatar" }}
+					<img src="{{ .avatar | relURL }}" alt="{{ .name }}'s photo" class="author-photo">
+					{{ end }}
+					<h4>{{ .name }}</h4>
+					<p>{{ .bio }}</p>
+				</li>
+				<li><a href="{{ "/about/" | relURL }}"><span class="btn btn-inverse">Learn More</span></a></li>
+				{{ if isset . "email" }}<li>
+					<a href="mailto:{{ .email }}"><i class="fa fa-fw fa-envelope"></i> Email</a>
+				</li>{{ end }}
+				{{ if isset . "twitter" }}<li>
+					<a href="https://twitter.com/{{ .twitter }}"><i class="fa fa-fw fa-twitter"></i> Twitter</a>
+				</li>{{ end }}
+				{{ if isset . "facebook" }}<li>
+					<a href="https://facebook.com/{{ .facebook }}"><i class="fa fa-fw fa-facebook"></i> Facebook</a>
+				</li>{{ end }}
+				{{ if isset . "google_plus" }}<li>
+					<a href="https://google.com/{{ .google_plus }}"><i class="fa fa-fw fa-google-plus"></i> Google+</a>
+				</li>{{ end }}
+				{{ if isset . "linkedin" }}<li>
+					<a href="https://linkedin.com/in/{{ .linkedin }}"><i class="fa fa-fw fa-linkedin"></i> LinkedIn</a>
+				</li>{{ end }}
+				{{ if isset . "github" }}<li>
+					<a href="https://github.com/{{ .github }}"><i class="fa fa-fw fa-github"></i> GitHub</a>
+				</li>{{ end }}
+				{{ if isset . "stackexchange" }}<li>
+					<a href="{{ .stackexchange }}"><i class="fa fa-fw fa-stack-exchange"></i> Stackexchange</a>
+				</li>{{ end }}
+				{{ if isset . "instagram" }}<li>
+					<a href="https://instagram.com/{{ .instagram }}"><i class="fa fa-fw fa-instagram"></i> Instagram</a>
+				</li>{{ end }}
+				{{ if isset . "flickr" }}<li>
+					<a href="https://www.flickr.com/photos/{{ .flickr }}"><i class="fa fa-fw fa-flickr"></i> Flickr</a>
+				</li>{{ end }}
+				{{ if isset . "tumblr" }}<li>
+					<a href="http://{{ .tumblr }}.tumblr.com"><i class="fa fa-fw fa-tumblr"></i> Tumblr</a>
+				</li>{{ end }}
+			{{ end }}
+			</ul><!-- /.dl-submenu -->
+		</li>
+    <li><a href="{{ "/posts/" | relURL }}"><i class="fa fa-fw fa-laptop"></i> Tech</a></li>
+    <li><a href="{{ "/games/" | relURL }}"><i class="fa fa-fw fa-gamepad"></i> Games</a></li>
+    <li><a href="{{ "/journal/" | relURL }}"><i class="fa fa-fw fa-list-alt"></i> Journal</a></li>
+    <li><a href="{{ "/life/" | relURL }}"><i class="fa fa-fw fa-leaf"></i> Life</a></li>
+		{{ range .Site.Data.navigation.links }}
+	    <li><a href="{{ .url | relURL }}" {{ if in .url "http" }}target="_blank"{{ end }}>{{ .title }}</a></li>
+	  {{ end }}
+    <li><a href="{{ "/tags/" | relURL }}"><i class="fa fa-fw fa-tags"></i> Tags</a></li>
+	</ul><!-- /.dl-menu -->
+</nav><!-- /.dl-menuwrapper -->

@@ -1,4 +1,14 @@
 baseurl = "http://example.org/"
 languageCode = "en-us"
-title = "My New Hugo Site"
+title = "~iany/blog"
 theme = "hpstr"
+disqusShortname = "ianyblog"
+
+[permalinks]
+posts = "/:year/:month/:title/"
+pages = "/:title/"
+life = "/life/:year/:month/:title/"
+games = "/games/:year/:month/:title/"
+
+[params.author]
+name = "ian"
