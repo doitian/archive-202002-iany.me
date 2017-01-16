@@ -1,0 +1,7 @@
+FROM zzrot/alpine-caddy
+
+WORKDIR /usr/src/app
+COPY usr/src/app/public /usr/src/app/public
+EXPOSE 2015
+
+CMD [ "caddy", "-host", "0.0.0.0", "-root", "public" ]

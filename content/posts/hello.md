@@ -1,10 +1,14 @@
-+++
-date = "2017-01-15T07:19:43+08:00"
-title = "hello"
-menu = "main"
-Categories = ["Development","GoLang"]
-Tags = ["Development","golang"]
-Description = ""
+---
+Categories:
+- Development
+- GoLang
+Tags:
+- Development
+- golang
+date: 0001-01-01T00:00:00
+menu: main
+title: hello
+---
 
-+++
 
+test
