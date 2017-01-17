@@ -7,20 +7,20 @@
 <meta charset="utf-8">
 <title>{{ if eq .IsHome false }}{{ .Title }} &#8211; {{ end }}{{ .Site.Title }}</title>
 <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}">
-{{ if .IsHome }}
+{{- if .IsHome }}
     {{ $.Scratch.Set "Params" .Site.Params }}
-{{ else if .IsNode }}
+{{- else if .IsNode }}
     {{ $.Scratch.Set "Params" (index .Site.Data.sections (lower .Title)) }}
-{{ else }}
+{{- else }}
     {{ $.Scratch.Set "Params" .Params }}
-{{ end }}
-{{ if .Params.tags }}<meta name="keywords" content="{{ delimit .Params.tags ", " }}">{{ end }}
+{{- end }}
+{{- if .Params.tags }}<meta name="keywords" content="{{ delimit .Params.tags ", " }}">{{ end -}}
 
 <!-- Open Graph and Twitter cards -->
-{{ partial "twitter_og_cards.html" . }}
+{{- partial "twitter_og_cards.html" . -}}
 
-{{ with .Site.Params.google_verify }}<meta name="google-site-verification" content="{{ . }}">{{ end }}
-{{ with .Site.Params.bing_verify }}<meta name="msvalidate.01" content="{{ . }}">{{ end }}
+{{- with .Site.Params.google_verify }}<meta name="google-site-verification" content="{{ . }}">{{ end }}
+{{- with .Site.Params.bing_verify }}<meta name="msvalidate.01" content="{{ . }}">{{ end }}
 
 <link rel="canonical" href="{{ .Permalink }}">
 {{ if .RSSLink }}
@@ -33,7 +33,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <!-- For all browsers -->
-<link rel="stylesheet" href="{{ "/css/main.css" | relURL }}">
+<link rel="stylesheet" href="{{ "/css/main.v1.css" | relURL }}">
 
 <meta http-equiv="cleartype" content="on">
 <!-- Hugo version -->

@@ -4212,5 +4212,8 @@ header .entry-meta {
 li.entry-title {
   margin-bottom: 0.5em;
 }
-
-/*# sourceMappingURL=main.css.map */
+#TableOfContents > ul {
+  list-style: none;
+  margin-left: 0;
+  padding-left: 0;
+}

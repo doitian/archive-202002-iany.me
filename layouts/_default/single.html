@@ -23,7 +23,9 @@
         {{ if and (ne .Type "page") (gt .Date 0001) }} <!-- If Date is set (greater than year 0001) -->
         <h2><span class="entry-date date published"><time datetime="{{ .Date }}">{{ .Date.Format "January 2, 2006" }}</time></span></h2>
         {{ end }}
-        {{ $section := (index $.Site.Data.sections (.Section | pluralize | lower)) }}
+        {{ if ne .Section "page" }}
+          {{ .Section }}
+          {{ $section := (index $.Site.Data.sections (.Section | pluralize | lower)) }}
         <p>
           {{ if $section }}
           <span class="entry-section">
@@ -42,9 +44,15 @@
             Reading time ~{{ .ReadingTime }}m
           </span>
         </p>
+        {{ end }}
       </div><!-- /.header-title-wrap -->
     </header>
     <div class="entry-content">
+      {{ if isset .Params "toc" }}
+      <div class="toc {{ .Params.toc }}">
+        {{ .TableOfContents }}
+      </div>
+      {{ end }}
       {{ .Content }}
       <footer class="entry-meta">
           {{ if ne .Type "page" }}
