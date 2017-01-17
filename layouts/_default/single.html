@@ -25,6 +25,7 @@
         {{ end }}
         {{ $section := (index $.Site.Data.sections (.Section | pluralize | lower)) }}
         <p>
+          {{ if $section }}
           <span class="entry-section">
             <a href="/{{ .Section }}/">
                 {{ if isset $section "icon" }}
@@ -35,6 +36,7 @@
               {{ index $section "title" }}
             </a>
           </span><!-- /.entry-section -->
+          {{ end }}
           <span class="entry-reading-time">
             <i class="fa fa-clock-o"></i>
             Reading time ~{{ .ReadingTime }}m
