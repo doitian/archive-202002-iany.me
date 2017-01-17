@@ -24,7 +24,6 @@
         <h2><span class="entry-date date published"><time datetime="{{ .Date }}">{{ .Date.Format "January 2, 2006" }}</time></span></h2>
         {{ end }}
         {{ if ne .Section "page" }}
-          {{ .Section }}
           {{ $section := (index $.Site.Data.sections (.Section | pluralize | lower)) }}
         <p>
           {{ if $section }}
@@ -50,7 +49,8 @@
     <div class="entry-content">
       {{ if isset .Params "toc" }}
       <div class="toc {{ .Params.toc }}">
-        {{ .TableOfContents }}
+        <h2>On This Page:</h2>
+        {{ .TableOfContents | replaceRE "(<nav.*\n)<ul>\n<li>\n" "$1" | replaceRE "</li>\n</ul>\n</nav>" "</nav>" | safeHTML }}
       </div>
       {{ end }}
       {{ .Content }}

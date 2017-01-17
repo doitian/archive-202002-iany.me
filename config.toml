@@ -3,6 +3,9 @@ languageCode = "en-us"
 title = "~iany/blog"
 theme = "hpstr"
 disqusShortname = "ianyblog"
+footnoteReturnLinkContents = "↩"
+copyright = "Except where otherwise noted, content on this site is licensed under CC-BY-SA"
+enableRobotsTXT = true
 
 [permalinks]
 post = "/:year/:month/:filename/"
@@ -11,5 +14,14 @@ life = "/life/:year/:month/:filename/"
 game = "/games/:year/:month/:filename/"
 journal = "/journal/:year/:month/:filename/"
 
+[params]
+hiddenSections = ["page", "archive", "life"]
+cdn = "//cdn.iany.me"
+
 [params.author]
 name = "ian"
+bio = "Programmer, Husband, Father"
+avatar = "images/avatar.jpg"
+email = "me@iany.me"
+twitter = "doitian"
+github = "doitian"

@@ -37,19 +37,13 @@
 {{ $data := .Data }}
 {{ range $key, $value := .Data.Terms }}
 	<article>
-	<h2 id="{{ $key }}" class="tag-heading">{{ $key }}</h2>
+    <h2 id="{{ $key | urlize }}" class="tag-heading all-caps">
+      <a href="/{{ $data.Plural }}/{{ $key | urlize }}"><i class="fa fa-tag"></i> {{ $key }}</a>
+    </h2>
 		<ul>
-            {{ range $value.Pages.ByDate.Reverse }}
-              <li class="entry-title"><a href="{{ .RelPermalink }}" title="{{ .Title }}">
-              {{ $section := (index $.Site.Data.sections (.Section | pluralize | lower)) }}
-              {{ if isset $section "icon" }}
-                <i class="fa fa-fw fa-{{ index $section "icon" }}"></i>
-              {{ else }}
-                <i class="fa fa-fw fa-sitemap"></i>
-              {{ end }}
-                {{ .Title }}
-              </a></li>
-            {{ end}}
+      {{ range $value.Pages.ByDate.Reverse }}
+        {{ .Render "li" }}
+      {{ end}}
 		</ul>
 	</article><!-- /.hentry -->
 {{ end}}

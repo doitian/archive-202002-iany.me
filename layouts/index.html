@@ -29,7 +29,7 @@
 </div><!-- /.entry-header -->
 
 <div id="main" role="main">
-{{ range where .Paginator.Pages "Section" "not in" (slice "page" "life") }}
+{{ range where .Paginator.Pages "Section" "not in" .Site.Params.hiddenSections }}
 <article class="hentry">
   <header>
     {{ if .Params.image.feature }}
@@ -60,7 +60,12 @@
     {{ end }}
   </header>
   <div class="entry-content">
-    {{ .Content }}
+    {{ .Summary }}
+    {{ if .Truncated }}
+    <footer class="entry-meta">
+      <p><a class="btn" href="{{ .RelPermalink }}">Continue reading &hellip;</a></p>
+    </footer>
+    {{ end }}
   </div><!-- /.entry-content -->
 </article><!-- /.hentry -->
 {{ end }}

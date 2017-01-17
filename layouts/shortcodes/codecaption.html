@@ -1,0 +1,11 @@
+<figure class="code">
+  <figcaption class="code-caption">
+    {{ with .Get "link" }}
+    <a class="code-filename" href="{{ . }}">{{ $.Get "name" }}</a>
+    {{ else }}
+    {{ .Get "name" }}
+    {{ end }}
+  </figcaption>
+  
+  {{ .Inner }}
+</figure>

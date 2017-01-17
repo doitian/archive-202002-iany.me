@@ -1,0 +1,30 @@
+{{ partial "head.html" . }}
+<body id="post-index">
+{{ partial "navigation.html" . }}
+<div id="main" role="main">
+  <header class="header-title">
+    <div class="header-title-wrap">
+      <h1 class="entry-title"><a href="{{ .RelPermalink }}" rel="bookmark" title="{{ .Title }}">{{ .Title }}</a></h1>
+    </div><!-- /.header-title-wrap -->
+  </header>
+  <ul class="sections inline-list">
+    <li><a href="{{ "/post/" | relURL }}"><i class="fa fa-fw fa-laptop"></i> Tech</a></li>
+    <li><a href="{{ "/game/" | relURL }}"><i class="fa fa-fw fa-gamepad"></i> Games</a></li>
+    <li><a href="{{ "/journal/" | relURL }}"><i class="fa fa-fw fa-list-alt"></i> Journal</a></li>
+    <li><a href="{{ "/life/" | relURL }}"><i class="fa fa-fw fa-leaf"></i> Life</a></li>
+    <li><a href="{{ "/tags/" | relURL }}"><i class="fa fa-fw fa-tags"></i> Tags</a></li>
+  </ul>
+  <article>
+      <h2>By Year</h2>
+
+      {{ range (where .Site.RegularPages "Section" "!=" "page").GroupByDate "2006" }}
+      <h3>{{ .Key }}</h3>
+      <ul>
+        {{ range .Pages }}
+        {{ .Render "li" }}
+        {{ end }}
+      </ul>
+      {{ end }}
+  </article>
+</div><!-- /#main -->
+{{ partial "foot.html" . }}

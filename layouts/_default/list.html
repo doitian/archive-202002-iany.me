@@ -11,22 +11,29 @@
   {{ end }}
   <div class="header-title">
     <div class="header-title-wrap">
-		<h1><a href="/" title="Go to the homepage">{{ .Site.Title }}</a></h1>
-	  <h2>{{ if .IsHome }}
-            {{ .Site.Params.subtitle }}
-          {{ else if .IsNode }}
-            {{ $pagename := (index .Site.Data.sections (lower .Title)) }}
-            {{ if $pagename }}
-              {{ if isset $pagename "icon" }}
-              <i class="fa fa-fw fa-{{ index $pagename "icon" }}"></i>
-              {{ end }}
-              {{  index $pagename "title"  }}
-            {{ else }}
-              {{ .Title }}
+      <h1><a href="/" title="Go to the homepage">{{ .Site.Title }}</a></h1>
+      <h2>
+      {{ if .IsHome }}
+        {{ .Site.Params.subtitle }}
+      {{ else if .IsNode }}
+        {{ if ne .Kind "taxonomy" }}
+          {{ $pagename := (index .Site.Data.sections (lower .Title)) }}
+          {{ if $pagename }}
+            {{ if isset $pagename "icon" }}
+        <i class="fa fa-fw fa-{{ index $pagename "icon" }}"></i>
             {{ end }}
-          {{ else if .IsPage }}
-            {{ .Title }}
-          {{ end }}</h2>
+        {{  index $pagename "title"  }}
+          {{ else }}
+        {{ .Title }}
+          {{ end }}
+        {{ else }}
+        <i class="fa fa-fw fa-tag"></i>
+        {{ .Title }}
+        {{ end }}
+      {{ else if .IsPage }}
+        {{ .Title }}
+      {{ end }}
+      </h2>
     </div><!-- /.header-title-wrap -->
   </div><!-- /.header-title -->
 </div><!-- /.entry-header -->
@@ -56,7 +63,10 @@
     {{ end }}
   </header>
   <div class="entry-content">
-    {{ .Content }}
+    {{ .Summary }}
+    <footer class="entry-meta">
+      <a class="continue-reading btn-inverse" href="{{ .RelPermalink }}">Continue reading &hellip;</a>
+    </footer>
   </div><!-- /.entry-content -->
 </article><!-- /.hentry -->
 {{ end }}

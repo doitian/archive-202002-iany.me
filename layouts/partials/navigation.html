@@ -47,13 +47,9 @@
 			{{ end }}
 			</ul><!-- /.dl-submenu -->
 		</li>
-    <li><a href="{{ "/post/" | relURL }}"><i class="fa fa-fw fa-laptop"></i> Tech</a></li>
-    <li><a href="{{ "/game/" | relURL }}"><i class="fa fa-fw fa-gamepad"></i> Games</a></li>
-    <li><a href="{{ "/journal/" | relURL }}"><i class="fa fa-fw fa-list-alt"></i> Journal</a></li>
-    <li><a href="{{ "/life/" | relURL }}"><i class="fa fa-fw fa-leaf"></i> Life</a></li>
+    <li><a href="{{ "/archive/" | relURL }}"><i class="fa fa-fw fa-calendar"></i> Archive</a></li>
 		{{ range .Site.Data.navigation.links }}
 	    <li><a href="{{ .url | relURL }}" {{ if in .url "http" }}target="_blank"{{ end }}>{{ .title }}</a></li>
 	  {{ end }}
-    <li><a href="{{ "/tags/" | relURL }}"><i class="fa fa-fw fa-tags"></i> Tags</a></li>
 	</ul><!-- /.dl-menu -->
 </nav><!-- /.dl-menuwrapper -->
