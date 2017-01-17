@@ -1,9 +1,19 @@
-[post]
+[posts]
 title = "Tech"
+icon = "laptop"
 
-[life]
+[lives]
 title = "Life"
+icon = "leaf"
 
-[game]
-title = "Game"
+[games]
+title = "Games"
+icon = "gamepad"
 
+[journals]
+title = "Journal"
+icon = "list-alt"
+
+[tags]
+title = "Tags"
+icon = "tags"

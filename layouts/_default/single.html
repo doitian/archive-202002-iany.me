@@ -23,10 +23,23 @@
         {{ if and (ne .Type "page") (gt .Date 0001) }} <!-- If Date is set (greater than year 0001) -->
         <h2><span class="entry-date date published"><time datetime="{{ .Date }}">{{ .Date.Format "January 2, 2006" }}</time></span></h2>
         {{ end }}
-      <p class="entry-reading-time">
-        <i class="fa fa-clock-o"></i>
-        Reading time ~{{ if le .ReadingTime 1 }}1 minute{{ else }}{{ .ReadingTime }} minutes{{ end }}
-    </p><!-- /.entry-reading-time -->
+        {{ $section := (index $.Site.Data.sections (.Section | pluralize | lower)) }}
+        <p>
+          <span class="entry-section">
+            <a href="/{{ .Section }}/">
+                {{ if isset $section "icon" }}
+              <i class="fa fa-fw fa-{{ index $section "icon" }}"></i>
+                {{ else }}
+              <i class="fa fa-fw fa-sitemap"></i>
+                {{ end }}
+              {{ index $section "title" }}
+            </a>
+          </span><!-- /.entry-section -->
+          <span class="entry-reading-time">
+            <i class="fa fa-clock-o"></i>
+            Reading time ~{{ .ReadingTime }}m
+          </span>
+        </p>
       </div><!-- /.header-title-wrap -->
     </header>
     <div class="entry-content">

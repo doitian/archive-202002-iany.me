@@ -1,14 +1,15 @@
-baseurl = "http://example.org/"
+baseurl = "http://iany.me/"
 languageCode = "en-us"
 title = "~iany/blog"
 theme = "hpstr"
 disqusShortname = "ianyblog"
 
 [permalinks]
-posts = "/:year/:month/:title/"
-pages = "/:title/"
-life = "/life/:year/:month/:title/"
-games = "/games/:year/:month/:title/"
+post = "/:year/:month/:filename/"
+page = "/:filename/"
+life = "/life/:year/:month/:filename/"
+game = "/games/:year/:month/:filename/"
+journal = "/journal/:year/:month/:filename/"
 
 [params.author]
 name = "ian"

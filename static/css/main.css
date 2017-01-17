@@ -4205,4 +4205,12 @@ header .entry-meta {
   border-color: #a2a2a2;
   border-radius: 3px; }
 
+.header-title .entry-section {
+  margin-right: 1em; }
+.entry-meta .entry-section {
+  float: right; }
+li.entry-title {
+  margin-bottom: 0.5em;
+}
+
 /*# sourceMappingURL=main.css.map */

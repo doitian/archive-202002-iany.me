@@ -17,6 +17,9 @@
           {{ else if .IsNode }}
             {{ $pagename := (index .Site.Data.sections (lower .Title)) }}
             {{ if $pagename }}
+              {{ if isset $pagename "icon" }}
+              <i class="fa fa-fw fa-{{ index $pagename "icon" }}"></i>
+              {{ end }}
               {{  index $pagename "title"  }}
             {{ else }}
               {{ .Title }}
@@ -29,7 +32,7 @@
 </div><!-- /.entry-header -->
 
 <div id="main" role="main">
-{{ range where .Paginator.Pages "Section" "not in" (slice "page" "life") }}
+{{ range .Paginator.Pages }}
 <article class="hentry">
   <header>
     {{ if .Params.image.feature }}
@@ -41,17 +44,10 @@
         {{ if gt .Date 0001 }} <!-- If Date is set (greater than year 0001) -->
 		<span class="entry-date date published updated"><time datetime="{{ .Date }}"><a href="{{ .RelPermalink }}">{{ .Date.Format "Jan 2, 2006" }}</a></time></span>
         {{ end }}
-        {{ $section := (index $.Site.Data.sections (.Section | pluralize | lower)) }}
-      <span class="entry-section">
-        <a href="/{{ .Section }}/">
-            {{ if isset $section "icon" }}
-          <i class="fa fa-fw fa-{{ index $section "icon" }}"></i>
-            {{ else }}
-          <i class="fa fa-fw fa-sitemap"></i>
-            {{ end }}
-          {{ index $section "title" }}
-        </a>
-      </span><!-- /.entry-section -->
+      <span class="entry-reading-time">
+        <i class="fa fa-clock-o"></i>
+        Reading time ~{{ .ReadingTime }}m
+      </span><!-- /.entry-reading-time -->
     </div><!-- /.entry-meta -->
     {{ if .Params.link }}
       <h1 class="entry-title"><a href="{{ .RelPermalink }}" class="permalink" rel="bookmark" title="{{ .Title }}"><i class="fa fa-bookmark"></i></a> <a href="{{ .Params.link }}">{{ .Title }}</a></h1>
