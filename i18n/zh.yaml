@@ -2,6 +2,8 @@
   translation: 前往首页
 - id: continueReading
   translation: 继续阅读
+- id: updatedOn
+  translation: 更新于
 - id: menu.home
   translation: 首页
 - id: menu.about

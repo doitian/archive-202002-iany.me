@@ -48,6 +48,7 @@
 			</ul><!-- /.dl-submenu -->
 		</li>
     <li><a href="{{ "/archive/" | relLangURL }}"><i class="fa fa-fw fa-calendar"></i> {{ i18n "menu.archive" }}</a></li>
+    <li><a href="{{ "/tags/" | relLangURL }}"><i class="fa fa-fw fa-tags"></i> {{ i18n "taxonomies.tag" }}</a></li>
 		{{ range .Site.Data.navigation.links }}
 	    <li><a href="{{ .url | relURL }}" {{ if in .url "http" }}target="_blank"{{ end }}>{{ .title }}</a></li>
 	  {{ end }}

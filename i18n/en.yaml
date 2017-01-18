@@ -2,6 +2,8 @@
   translation: Go to the homepage
 - id: continueReading
   translation: Continue reading
+- id: updatedOn
+  translation: Updated on
 - id: menu.home
   translation: Home
 - id: menu.about
