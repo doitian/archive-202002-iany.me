@@ -7,13 +7,12 @@ Description = "I'm Ian Yang, Partner and CTO of 3pjgames. I also worked for Grou
 
 I'm Ian Yang, Partner and CTO of [3pjgames][1]. I also worked for [Groupon][2], [Intridea][3], [iZENEsoft][4] and [Augmentum][5] before.
 
-I focus on game design and development now, especially the techniques to deliver high performance back-end.
+I focus on game design and development now, especially the techniques to deliver high performance back-end, game automated build, test, publish and deployment.
 
 I also did several years web development for POS and payments system, as well as server-side application development in field advertising, information retrieval, machine learning and data mining.
 
 ## Me, Elsewhere
 
-- Medium: [@doitian][13]
 - Twitter: [@doitian][8]
 - GitHub: [doitian][9]
 - LinkedIn: [Ian Yang][7]
@@ -35,4 +34,3 @@ I also did several years web development for POS and payments system, as well as
 [9]:	https://github.com/doitian
 [11]:	https://www.coursera.org/user/i/bbafd1ce323b828803f265dba73d9968
 [12]:	http://www.codeschool.com/users/iany
-[13]: https://medium.com/@doitian

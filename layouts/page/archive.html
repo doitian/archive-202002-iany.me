@@ -7,24 +7,35 @@
       <h1 class="entry-title"><a href="{{ .RelPermalink }}" rel="bookmark" title="{{ .Title }}">{{ .Title }}</a></h1>
     </div><!-- /.header-title-wrap -->
   </header>
-  <ul class="sections inline-list">
-    <li><a href="{{ "/post/" | relURL }}"><i class="fa fa-fw fa-laptop"></i> Tech</a></li>
-    <li><a href="{{ "/game/" | relURL }}"><i class="fa fa-fw fa-gamepad"></i> Games</a></li>
-    <li><a href="{{ "/journal/" | relURL }}"><i class="fa fa-fw fa-list-alt"></i> Journal</a></li>
-    <li><a href="{{ "/life/" | relURL }}"><i class="fa fa-fw fa-leaf"></i> Life</a></li>
-    <li><a href="{{ "/tags/" | relURL }}"><i class="fa fa-fw fa-tags"></i> Tags</a></li>
-  </ul>
-  <article>
-      <h2>By Year</h2>
-
-      {{ range (where .Site.RegularPages "Section" "!=" "page").GroupByDate "2006" }}
-      <h3>{{ .Key }}</h3>
-      <ul>
-        {{ range .Pages }}
-        {{ .Render "li" }}
-        {{ end }}
-      </ul>
+  <ul class="submenu inline-list">
+    {{ if first 1 (where .Site.RegularPages "Section" "post") }}
+    <li><a href="{{ "/post/" | relLangURL }}"><i class="fa fa-fw fa-laptop"></i> {{ i18n "sections.post" }}</a></li>
+    {{ end }}
+    {{ if first 1 (where .Site.RegularPages "Section" "game") }}
+    <li><a href="{{ "/game/" | relLangURL }}"><i class="fa fa-fw fa-gamepad"></i> {{ i18n "sections.game" }}</a></li>
+    {{ end }}
+    {{ if first 1 (where .Site.RegularPages "Section" "journal") }}
+    <li><a href="{{ "/journal/" | relLangURL }}"><i class="fa fa-fw fa-list-alt"></i> {{ i18n "sections.journal" }}</a></li>
+    {{ end }}
+    {{ if first 1 (where .Site.RegularPages "Section" "life") }}
+    <li><a href="{{ "/life/" | relLangURL }}"><i class="fa fa-fw fa-leaf"></i> {{ i18n "sections.life" }}</a></li>
+    {{ end }}
+    <li><a href="{{ "/tags/" | relLangURL }}"><i class="fa fa-fw fa-tags"></i> {{ i18n "taxonomies.tag" }}</a></li>
+    {{ if .IsTranslated }}
+      {{ range .Translations }}
+    <li class="translation"><a href="{{ .Permalink }}"><i class="fa fa-fw fa-globe"></i> {{ .Lang | i18n }}</a>
       {{ end }}
+    {{ end }}
+  </ul>
+  {{ range (where .Site.RegularPages "Section" "!=" "page").GroupByDate "2006" }}
+  <article>
+    <h2>{{ .Key }}</h2>
+    <ul>
+      {{ range .Pages }}
+      {{ .Render "li" }}
+      {{ end }}
+    </ul>
   </article>
+  {{ end }}
 </div><!-- /#main -->
 {{ partial "foot.html" . }}

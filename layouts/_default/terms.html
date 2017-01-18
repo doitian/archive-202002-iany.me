@@ -11,18 +11,17 @@
   {{ end }}
   <div class="header-title">
     <div class="header-title-wrap">
-		<h1><a href="/" title="Go to the homepage">{{ .Site.Title }}</a></h1>
-	  <h2>
-      {{ $pagename := (index .Site.Data.sections (lower .Title)) }}
-      {{ if $pagename }}
-        {{ if isset $pagename "icon" }}
-        <i class="fa fa-fw fa-{{ index $pagename "icon" }}"></i>
+      <h1><a href="{{ relLangURL "/" }}" title="{{ i18n "goToHomepage" }}">{{ .Site.Title }}</a></h1>
+      <h2>
+        {{ with .Title | lower | singularize }}
+          {{ with index $.Site.Data.sections . }}
+            {{ with .icon }}
+        <i class="fa fa-fw fa-{{ . }}"></i>
+            {{ end }}
+          {{ end }}
+        {{ . | print "taxonomies." | i18n }}
         {{ end }}
-        {{  index $pagename "title"  }}
-      {{ else }}
-        {{ .Title }}
-      {{ end }}
-    </h2>
+      </h2>
     </div><!-- /.header-title-wrap -->
   </div><!-- /.header-title -->
 </div><!-- /.entry-header -->

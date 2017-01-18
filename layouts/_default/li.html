@@ -1,12 +1,11 @@
 <li class="entry-title">
-  <span class="entry-meta">{{ .Date.Format "Jan, 2006" }}</span>
+  <span class="entry-meta">{{ .Date.Format (i18n "date.short") }}</span>
   <a href="{{ .RelPermalink }}" title="{{ .Title }}">
-{{ $section := (index $.Site.Data.sections (.Section | pluralize | lower)) }}
-{{ if isset $section "icon" }}
-    <i class="fa fa-fw fa-{{ index $section "icon" }}"></i>
-{{ else }}
-    <i class="fa fa-fw fa-sitemap"></i>
-{{ end }}
+  {{ with (index $.Site.Data.sections .Section) }}
+    {{ with .icon }}
+    <i class="fa fa-fw fa-{{ . }}"></i>
+    {{ end }}
+  {{ end }}
     {{ .Title }}
   </a>
 </li>

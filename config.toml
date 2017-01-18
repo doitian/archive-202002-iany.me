@@ -1,10 +1,12 @@
 baseurl = "http://iany.me/"
-languageCode = "en-us"
+defaultContentLanguage = "en"
+hasCJKLanguage = true
+description = "Personal Blog"
+copyright = "Except where otherwise noted, content on this site is licensed under CC-BY-SA"
 title = "~iany/blog"
 theme = "hpstr"
 disqusShortname = "ianyblog"
 footnoteReturnLinkContents = "↩"
-copyright = "Except where otherwise noted, content on this site is licensed under CC-BY-SA"
 enableRobotsTXT = true
 
 [permalinks]
@@ -18,6 +20,15 @@ journal = "/journal/:year/:month/:filename/"
 hiddenSections = ["page", "archive", "life"]
 cdn = "//cdn.iany.me"
 
+[params.sections.post]
+icon = "laptop"
+[params.sections.life]
+icon = "leaf"
+[params.sections.journal]
+icon = "list-alt"
+[params.sections.game]
+icon = "gamepad"
+
 [params.author]
 name = "ian"
 bio = "Programmer, Husband, Father"
@@ -25,3 +36,13 @@ avatar = "images/avatar.jpg"
 email = "me@iany.me"
 twitter = "doitian"
 github = "doitian"
+
+[Languages.zh]
+copyright = "除特别说明，所有内容使用署名-相同方式共享 (CC-BY-SA)"
+description = "个人博客"
+title = "~iany 博客"
+languageName = "中文"
+disqusShortname = "ianyblogcn"
+
+[Languages.en]
+languageName = "English"

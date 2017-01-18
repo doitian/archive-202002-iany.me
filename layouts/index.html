@@ -11,19 +11,11 @@
   {{ end }}
   <div class="header-title">
     <div class="header-title-wrap">
-		<h1><a href="/" title="Go to the homepage">{{ .Site.Title }}</a></h1>
-	  <h2>{{ if .IsHome }}
-            {{ .Site.Params.subtitle }}
-          {{ else if .IsNode }}
-            {{ $pagename := (index .Site.Data.sections (lower .Title)) }}
-            {{ if $pagename }}
-              {{  index $pagename "title"  }}
-            {{ else }}
-              {{ .Title }}
-            {{ end }}
-          {{ else if .IsPage }}
-            {{ .Title }}
-          {{ end }}</h2>
+      <h1><a href="{{ relLangURL "/" }}" title="{{ i18n "goToHomepage" }}">{{ .Site.Title }}</a></h1>
+      {{ with .Site.Params.subtitle }}
+      <h2>{{ . }}</h2>
+      {{ end }}
+      {{ partial "languages" . }}
     </div><!-- /.header-title-wrap -->
   </div><!-- /.header-title -->
 </div><!-- /.entry-header -->
@@ -39,17 +31,14 @@
     {{ end }}
     <div class="entry-meta">
         {{ if gt .Date 0001 }} <!-- If Date is set (greater than year 0001) -->
-		<span class="entry-date date published updated"><time datetime="{{ .Date }}"><a href="{{ .RelPermalink }}">{{ .Date.Format "Jan 2, 2006" }}</a></time></span>
+		<span class="entry-date date published updated"><time datetime="{{ .Date }}"><a href="{{ .RelPermalink }}">{{ .Date.Format (i18n "date.format") }}</a></time></span>
         {{ end }}
-        {{ $section := (index $.Site.Data.sections (.Section | pluralize | lower)) }}
       <span class="entry-section">
-        <a href="/{{ .Section }}/">
-            {{ if isset $section "icon" }}
-          <i class="fa fa-fw fa-{{ index $section "icon" }}"></i>
-            {{ else }}
-          <i class="fa fa-fw fa-sitemap"></i>
-            {{ end }}
-          {{ index $section "title" }}
+        <a href="{{ print "/" .Section "/" | relLangURL }}">
+          {{ with (index (index $.Site.Data.sections .Section) "icon") }}
+          <i class="fa fa-fw fa-{{ . }}"></i>
+          {{ end }}
+          {{ print "sections." .Section | i18n }}
         </a>
       </span><!-- /.entry-section -->
     </div><!-- /.entry-meta -->
@@ -63,7 +52,7 @@
     {{ .Summary }}
     {{ if .Truncated }}
     <footer class="entry-meta">
-      <p><a class="btn" href="{{ .RelPermalink }}">Continue reading &hellip;</a></p>
+      <a class="continue-reading btn-inverse" href="{{ .RelPermalink }}">{{ i18n "continueReading" }} &hellip;</a>
     </footer>
     {{ end }}
   </div><!-- /.entry-content -->

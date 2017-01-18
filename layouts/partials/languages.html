@@ -1,0 +1,19 @@
+{{ if .IsTranslated }}
+<ul class="languages inline-list">
+  {{ $translations := .Translations }}
+  {{ range $.Site.Languages }}
+    {{ if eq .Lang $.Site.Language.Lang }}
+      {{ if $.RSSLink }}
+      <li class="active"><a href="{{ $.RSSLink | relURL | absLangURL }}">{{ .Lang | i18n }} <i class="fa fa-rss"></i></a></li>
+      {{ else }}
+  <li class="active"><a href="#">{{ .Lang | i18n }}</a></li>
+      {{ end }}
+    {{ else }}
+      {{ $lang := .Lang }}
+      {{ range where $translations "Lang" .Lang }}
+  <li><a href="{{ .Permalink }}">{{ $lang | i18n }}</a>{{ if $.RSSLink }} <i class="fa fa-language"></i>{{ end }}</li>
+      {{ end }}
+    {{ end }}
+  {{ end }}
+</ul>
+{{ end }}

@@ -11,21 +11,18 @@
   {{ end }}
   <div class="header-title">
     <div class="header-title-wrap">
-      <h1><a href="/" title="Go to the homepage">{{ .Site.Title }}</a></h1>
+      <h1><a href="/" title="{{ i18n "goToHomepage" }}">{{ .Site.Title }}</a></h1>
       <h2>
       {{ if .IsHome }}
         {{ .Site.Params.subtitle }}
       {{ else if .IsNode }}
         {{ if ne .Kind "taxonomy" }}
-          {{ $pagename := (index .Site.Data.sections (lower .Title)) }}
-          {{ if $pagename }}
-            {{ if isset $pagename "icon" }}
-        <i class="fa fa-fw fa-{{ index $pagename "icon" }}"></i>
+          {{ with (index .Site.Data.sections (.Title | lower | singularize)) }}
+            {{ with .icon }}
+        <i class="fa fa-fw fa-{{ . }}"></i>
             {{ end }}
-        {{  index $pagename "title"  }}
-          {{ else }}
-        {{ .Title }}
           {{ end }}
+        {{ print "sections." (.Title | lower | singularize ) | i18n }}
         {{ else }}
         <i class="fa fa-fw fa-tag"></i>
         {{ .Title }}
@@ -34,6 +31,7 @@
         {{ .Title }}
       {{ end }}
       </h2>
+      {{ partial "languages" . }}
     </div><!-- /.header-title-wrap -->
   </div><!-- /.header-title -->
 </div><!-- /.entry-header -->
@@ -49,11 +47,11 @@
     {{ end }}
     <div class="entry-meta">
         {{ if gt .Date 0001 }} <!-- If Date is set (greater than year 0001) -->
-		<span class="entry-date date published updated"><time datetime="{{ .Date }}"><a href="{{ .RelPermalink }}">{{ .Date.Format "Jan 2, 2006" }}</a></time></span>
+		<span class="entry-date date published updated"><time datetime="{{ .Date }}"><a href="{{ .RelPermalink }}">{{ .Date.Format (i18n "date.format") }}</a></time></span>
         {{ end }}
       <span class="entry-reading-time">
         <i class="fa fa-clock-o"></i>
-        Reading time ~{{ .ReadingTime }}m
+        {{ i18n "readingTime" .ReadingTime }}
       </span><!-- /.entry-reading-time -->
     </div><!-- /.entry-meta -->
     {{ if .Params.link }}
@@ -65,7 +63,7 @@
   <div class="entry-content">
     {{ .Summary }}
     <footer class="entry-meta">
-      <a class="continue-reading btn-inverse" href="{{ .RelPermalink }}">Continue reading &hellip;</a>
+      <a class="continue-reading btn-inverse" href="{{ .RelPermalink }}">{{ i18n "continueReading" }} &hellip;</a>
     </footer>
   </div><!-- /.entry-content -->
 </article><!-- /.hentry -->

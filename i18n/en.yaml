@@ -1,0 +1,42 @@
+- id: goToHomepage
+  translation: Go to the homepage
+- id: continueReading
+  translation: Continue reading
+- id: menu.home
+  translation: Home
+- id: menu.about
+  translation: About
+- id: menu.learnMore
+  translation: Learn More
+- id: menu.archive
+  translation: Archive
+- id: author.email
+  translation: Email
+- id: taxonomies.tag
+  translation: Tags
+- id: sections.post
+  translation: Tech
+- id: date.format
+  translation: Jan 2, 2006
+- id: date.long
+  translation: January 2, 2006
+- id: date.short
+  translation: Jan, 2006
+- id: readingTime
+  translation:
+    one: Reading time ~{{ .Count }} minute
+    other: Reading time ~{{ .Count }} minutes
+- id: zh
+  translation: 中文
+- id: en
+  translation: English
+- id: copyrightHTML
+  translation: |
+    <p><span>Except where otherwise noted, content on this site is licensed under <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">CC-BY-SA</a>.</p>
+
+    <span>Powered by <a href="https://gohugo.io/" rel="nofollow">Hugo</a> with theme <a href="https://github.com/dldx/hpstr-hugo-theme" rel="nofollow">HPSTR</a>.</span>
+- id: disqusHTML
+  translation: |
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <a href="http://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
