@@ -1,0 +1,3 @@
+Flask==0.12
+qcloud_cos_v4==0.0.9
+cuisine==0.7.13
