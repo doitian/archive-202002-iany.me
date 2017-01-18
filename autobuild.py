@@ -192,6 +192,7 @@ def _build(job_id):
         traceback.print_exc(file=sys.stdout)
     else:
         job['status'] = 'suceeded'
+        print('SUCEEDED!!!')
     finally:
         completed_ts = time()
         job['duration'] = completed_ts - started_ts
