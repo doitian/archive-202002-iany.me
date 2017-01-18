@@ -232,7 +232,7 @@ def start_build():
             print("ERROR: Token not matched")
             return Response(status="403")
 
-    if ('ref' not in payload or payload['ref'] != 'master'):
+    if ('ref' not in payload or payload['ref'] != 'refs/heads/master'):
         print("ERROR: ref is not master")
 
     global seq_id
