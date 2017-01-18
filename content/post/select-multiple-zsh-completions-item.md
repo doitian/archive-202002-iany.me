@@ -2,7 +2,18 @@
 title: Select multiple zsh completions item
 tags: [zsh, console]
 date: "2013-04-08"
+lastmod: "2017-01-19"
 ---
+
+```
+# ^Xa to insert all matches
+zle -C all-matches complete-word _generic
+bindkey '^Xa' all-matches
+zstyle ':completion:all-matches:*' old-matches only
+zstyle ':completion:all-matches::::' completer _all_matches
+```
+
+> UPDATE: The snippet above brings `insert-completions` to zsh. Thanks, Trevor Joynson, who has provided the solution in [comment](#comment-2754013033).
 
 Command `insert-completions` (see [man bash](http://linux.die.net/man/1/bash)) is the
 feature I most miss in bash.
