@@ -1,4 +1,4 @@
-baseurl = "//blog.iany.me/"
+baseurl = "http://blog.iany.me/"
 defaultContentLanguage = "en"
 hasCJKLanguage = true
 description = "Personal Blog"
