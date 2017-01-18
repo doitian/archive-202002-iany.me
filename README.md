@@ -1,1 +1,3 @@
-Hugo site for https://blog.iany.me
+# Blog
+
+Hugo site for http://blog.iany.me
