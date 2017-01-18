@@ -14,6 +14,8 @@ RUN mkdir -p /srv/app && \
     tini bash git openssh-client python py2-pip \
     gcc python2-dev musl-dev libffi-dev openssl-dev
 
+RUN mkdir -p /root/.ssh && chmod 750 /root/.ssh && touch /root/.ssh/known_hosts && ssh-keyscan -t rsa git.coding.net >> /root/.ssh/known_hosts
+
 COPY requirements.txt /srv/app
 RUN pip install -r requirements.txt
 COPY . /srv/app/
@@ -23,4 +25,3 @@ EXPOSE 5000
 ENTRYPOINT ["/sbin/tini", "--", "./entrypoint.sh"]
 CMD ["./autobuild.py"]
 
-RUN mkdir -p /root/.ssh && chmod 750 /root/.ssh && touch /root/.ssh/known_hosts && ssh-keyscan -t rsa git.coding.net >> /root/.ssh/known_hosts
