@@ -22,3 +22,5 @@ EXPOSE 5000
 
 ENTRYPOINT ["tini", "--", "./entrypoint.sh"]
 CMD ["./autobuild.py"]
+
+RUN mkdir -p /root/.ssh && chmod 750 /root/.ssh && touch /root/.ssh/known_hosts && ssh-keyscan -t rsa git.coding.net >> /root/.ssh/known_hosts
