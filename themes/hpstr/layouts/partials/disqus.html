@@ -3,7 +3,7 @@
 
 var disqus_config = function () {
   this.page.url = 'http://blog.iany.me{{ .RelPermalink }}';
-  this.page.identifier = '{{ .RelPermalink }}';
+  this.page.identifier = this.page.url;
 };
 
 (function() {
