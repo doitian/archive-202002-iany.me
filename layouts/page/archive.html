@@ -23,7 +23,7 @@
     <li><a href="{{ "/tags/" | relLangURL }}"><i class="fa fa-fw fa-tags"></i> {{ i18n "taxonomies.tag" }}</a></li>
     {{ if .IsTranslated }}
       {{ range .Translations }}
-    <li class="translation"><a href="{{ .Permalink }}"><i class="fa fa-fw fa-globe"></i> {{ .Lang | i18n }}</a>
+    <li class="translation"><a href="{{ .RelPermalink }}"><i class="fa fa-fw fa-globe"></i> {{ .Lang | i18n }}</a>
       {{ end }}
     {{ end }}
   </ul>
