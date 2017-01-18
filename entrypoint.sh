@@ -11,7 +11,7 @@ function kill_ssh_agent() {
 }
 
 eval $(ssh-agent -s)
-ssh-add <(echo "$SSH_PRIVATE_KEY")
+ssh-add <(echo "$SSH_PRIVATE_KEY" | base64 -d)
 
 "$@"
 
