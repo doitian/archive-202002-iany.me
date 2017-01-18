@@ -10,7 +10,9 @@ ENV SSH_PRIVATE_KEY= \
     COS_REGION=
 
 RUN mkdir -p /srv/app && \
-  apk add --no-cache tini bash git openssh-client python py2-pip
+  apk add --no-cache \
+    tini bash git openssh-client python py2-pip \
+    gcc python2-dev musl-dev libffi-dev openssl-dev
 
 COPY requirements.txt /srv/app
 RUN pip install -r requirements.txt
