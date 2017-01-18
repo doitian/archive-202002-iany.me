@@ -17,3 +17,7 @@ icon = "list-alt"
 [tag]
 title = "Tags"
 icon = "tags"
+
+[series]
+title = "Series"
+icon = "book"

@@ -10,12 +10,22 @@
   translation: Learn More
 - id: menu.archive
   translation: Archive
+- id: menu.search
+  translation: Search
 - id: author.email
   translation: Email
 - id: taxonomies.tag
   translation: Tags
+- id: taxonomies.series
+  translation: Series
 - id: sections.post
   translation: Tech
+- id: sections.journal
+  translation: Journal
+- id: sections.game
+  translation: Games
+- id: sections.life
+  translation: Life
 - id: date.format
   translation: Jan 2, 2006
 - id: date.long
@@ -39,4 +49,6 @@
   translation: |
     <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
     <a href="http://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-
+- id: series.What I Touched.HTML
+  translation: |
+    This is a post in series &quot;<a href="{{ . }}">What I Touched</a>&quot;

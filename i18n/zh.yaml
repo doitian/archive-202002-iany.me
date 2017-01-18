@@ -10,14 +10,24 @@
   translation: 更多介绍
 - id: menu.archive
   translation: 归档
+- id: menu.search
+  translation: 搜索
 - id: author.email
   translation: 电子邮件
 - id: label.home
   translation: 首页
 - id: taxonomies.tag
   translation: 标签
+- id: taxonomies.series
+  translation: 系列文章
 - id: sections.post
   translation: 技术
+- id: sections.journal
+  translation: 流水账
+- id: sections.game
+  translation: 游戏
+- id: sections.life
+  translation: 生活
 - id: date.format
   translation: 1月2日, 2006
 - id: date.long

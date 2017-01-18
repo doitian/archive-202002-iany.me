@@ -61,10 +61,16 @@
     {{ end }}
   </header>
   <div class="entry-content">
+    {{ if (eq .Params.summary false) }}
+    {{ .Content }}
+    {{ else }}
     {{ .Summary }}
+      {{ if .Truncated }}
     <footer class="entry-meta">
       <a class="continue-reading btn-inverse" href="{{ .RelPermalink }}">{{ i18n "continueReading" }} &hellip;</a>
     </footer>
+      {{ end }}
+    {{ end }}
   </div><!-- /.entry-content -->
 </article><!-- /.hentry -->
 {{ end }}

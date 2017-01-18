@@ -14,7 +14,11 @@ post = "/:year/:month/:filename/"
 page = "/:filename/"
 life = "/life/:year/:month/:filename/"
 game = "/games/:year/:month/:filename/"
-journal = "/journal/:year/:month/:filename/"
+journal = "/journal/:year/:month/:slug/"
+
+[Taxonomies]
+tag = "tags"
+series = "series"
 
 [params]
 hiddenSections = ["page", "archive", "life"]
