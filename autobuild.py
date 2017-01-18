@@ -4,7 +4,7 @@ import os
 import sys
 import traceback
 
-from flask import Flask, Response, json, jsonify
+from flask import Flask, Response, request, json, jsonify
 from fabric.api import env, local as run, lcd as cd
 from time import time
 from datetime import datetime
@@ -220,6 +220,21 @@ def get_status():
 
 @app.route('/', methods=['POST'])
 def start_build():
+    if not request.is_json:
+        print("ERROR: not JSON request")
+        return Response(status="405")
+
+    payload = request.get_json()
+    print("POST {}".format(payload))
+    if 'PUSH_TOKEN' in os.environ:
+        if ('token' not in payload or
+                payload['token'] != os.environ['PUSH_TOKEN']):
+            print("ERROR: Token not matched")
+            return Response(status="403")
+
+    if ('ref' not in payload or payload['ref'] != 'master'):
+        print("ERROR: ref is not master")
+
     global seq_id
     seconds = str(int(time() * 1000))
     seq_id = (seq_id + 1) % 1000
