@@ -122,7 +122,6 @@ def _cos_file(job, client, bucket, cos_path, file_path=None):
 
     if compare_result == u'SKIPPED':
         print('SKIP ' + cos_path)
-        job[u'files'][cos_path] = compare_result
         return
 
     print('UPLOAD ' + cos_path)
