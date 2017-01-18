@@ -76,7 +76,6 @@ def _git(job):
 
 def _hugo(job):
     with cd(u'src'):
-        run(u'rm -rf public')
         run(u'hugo')
     job[u'steps'][u'hugo'] = True
     _save()
@@ -235,6 +234,7 @@ def start_build():
 
     if ('ref' not in payload or payload['ref'] != 'refs/heads/master'):
         print("ERROR: ref is not master")
+        return jsonify(job_id='')
 
     global seq_id
     seconds = str(int(time() * 1000))
