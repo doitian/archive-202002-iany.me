@@ -4,8 +4,12 @@
   translation: 继续阅读
 - id: updatedOn
   translation: 更新于
+- id: subscribeRSS
+  translation: 订阅 RSS
 - id: menu.home
   translation: 首页
+- id: thisPageIsTranslated
+  translation: Go to Enghlish Version
 - id: menu.about
   translation: 个人介绍
 - id: menu.learnMore

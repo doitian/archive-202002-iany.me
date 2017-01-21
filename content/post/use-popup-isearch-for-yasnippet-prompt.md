@@ -14,6 +14,8 @@ by its author. It has better look and feel than all the built-in
 `yas/prompt-functions`. Also it is easy to customize, and its isearch mode is
 very efficient, the items are filtered on-the-fly when typing.
 
+<!--more-->
+
 <figure class="half">
   <img src="/images/201203/choises.png">
   <img src="/images/201203/filter_by_keyword.png">

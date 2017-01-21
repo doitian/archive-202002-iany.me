@@ -4,6 +4,10 @@
   translation: Continue reading
 - id: updatedOn
   translation: Updated on
+- id: subscribeRSS
+  translation: Subscribe RSS
+- id: thisPageIsTranslated
+  translation: 查看本页面中文版本
 - id: menu.home
   translation: Home
 - id: menu.about

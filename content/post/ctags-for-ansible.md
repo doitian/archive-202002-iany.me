@@ -7,6 +7,7 @@ description: "Create ctags index for Ansible to ease navigation in editor."
 
 Ansible uses YAML to define tasks, playbooks and handlers. If the files follow some conventions, it is easy to index them using [Exuberant Ctags][1].
 
+<!--more-->
 
 For example, following ctags options will index all the lines starting with `- name:` in `.yml` and `.yaml` files. Save it as `.ctags` in the playbook or role top directory.
 

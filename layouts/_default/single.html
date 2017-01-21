@@ -41,7 +41,7 @@
         {{ end }}
       </div><!-- /.header-title-wrap -->
     </header>
-    <div class="entry-content">
+    <div class="entry-content {{ if .IsTranslated }}translated{{ end }}">
       {{ partial "languages" . }}
       {{ if isset .Params "toc" }}
       <div class="toc {{ .Params.toc }}">

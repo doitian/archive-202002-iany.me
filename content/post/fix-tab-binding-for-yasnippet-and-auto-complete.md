@@ -2,6 +2,7 @@
 title: Fix TAB Binding For yasnippet And auto-complete
 tags: [emacs]
 date: "2012-03-31"
+summary: false
 ---
 
 There are two TAB's in Emacs, `(kbd "TAB")` (`\t`, `[9]`) and `(kbd "<tab>")`

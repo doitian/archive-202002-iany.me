@@ -1,6 +1,5 @@
 +++
 date = "2017-01-15T23:47:32+08:00"
-draft = true
 title = "About"
 Description = "I'm Ian Yang, Partner and CTO of 3pjgames. I also worked for Groupon, Intridea, iZENEsoft and Augmentum before."
 +++
@@ -10,6 +9,8 @@ I'm Ian Yang, Partner and CTO of [3pjgames][1]. I also worked for [Groupon][2], 
 I focus on game design and development now, especially the techniques to deliver high performance back-end, game automated build, test, publish and deployment.
 
 I also did several years web development for POS and payments system, as well as server-side application development in field advertising, information retrieval, machine learning and data mining.
+
+<!--more-->
 
 ## Me, Elsewhere
 
