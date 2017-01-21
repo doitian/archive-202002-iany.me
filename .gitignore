@@ -4,3 +4,6 @@
 /py2
 /py3
 /status.json
+/content
+/public
+.Ulysses-*
