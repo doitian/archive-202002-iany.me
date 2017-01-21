@@ -1,5 +1,4 @@
 ---
-description: ""
 tags: []
 draft: true
 ---
