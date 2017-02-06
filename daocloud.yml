@@ -1,5 +1,11 @@
 version: 2.0
 
+test:
+  image: buildpack-deps:scm
+  script:
+    - git remote add github git@github.com:doitian/iany.me.git
+    - git push github $(git rev-parse --abbrev-ref HEAD)
+
 build:
   image:
     dockerfile_path: Dockerfile
