@@ -201,10 +201,8 @@ def _build(job_id):
 
 
 def worker(job_id):
-    global current_worker
     try:
         worker_mutex.acquire()
-        current_worker = current_thread()
         _build(job_id)
     finally:
         worker_mutex.release()
