@@ -22,6 +22,6 @@ COPY . /srv/app/
 
 EXPOSE 5000  
 
-ENTRYPOINT ["/sbin/tini", "--", "./entrypoint.sh"]
+ENTRYPOINT ["/sbin/tini", "-g", "--", "./entrypoint.sh"]
 CMD ["./autobuild.py"]
 
