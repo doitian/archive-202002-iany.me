@@ -201,11 +201,14 @@ def _build(job_id):
 
 
 def worker(job_id):
+    print(u'JOB {} pending'.format(job_id))
     try:
         worker_mutex.acquire()
+        print(u'JOB {} started'.format(job_id))
         _build(job_id)
     finally:
         worker_mutex.release()
+    print(u'JOB {} done'.format(job_id))
 
 
 @app.route('/')
