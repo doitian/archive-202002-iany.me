@@ -20,8 +20,8 @@
   translation: 搜索
 - id: author.email
   translation: 电子邮件
-- id: label.home
-  translation: 首页
+- id: label.subscribe
+  translation: 订阅
 - id: taxonomies.tag
   translation: 标签
 - id: taxonomies.series
