@@ -1,7 +1,7 @@
 +++
 date = "2017-01-15T23:47:32+08:00"
-draft = true
 title = "关于"
+share = false
 Description = "我是 Ian Yang, 皮匠科技 CTO 和合伙人。我也曾在 Groupon, Intridea, 载信和群硕工作过。"
 +++
 

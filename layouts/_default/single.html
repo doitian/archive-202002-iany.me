@@ -62,7 +62,7 @@
         {{ end }}
         {{ if gt .Lastmod .Date }}<span>{{ i18n "updatedOn" }} <span class="entry-date date updated"><time datetime="{{ .Lastmod }}">{{ .Lastmod.Format (i18n "date.format") }}</time></span></span>
         <span class="author vcard"><span class="fn">{{ $.Site.Params.author.name }}</span></span>{{ end }}
-        {{ if (eq .Params.share true) }}{{ partial "share.html" . }}{{ end }}
+        {{ if (or (and (eq .Lang "en") (not (eq .Params.share false))) (eq .Params.share true)) }}{{ partial "share.html" . }}{{ end }}
       </footer>
     </div><!-- /.entry-content -->
     {{ if ne .Params.comments false }}
