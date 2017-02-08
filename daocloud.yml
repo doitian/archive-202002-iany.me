@@ -1,13 +1,5 @@
 version: 2.0
 
-test:
-  image: buildpack-deps:scm
-  script:
-    - mkdir -p ~/.ssh
-    - ssh-keyscan -t rsa -H github.com >> ~/.ssh/known_hosts
-    - git remote add github git@github.com:doitian/iany.me.git
-    - git push github $(git rev-parse --abbrev-ref HEAD)
-
 build:
   image:
     dockerfile_path: Dockerfile
