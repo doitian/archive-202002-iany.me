@@ -21,7 +21,7 @@ This week I have worked on Lua API of Sentry using its Objective-C and Android c
 
 		sudo /usr/bin/gem install --bindir /usr/local/bin --no-env-shebang cocoapods 
 
-- `--bindir`: the default `/usr/bin` is not allowed to be modified.
+  - `--bindir`: the default `/usr/bin` is not allowed to be modified.
 	- `--no-env-shebang`: just use system Ruby explicitly.
 - [webmachine: A REST-based system for building web applications][3], A RESTful framework for Erlang.
 - [Iris]()( https://docs.iris-go.com/install.html ), A go web framework.
@@ -31,9 +31,8 @@ This week I have worked on Lua API of Sentry using its Objective-C and Android c
 		(require “xx.”) .. foo
 
 
-- 写了篇[游戏分享：Shenzhen IO][5]。花了一个多月备案，现在放在腾讯云上，改成了用 Hugo，加上了英文，中文多语言支持。		
+- 写了篇[游戏分享：Shenzhen IO](/zh/games/2017/02/shenzhen-io/)。花了一个多月备案，现在放在腾讯云上，改成了用 Hugo，加上了英文，中文多语言支持。		
 
 [1]:	http://dualface.github.io/blog/2013/01/01/call-java-from-lua/
 [2]:	https://github.com/joshdholtz/Sentry-Android
 [3]:	https://github.com/webmachine/webmachine
-[5]:	%7B%7B%3C%20relref%20%22game/shenzhen-io.zh.md%22%20%3E%7D%7D
