@@ -24,7 +24,7 @@ This week I have worked on Lua API of Sentry using its Objective-C and Android c
   - `--bindir`: the default `/usr/bin` is not allowed to be modified.
 	- `--no-env-shebang`: just use system Ruby explicitly.
 - [webmachine: A REST-based system for building web applications][3], A RESTful framework for Erlang.
-- [Iris]()( https://docs.iris-go.com/install.html ), A go web framework.
+- [Iris]( https://docs.iris-go.com/install.html ), A go web framework.
 - In Lua, following two statements are identicated:
 
 		require “xx.” .. foo
