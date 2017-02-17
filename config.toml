@@ -21,7 +21,7 @@ tag = "tags"
 series = "series"
 
 [params]
-hiddenSections = ["page", "life"]
+hiddenSections = ["page", "life", "journal"]
 cdn = "//cdn.iany.me"
 
 [params.sections.post]

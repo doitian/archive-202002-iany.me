@@ -8,17 +8,11 @@
     </div><!-- /.header-title-wrap -->
   </header>
   <ul class="submenu inline-list">
-    {{ if first 1 (where .Site.RegularPages "Section" "post") }}
-    <li><a href="{{ "/post/" | relLangURL }}"><i class="fa fa-fw fa-laptop"></i> {{ i18n "sections.post" }}</a></li>
-    {{ end }}
-    {{ if first 1 (where .Site.RegularPages "Section" "game") }}
-    <li><a href="{{ "/game/" | relLangURL }}"><i class="fa fa-fw fa-gamepad"></i> {{ i18n "sections.game" }}</a></li>
-    {{ end }}
-    {{ if first 1 (where .Site.RegularPages "Section" "journal") }}
-    <li><a href="{{ "/journal/" | relLangURL }}"><i class="fa fa-fw fa-list-alt"></i> {{ i18n "sections.journal" }}</a></li>
-    {{ end }}
-    {{ if first 1 (where .Site.RegularPages "Section" "life") }}
-    <li><a href="{{ "/life/" | relLangURL }}"><i class="fa fa-fw fa-leaf"></i> {{ i18n "sections.life" }}</a></li>
+    {{ range $section, $sectionParams := .Site.Data.sections }}
+      {{ if first 1 (where $.Site.RegularPages "Section" $section) }}
+        {{ $sectionKey := $section | lower | singularize }}
+      <li><a href="#{{ $sectionKey }}"><i class="fa fa-fw fa-{{ $sectionParams.icon }}"></i> {{ i18n (print "sections." $sectionKey) }}</a></li>
+      {{ end }}
     {{ end }}
     <li><a href="{{ "/tags/" | relLangURL }}"><i class="fa fa-fw fa-tags"></i> {{ i18n "taxonomies.tag" }}</a></li>
     {{ if .IsTranslated }}
@@ -27,14 +21,32 @@
       {{ end }}
     {{ end }}
   </ul>
-  {{ range (where .Site.RegularPages "Section" "!=" "page").GroupByDate "2006" }}
+  {{ range (where .Site.RegularPages "Section" "!=" "page").GroupBy "Section" }}
+    {{ $sectionKey := .Key | lower | singularize }}
   <article>
-    <h2>{{ .Key }}</h2>
+    <h2>
+      <a name="{{ $sectionKey }}" href="{{ print "/" $sectionKey "/" | relLangURL }}">
+        {{ with (index $.Site.Data.sections $sectionKey) }}
+          {{ with .icon }}
+        <i class="fa fa-fw fa-{{ . }}"></i>
+          {{ end }}
+        {{ end }}
+        {{ print "sections." $sectionKey | i18n}}
+      </a>
+    </h2>
+    {{ range .Pages.GroupByDate "2006" }}
+    <h3>{{ .Key }}</h3>
     <ul>
       {{ range .Pages }}
-      {{ .Render "li" }}
+      <li class="entry-title">
+        <span class="entry-date date published update dentry-meta">{{ .Date.Format (i18n "date.short") }}</span>
+        <a href="{{ .RelPermalink }}" title="{{ .Title }}">
+          {{ .Title }}
+        </a>
+      </li>
       {{ end }}
     </ul>
+    {{ end }}
   </article>
   {{ end }}
 </div><!-- /#main -->

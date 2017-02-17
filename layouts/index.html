@@ -21,7 +21,8 @@
 </div><!-- /.entry-header -->
 
 <div id="main" role="main">
-{{ range where .Paginator.Pages "Section" "not in" .Site.Params.hiddenSections }}
+{{ $paginator := .Paginate (where .Data.Pages "Section" "not in" $.Site.Params.hiddenSections) }}
+{{ range $paginator.Pages }}
 <article class="hentry">
   <header>
     {{ if .Params.image.feature }}

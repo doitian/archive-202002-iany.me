@@ -59,4 +59,4 @@
     <a href="http://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
 - id: series.What I Touched.HTML
   translation: |
-    This is a post in series &quot;<a href="{{ . }}">What I Touched</a>&quot;
+    This is a post in series &quot;<a href="{{ .Count }}">What I Touched</a>&quot;

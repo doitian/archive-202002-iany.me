@@ -38,7 +38,7 @@
 {{ range $key, $value := .Data.Terms }}
 	<article>
     <h2 id="{{ $key | urlize }}" class="tag-heading all-caps">
-      <a href="/{{ $data.Plural }}/{{ $key | urlize }}"><i class="fa fa-tag"></i> {{ $key }}</a>
+      <a href="{{ relLangURL (print "/" $data.Plural "/" ($key | urlize)) }}"><i class="fa fa-tag"></i> {{ $key }}</a>
     </h2>
 		<ul>
       {{ range $value.Pages.ByDate.Reverse }}
