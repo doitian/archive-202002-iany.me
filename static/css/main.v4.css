@@ -4296,6 +4296,14 @@ a.continue-reading:hover {
 }
 .code-caption + pre {
   border-radius: 0 0 3px 3px;
+  margin-top: 0;
+}
+
+figure {
+  text-align: center;
+}
+figure.code {
+  text-align: left;
 }
 
 .submenu {

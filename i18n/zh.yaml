@@ -51,4 +51,7 @@
   translation: |
     <noscript>请允许 JavaScript 查看 <a href="http://disqus.com/?ref_noscript">Disqus 上的评论</a>。</noscript>
     <a href="http://disqus.com/" class="dsq-brlink">评论由 <span class="logo-disqus">Disqus</span> 提供服务</a>
+- id: series.Lua C API.HTML
+  translation: |
+    这是系列文章『<a href="{{ .Count }}">Lua C API</a>』中的一篇。
 

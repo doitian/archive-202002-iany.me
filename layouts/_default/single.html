@@ -52,7 +52,7 @@
       {{ with .Params.series }}
       <blockquote class="serie">
         <i class="fa fa-book"></i>
-        {{ i18n (print "series." (index . 0) ".HTML") (relLangURL "/series/#what-ive-touched") | safeHTML }}
+        {{ i18n (print "series." (index . 0) ".HTML") (print (relLangURL "/series/") "#" (index . 0 | urlize)) | safeHTML }}
       </blockquote>
       {{ end }}
       {{ .Content }}
