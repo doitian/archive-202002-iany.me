@@ -4299,6 +4299,13 @@ a.continue-reading:hover {
   margin-top: 0;
 }
 
+figure {
+  text-align: center;
+}
+figure.code {
+  text-align: left;
+}
+
 .submenu {
   text-align: center;
 }
