@@ -4,6 +4,7 @@ title = "Lua C API 简介"
 tags = ["lua"]
 series = ["Lua C API"]
 toc = "right"
+isCJKLanguage = true
 +++
 
 公司主要用 skynet 和 cocos2d-x Lua 来开发游戏。两者都采用了嵌入 Lua 来开发。因为性能，要和原生代码交互等原因，需要在 Lua 和其它语言之间进行交互。最近做了挺多这样的工作，积累了一些心得，会陆续总结分享出来。
