@@ -22,6 +22,8 @@
   translation: Email
 - id: label.subscribe
   translation: Subscribe
+- id: label.toc
+  translation: "On This Page:"
 - id: taxonomies.tag
   translation: Tags
 - id: taxonomies.series

@@ -22,6 +22,8 @@
   translation: 电子邮件
 - id: label.subscribe
   translation: 订阅
+- id: label.toc
+  translation: 目录
 - id: taxonomies.tag
   translation: 标签
 - id: taxonomies.series

@@ -45,7 +45,7 @@
       {{ partial "languages" . }}
       {{ if isset .Params "toc" }}
       <div class="toc {{ .Params.toc }}">
-        <h2>On This Page:</h2>
+        <h2>{{ i18n "label.toc" }}</h2>
         {{ .TableOfContents | replaceRE "(<nav.*\n)<ul>\n<li>\n" "$1" | replaceRE "</li>\n</ul>\n</nav>" "</nav>" | safeHTML }}
       </div>
       {{ end }}
