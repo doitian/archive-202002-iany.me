@@ -295,12 +295,17 @@ require "cjson.safe"
 
 上面的代码如果没有找到 `cjson/safe.so` 的话，会再去查找 `cjson.so`，这样 `cjson`, `cjson.safe`, `cjson.another.module` 都可以共享一个动态链接库。对应的入口函数就是把点全部替换成下划线，然后在前面加上 `luaopen_`，比如 `luaopen_cjson_safe`。
 
-下面把之前的 `string_split` 变成模块作为示例。这里只贴出了入口方法，完整文件点击文件名查看。其中的 `l_string_split` 就是上面定义的 C Function。注意入口方法必须 export 才能被动态加载，在方法的实现之前加上 `LUALIB_API` 就可以了。
+下面把之前的 `string_split` 变成模块作为示例。这里只贴出了入口方法，完整文件点击文件名查看。其中的 `l_string_split` 就是上面定义的 C Function。注意入口方法必须 export 才能被动态加载，DLL 应该用 `__declspec(dllexport)`，so 应该用 `extern`。下面的例子定义了一个宏 `STRING_SPLIT_EXPORT`
 
 {{% codecaption name="string_split.c" link="https://coding.net/u/doitian/p/lua-c-api-intro/git/blob/master/csrc/string_split.c" %}}
 
 ~~~ c
-LUALIB_API int luaopen_string_split(lua_State *L) {
+#ifdef _MSC_VER
+#define STRING_SPLIT_EXPORT    __declspec(dllexport)
+#else
+#define STRING_SPLIT_EXPORT    extern
+#endif
+STRING_SPLIT_EXPORT int luaopen_string_split(lua_State *L) {
   lua_createtable(L, 0, 1);
 
   lua_pushcfunction(L, l_string_split);
