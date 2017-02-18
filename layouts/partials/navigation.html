@@ -52,6 +52,6 @@
 		{{ range .Site.Data.navigation.links }}
 	    <li><a href="{{ .url | relURL }}" {{ if in .url "http" }}target="_blank"{{ end }}>{{ .title }}</a></li>
 	  {{ end }}
-    <li><a href="{{ "/search" | relURL }}"><i class="fa fa-fw fa-search"></i> {{ i18n "menu.search" }}</a></li>
+    <li><a href="{{ "/search/" | relURL }}"><i class="fa fa-fw fa-search"></i> {{ i18n "menu.search" }}</a></li>
 	</ul><!-- /.dl-menu -->
 </nav><!-- /.dl-menuwrapper -->
