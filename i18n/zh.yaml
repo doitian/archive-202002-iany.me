@@ -56,4 +56,6 @@
 - id: series.Lua C API.HTML
   translation: |
     这是系列文章『<a href="{{ .Count }}">Lua C API</a>』中的一篇。
-
+- id: copyright.gameHTML
+  translation:
+    本文中出现的游戏相关资源、截图版权归游戏版权方所有

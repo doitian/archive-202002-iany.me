@@ -49,6 +49,12 @@
         {{ .TableOfContents | replaceRE "(<nav.*\n)<ul>\n<li>\n" "$1" | replaceRE "</li>\n</ul>\n</nav>" "</nav>" | safeHTML }}
       </div>
       {{ end }}
+      {{ with .Params.copyright }}
+      <blockquote class="copyright">
+        <i class="fa fa-copyright"></i>
+        {{ i18n (print "copyright." . "HTML") }}
+      </blockquote>
+      {{ end }}
       {{ with .Params.series }}
       <blockquote class="serie">
         <i class="fa fa-book"></i>
