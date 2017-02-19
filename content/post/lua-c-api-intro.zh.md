@@ -5,6 +5,7 @@ tags = ["lua"]
 series = ["Lua C API"]
 toc = "right"
 isCJKLanguage = true
+hljsLanguages = ["lua"]
 +++
 
 公司主要用 skynet 和 cocos2d-x Lua 来开发游戏。两者都采用了嵌入 Lua 来开发。因为性能，要和原生代码交互等原因，需要在 Lua 和其它语言之间进行交互。最近做了挺多这样的工作，积累了一些心得，会陆续总结分享出来。
@@ -63,8 +64,9 @@ Lua C API 的核心就是操作栈，所有的操作都是通过栈实现的。�
 
 查看 C API 的文档重要一部分就是查看其对栈操作的约定。 以设置全局变量的 API `lua_setglobal` 为例
 
-    void lua_setglobal (lua_State *L, const char *name);
-    Pops a value from the stack and sets it as the new value of global name.
+> `void lua_setglobal (lua_State *L, const char *name);`
+>
+> Pops a value from the stack and sets it as the new value of global name.
 
 执行该方法需要把全局变量的值压入栈，调用成功后会被自动弹出。下面是使用的例子，注释中是等价的 Lua 代码。完整代码点击文件名查看。
 

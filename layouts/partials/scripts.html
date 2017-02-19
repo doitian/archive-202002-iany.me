@@ -6,5 +6,10 @@
 {{ end }}
 
 <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script>
+{{ with .Params.hljsLanguages }}
+  {{ range . }}
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/languages/{{ . }}.min.js"></script>
+  {{ end }}
+{{ end }}
 <script>hljs.initHighlightingOnLoad();</script>
 

@@ -2801,12 +2801,12 @@ blockquote {
    Code
    ========================================================================== */
 tt, code, kbd, samp, pre {
-  font-family: monospace; }
+  font-family: Source Code Pro, Inconsolata, Consolas, monospace; }
 
 p code,
 li code {
-  font-size: 12px;
-  font-size: 0.75rem;
+  font-size: 14px;
+  font-size: 0.875rem;
   line-height: 1.5;
   white-space: nowrap;
   margin: 0 2px;
@@ -2816,8 +2816,6 @@ li code {
   border-radius: 3px; }
 
 pre {
-  font-size: 12px;
-  font-size: 0.75rem;
   line-height: 1.5;
   overflow-x: auto; }
   pre::-webkit-scrollbar {
@@ -2836,8 +2834,6 @@ pre.highlight {
 
 .highlight {
   margin-bottom: 1.5em;
-  font-size: 12px;
-  font-size: 0.75rem;
   line-height: 1.5;
   color: #d0d0d0;
   border: 1px solid #dbdbdb;
@@ -4214,17 +4210,19 @@ li.entry-title {
 }
 .toc, pre > code {
   display: block;
-  font-size: 12px;
-  font-size: 0.75rem;
   line-height: 1.5;
   border: 1px solid #e6e6e6;
   background-color: #f2f2f2;
   border-radius: 3px;
 }
 pre > code {
+  font-size: 15px;
+  font-size: 0.9375rem;
   padding: 0.5em;
 }
 .toc {
+  font-size: 12px;
+  font-size: 0.75rem;
   margin-bottom: 26px;
   margin-bottom: 1.625rem;
   padding: 0 13px;
@@ -4234,6 +4232,10 @@ pre > code {
   font-size: 16px;
   font-size: 1rem;
   margin-bottom: 0;
+}
+#TableOfContents > ul {
+  padding-left: 20px;
+  padding-left: 1em;
 }
 @media only screen and (min-width: 48em) {
   .toc.left {
@@ -4341,7 +4343,7 @@ figure.code {
   }
 }
 li.entry-title .entry-date {
-  font-family: monospace;
+  font-family: Source Code Pro, Inconsolata, Consolas, monospace; }
   font-size: 80%;
   color: #333;
 }
