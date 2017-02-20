@@ -4329,8 +4329,12 @@ figure.code {
 .languages {
   position: absolute;
   right: 1em;
-  top: 0;
+  top: -5px;
 }
+article .languages {
+  top: -8px;
+}
+
 .languages li {
   line-height: 1em;
   margin: 0 0 0 1em;
