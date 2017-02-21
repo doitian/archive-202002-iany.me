@@ -2,6 +2,7 @@
 title: What I Touched This 2 Weeks 2016-11-27
 date: 2016-11-27
 series: ["What I Touched"]
+description: "My weekly review report."
 ---
 
 This week I worked on syslog integration in [skynet][1] and delve into details of skynet. I also started using Gitlab CI.

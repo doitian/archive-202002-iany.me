@@ -2,6 +2,7 @@
 date: "2011-12-09"
 title: Zero Configuration Nginx With Passenger
 tags: [rails, ruby, rack, nginx, passenger, pow]
+description: "Use named captures in Nginx to serve multiple Passenger apps in different directories."
 ---
 
 [Pow][] is a zero-config Rack server for Mac OS X. Here I steal its idea to

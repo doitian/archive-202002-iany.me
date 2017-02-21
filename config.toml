@@ -1,7 +1,6 @@
 baseurl = "http://blog.iany.me/"
 defaultContentLanguage = "en"
 hasCJKLanguage = true
-description = "Personal Blog"
 copyright = "Except where otherwise noted, content on this site is licensed under CC-BY-SA"
 title = "~iany/blog"
 theme = "hpstr"
@@ -21,6 +20,7 @@ tag = "tags"
 series = "series"
 
 [params]
+description = "A personal blog with tech, game and etc."
 hiddenSections = ["page", "life", "journal"]
 cdn = "//cdn.iany.me"
 
@@ -43,10 +43,12 @@ github = "doitian"
 
 [Languages.zh]
 copyright = "除特别说明，所有内容使用署名-相同方式共享 (CC-BY-SA)"
-description = "个人博客"
 title = "~iany 博客"
 languageName = "中文"
 disqusShortname = "ianyblogcn"
+
+[Languages.zh.params]
+description = "个人博客，关于技术，游戏等"
 
 [Languages.en]
 languageName = "English"

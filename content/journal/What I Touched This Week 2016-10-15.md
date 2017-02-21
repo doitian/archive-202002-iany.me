@@ -2,6 +2,7 @@
 date: "2016-10-15"
 title: "What I Touched This Week 2016-10-15"
 series: ["What I Touched"]
+description: "My weekly review report."
 ---
 
 ## Programming
@@ -29,9 +30,9 @@ Replace "appnamehere" with the name of the app as it appears in the Accessibilit
 * Install Python modules for ansible installed by Homebrew
 
     ```
-	  cd /usr/local/Cellar/ansible/2.1.2.0/libexec/lib/python2.7/site-packages
-	  PYTHONPATH=$(pwd) python easy_install.py -ad $(pwd) redis
-	  ```
+      cd /usr/local/Cellar/ansible/2.1.2.0/libexec/lib/python2.7/site-packages
+      PYTHONPATH=$(pwd) python easy_install.py -ad $(pwd) redis
+      ```
 
 * [Clearing the Icon Services cache in Yosemite][6]
 * [Advanced Vim macros][7] Dump macro, edit and save back to register. Run macro on scope using `normal`
@@ -48,17 +49,17 @@ Replace "appnamehere" with the name of the app as it appears in the Accessibilit
 * [A Javascript journey with only six characters][12] Create a Turing machine using only six characters `[`,`]`,`(`,`)`,`+` and `!`.
 * [Dash and Apple: My Side of the Story][13] A popular app for developer has been [removed from apple store][14], and here is the story from the author.
 
-[1]:	http://gad.qq.com/article/detail/7171237?hmsr=toutiao.io&utm_medium=toutiao.io&utm_source=toutiao.io
-[2]:	https://code.facebook.com/posts/1840075619545360?utm_campaign=digest&utm_medium=email&utm_source=app
-[3]:	https://blog.codeship.com/a-review-of-immutability-in-ruby/
-[4]:	http://www.theverge.com/tldr/2016/9/25/12284400/how-to-read-more-books
-[5]:	https://discussions.apple.com/thread/5522241?tstart=0
-[6]:	http://furbo.org/2015/01/19/clearing-the-icon-services-cache-in-yosemite/
-[7]:	https://sanctum.geek.nz/arabesque/advanced-vim-macros/
-[8]:	https://sanctum.geek.nz/arabesque/vim-anti-patterns/
-[9]:	http://launchpadmanager.com/
-[10]:	http://www.yingdev.com/projects/tickeys
-[11]:	https://github.com/docopt/docopt
-[12]:	http://jazcash.com/a-javascript-journey-with-only-six-characters/
-[13]:	https://blog.kapeli.com/dash-and-apple-my-side-of-the-story?utm_campaign=digest&utm_medium=email&utm_source=app
-[14]:	https://blog.kapeli.com/apple-removed-dash-from-the-app-store#what-happened
+[1]:    http://gad.qq.com/article/detail/7171237?hmsr=toutiao.io&utm_medium=toutiao.io&utm_source=toutiao.io
+[2]:    https://code.facebook.com/posts/1840075619545360?utm_campaign=digest&utm_medium=email&utm_source=app
+[3]:    https://blog.codeship.com/a-review-of-immutability-in-ruby/
+[4]:    http://www.theverge.com/tldr/2016/9/25/12284400/how-to-read-more-books
+[5]:    https://discussions.apple.com/thread/5522241?tstart=0
+[6]:    http://furbo.org/2015/01/19/clearing-the-icon-services-cache-in-yosemite/
+[7]:    https://sanctum.geek.nz/arabesque/advanced-vim-macros/
+[8]:    https://sanctum.geek.nz/arabesque/vim-anti-patterns/
+[9]:    http://launchpadmanager.com/
+[10]:   http://www.yingdev.com/projects/tickeys
+[11]:   https://github.com/docopt/docopt
+[12]:   http://jazcash.com/a-javascript-journey-with-only-six-characters/
+[13]:   https://blog.kapeli.com/dash-and-apple-my-side-of-the-story?utm_campaign=digest&utm_medium=email&utm_source=app
+[14]:   https://blog.kapeli.com/apple-removed-dash-from-the-app-store#what-happened

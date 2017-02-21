@@ -7,7 +7,7 @@
 <meta charset="utf-8">
 <meta name="language" content="{{ .Site.Language.LanguageName }}">
 <title>{{ if eq .IsHome false }}{{ .Title }} &#8211; {{ end }}{{ .Site.Title }}</title>
-<meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}">
+<meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ with .Summary }}{{ . | plainify }}{{ else }}{{ .Site.Params.description }}{{ end }}{{ end }}">
 {{- if .IsHome }}
     {{ $.Scratch.Set "Params" .Site.Params }}
 {{- else if .IsNode }}

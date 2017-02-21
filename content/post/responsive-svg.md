@@ -2,6 +2,7 @@
 title: Responsive SVG
 tags: [svg]
 date: "2013-06-16"
+description: "Introduction to make SVG responsive."
 ---
 
 SVG can use percentage as unit, but it is often more convenient to use px as

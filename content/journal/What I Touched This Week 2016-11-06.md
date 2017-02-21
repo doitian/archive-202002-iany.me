@@ -2,6 +2,7 @@
 title: What I Touched This Week 2016-11-06
 date: 2016-11-06
 series: ["What I Touched"]
+description: "My weekly review report."
 ---
 
 This week I worked on rsyslog research and management. The work on terraform-provider-ucloud is postponed. 
@@ -20,12 +21,12 @@ This week I worked on rsyslog research and management. The work on terraform-pro
 
 * Use tag to filter log. Facilities are fixed and cannot add new custom facility, but app can specify arbitrary tag. The tag format is `programname[PROCID]`
 * `Syslog::Logger` in Ruby reserves higher priorities (crit, alert and emerge) for system message. The mapping to Logger severity is one level lower:
-	* Ruby -\> syslog
-	* debug -\> debug
-	* info -\> info
-	* warn -\> notice
-	* error -\> warning
-	* fatal -\> err
+    * Ruby -\> syslog
+    * debug -\> debug
+    * info -\> info
+    * warn -\> notice
+    * error -\> warning
+    * fatal -\> err
 * Ruby 2.0 cannot specify facility when creating `Syslog::Logger`, 2.2 has the third parameter to specify the facility.
 * [20.2. Basic Configuration of Rsyslog][1] via Redhat
 
@@ -46,12 +47,12 @@ This week I worked on rsyslog research and management. The work on terraform-pro
 * [Need to specify `--with-opt-dir` on OSX 10.11 El Capitan. · Issue #718 · puma/puma][8] Bundle can configure build options for specific gem: `bundle config build.puma --with-opt-dir=/usr/local/opt/openssl`
 * [tencent/libco][9]. Coroutine for C, from WeChat team.
 
-[1]:	https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/7/html/System_Administrators_Guide/s1-basic_configuration_of_rsyslog.html
-[2]:	https://zhuanlan.zhihu.com/p/23314649
-[3]:	http://sspai.com/35894
-[4]:	https://m.signalvnoise.com/why-you-should-argue-with-your-employees-ab8189fcd1c4#.khcwz2hp0
-[5]:	http://mp.weixin.qq.com/s?__biz=MjM5NjAyMDE5Mg==&mid=2649813638&idx=1&sn=3badc5dbbb3fa6c31a493d5c2948eaa1&chksm=beebf809899c711f00a2b54cd67e7a161d8b6f11079fc650cad9400bc6f7c7342c97d870af77&scene=0#rd
-[6]:	https://appsto.re/cn/qjJ_cb.i
-[7]:	http://ryandlane.com/blog/2014/08/04/moving-away-from-puppet-saltstack-or-ansible/
-[8]:	https://github.com/puma/puma/issues/718
-[9]:	https://github.com/tencent/libco
+[1]:    https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/7/html/System_Administrators_Guide/s1-basic_configuration_of_rsyslog.html
+[2]:    https://zhuanlan.zhihu.com/p/23314649
+[3]:    http://sspai.com/35894
+[4]:    https://m.signalvnoise.com/why-you-should-argue-with-your-employees-ab8189fcd1c4#.khcwz2hp0
+[5]:    http://mp.weixin.qq.com/s?__biz=MjM5NjAyMDE5Mg==&mid=2649813638&idx=1&sn=3badc5dbbb3fa6c31a493d5c2948eaa1&chksm=beebf809899c711f00a2b54cd67e7a161d8b6f11079fc650cad9400bc6f7c7342c97d870af77&scene=0#rd
+[6]:    https://appsto.re/cn/qjJ_cb.i
+[7]:    http://ryandlane.com/blog/2014/08/04/moving-away-from-puppet-saltstack-or-ansible/
+[8]:    https://github.com/puma/puma/issues/718
+[9]:    https://github.com/tencent/libco

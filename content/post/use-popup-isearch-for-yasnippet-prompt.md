@@ -3,6 +3,7 @@ title: Use Popup isearch For Yasnippet Prompt
 tags: [emacs]
 date: "2012-03-30"
 layout: post
+description: "Use popup as a backend of yasnippet prompt"
 ---
 
 [Yasnippet][] tries functions in `yas/prompt-functions` when it needs user to

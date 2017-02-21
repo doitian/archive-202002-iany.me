@@ -2,6 +2,7 @@
 title: Rails Compound Input
 tags: [rails]
 date: "2013-01-19"
+description: "How to use multiple HTML input controllers for a single field in model."
 ---
 
 When I implement

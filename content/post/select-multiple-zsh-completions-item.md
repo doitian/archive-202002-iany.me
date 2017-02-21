@@ -3,6 +3,7 @@ title: Select multiple zsh completions item
 tags: [zsh, console]
 date: "2013-04-08"
 lastmod: "2017-01-19"
+description: "I like the feature to Insert all completions in bash, and I can get this feature in zsh now"
 ---
 
 ```

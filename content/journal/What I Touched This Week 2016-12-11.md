@@ -2,6 +2,7 @@
 title: What I Touched This Week 2016-12-11
 date: 2016-12-11
 series: ["What I Touched"]
+description: "My weekly review report."
 ---
 
 This week I worked on setting up gralog2 for logging search and analysis.
@@ -80,18 +81,18 @@ Check a value is in array in zsh:
 - [APT Cheat Sheet - Packagecloud Blog][14]. I have used Ubuntu for years, but I still don’t know when to use `apt-get`, when to use `apt-cache` and when to use `dpkg`. It is better to save it in Evernote for office reference.
 - [Dear JavaScript, – Medium][15]. About open source community.
 
-[1]:	https://github.com/junegunn/fzf
-[2]:	https://github.com/doitian/dotfiles/blob/master/bin/fasd_fzf
-[3]:	https://github.com/clvv/fasd
-[4]:	https://github.com/doitian/dotfiles/blob/master/bin/tmux-fzf-session
-[5]:	https://github.com/doitian/dotfiles/blob/master/bin/tmux-fzf-pane
-[6]:	https://github.com/doitian/dotfiles/blob/master/zsh/completion.zsh
-[7]:	https://github.com/doitian/dotfiles/blob/master/bin/tt
-[8]:	https://github.com/zsh-users/zsh-completions
-[9]:	http://apple.stackexchange.com/questions/35524/what-can-i-do-when-my-ssh-session-is-stuck
-[10]:	http://kotojs.org/
-[11]:	https://github.com/edvin/tornadofx
-[12]:	https://www.alfredapp.com/help/workflows/inputs/script-filter/json/
-[13]:	https://peteris.rocks/blog/htop/
-[14]:	https://blog.packagecloud.io/eng/2015/03/30/apt-cheat-sheet/
-[15]:	https://medium.com/@thejameskyle/dear-javascript-7e14ffcae36c#.rb5663a0s
+[1]:    https://github.com/junegunn/fzf
+[2]:    https://github.com/doitian/dotfiles/blob/master/bin/fasd_fzf
+[3]:    https://github.com/clvv/fasd
+[4]:    https://github.com/doitian/dotfiles/blob/master/bin/tmux-fzf-session
+[5]:    https://github.com/doitian/dotfiles/blob/master/bin/tmux-fzf-pane
+[6]:    https://github.com/doitian/dotfiles/blob/master/zsh/completion.zsh
+[7]:    https://github.com/doitian/dotfiles/blob/master/bin/tt
+[8]:    https://github.com/zsh-users/zsh-completions
+[9]:    http://apple.stackexchange.com/questions/35524/what-can-i-do-when-my-ssh-session-is-stuck
+[10]:   http://kotojs.org/
+[11]:   https://github.com/edvin/tornadofx
+[12]:   https://www.alfredapp.com/help/workflows/inputs/script-filter/json/
+[13]:   https://peteris.rocks/blog/htop/
+[14]:   https://blog.packagecloud.io/eng/2015/03/30/apt-cheat-sheet/
+[15]:   https://medium.com/@thejameskyle/dear-javascript-7e14ffcae36c#.rb5663a0s

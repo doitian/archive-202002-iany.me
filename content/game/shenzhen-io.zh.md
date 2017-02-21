@@ -4,6 +4,7 @@ title = "Shenzhen IO"
 tags = ["steam", "puzzle"]
 isCJKLanguage = true
 copyright = "game"
+description = "分享 Shengzhen IO，一款需要使用汇编写代码的游戏。"
 +++
 
 Shenzhen IO 是款很小众的游戏，某国同学发现自己的国家很难去制造什么东西，所以来到了深圳加入了一家电子公司 “深圳龙腾科技有限公司”。游戏中你将扮演这位同学，使用公司的各种芯片，设计电路板，烧入汇编语言来实现各种需求。

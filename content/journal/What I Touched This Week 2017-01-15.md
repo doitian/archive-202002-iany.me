@@ -2,17 +2,18 @@
 title: What I Touched This Week 2017-01-15
 date: 2017-01-15
 series: ["What I Touched"]
+description: "My weekly review report."
 ---
 
 This week I continue on cocos2d-x project automation build and dependencies management.
 
 By default, tolua registers global variables. A trick to use fallback Lua implementation by default is:
 
-	# config.lua
-	if _G.config then
-	  return _G.config
-	end
-	return { lua = true }
+    # config.lua
+    if _G.config then
+      return _G.config
+    end
+    return { lua = true }
 
 <!--more-->
 
@@ -36,7 +37,7 @@ There is a gotcha to register tolua bindings in AppDelegate.cpp in Quick Communi
         export http_proxy=xxx https_proxy=xxx
         emacs -nw --insecure
 
-[1]:	http://stackoverflow.com/a/6142700/667158
-[2]:	http://gad.qq.com/article/detail/7182056
-[3]:	http://android-mirror.bugly.qq.com:8080
-[4]:	http://msdn.itellyou.cn/
+[1]:    http://stackoverflow.com/a/6142700/667158
+[2]:    http://gad.qq.com/article/detail/7182056
+[3]:    http://android-mirror.bugly.qq.com:8080
+[4]:    http://msdn.itellyou.cn/

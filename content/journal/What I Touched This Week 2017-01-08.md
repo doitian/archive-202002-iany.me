@@ -2,6 +2,7 @@
 title: What I Touched This Week 2017-01-08
 date: 2017-01-08
 series: ["What I Touched"]
+description: "My weekly review report."
 summary: false
 ---
 
@@ -9,16 +10,16 @@ This week I was setting up cocos2d-x project automation build and dependencies m
 
 A minimum minion config, saved it as `config/minion`
 
-	id: local
-	file_client: local
-	minion_id_caching: False
-	root_dir: ./.salt
-	file_roots:
-	  base:
-	    - ./states
-	pillar_roots:
-	  base:
-	    - ./pillar
+    id: local
+    file_client: local
+    minion_id_caching: False
+    root_dir: ./.salt
+    file_roots:
+      base:
+        - ./states
+    pillar_roots:
+      base:
+        - ./pillar
 
 To include dynamic states and pillar roots, just generate the minion config file every time before invoking `salt-call`
 
@@ -26,5 +27,5 @@ To include dynamic states and pillar roots, just generate the minion config file
 
 - [Tencent/xLua: xLua is a hot-fix solution plugin for Unity3D, it supports android, ios, windows, osx, etc.][2] 腾讯开源的 Unity3d  Lua 解决方案
 
-[1]:	https://docs.saltstack.com/en/latest/topics/tutorials/quickstart.html
-[2]:	https://github.com/Tencent/xLua
+[1]:    https://docs.saltstack.com/en/latest/topics/tutorials/quickstart.html
+[2]:    https://github.com/Tencent/xLua

@@ -2,6 +2,7 @@
 title: CSS Line Wrap Indicator
 tags: [css, html]
 date: "2012-02-04"
+description: "Display line wrap indicator in gutter using CSS"
 ---
 
 Many editor can wrap a line that reaches the window width and show an

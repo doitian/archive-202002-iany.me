@@ -2,7 +2,7 @@
 date = "2017-01-15T23:47:32+08:00"
 title = "关于"
 share = false
-Description = "我是 Ian Yang, 皮匠科技 CTO 和合伙人。我也曾在 Groupon, Intridea, 载信和群硕工作过。"
+description = "我是 Ian Yang, 皮匠科技 CTO 和合伙人。我也曾在 Groupon, Intridea, 载信和群硕工作过。"
 +++
 
 我是 Ian Yang, [皮匠科技][1] CTO 和合伙人。我也曾在 [Groupon][2], [Intridea][3], [载信][4]和[群硕][5]工作过。

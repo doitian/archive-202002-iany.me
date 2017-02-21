@@ -2,6 +2,7 @@
 title: What I Touched This Week 2016-10-22
 date: 2016-10-22
 series: ["What I Touched"]
+description: "My weekly review report."
 ---
 
 ## Programming
@@ -52,25 +53,25 @@ series: ["What I Touched"]
 * [Tech Tips, Tricks & Trivia: Tips for more effective white-boarding][21]
 * [中文文案排版指北][22]
 
-[1]:	https://www.terraform.io/docs/plugins/
-[2]:	https://github.com/rakutentech/terraform-provider-vsphere
-[3]:	https://github.com/hashicorp/terraform/tree/master/builtin/providers/aws
-[4]:	https://github.com/3pjgames/terraform-provider-ucloud
-[5]:	http://blog.codingnow.com/2016/10/gamesync.html
-[6]:	http://highscalability.com/blog/2016/10/12/lessons-learned-from-scaling-uber-to-2000-engineers-1000-ser.html
-[7]:	https://medium.com/@cep21/how-to-correctly-use-context-context-in-go-1-7-8f2c0fafdf39#.pmk4vjiow
-[8]:	http://stackoverflow.com/a/28007631/667158
-[9]:	https://twitter.com/brodiegames/status/786041246321999873
-[10]:	http://mp.weixin.qq.com/s?__biz=MzA4MDc5OTg5MA==&mid=2650586822&idx=4&sn=cca55822c77793d8aa093cfed8ea7ab5&chksm=8796af3bb0e1262dfc24fb4ed354f498e502d2dd98e7bb75d56564059ceab717b111cc1018af&scene=0#wechat_redirect
-[11]:	https://paulbakaus.com/2016/10/13/debunked-10-misconceptions-about-amp/?utm_source=wanqu.co&utm_campaign=Wanqu+Daily&utm_medium=website
-[12]:	https://medium.com/@gokulrajaram/all-you-ever-wanted-to-know-about-all-hands-but-were-afraid-to-ask-b13f7b97f2d9#.ovwq0mbix
-[13]:	http://stackoverflow.com/questions/32814161/how-to-make-spoiler-text-in-github-wiki-pages/39920717?stw=2#39920717
-[14]:	https://github.com/Microsoft/LightGBM
-[15]:	http://disney.github.io/
-[16]:	https://code.woboq.org/
-[17]:	http://a-sharper-scaling.com/
-[18]:	http://coala.io/
-[19]:	http://zh.dontstarve.wikia.com/wiki/Don't_Starve_%E4%B8%AD%E6%96%87%E7%B6%AD%E5%9F%BA
-[20]:	http://jmd.im/black.html
-[21]:	http://mvark.blogspot.jp/2016/10/tips-for-more-effective-white-boarding.html?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed:+WebDevelopmentTipsTricksTrivia+(Tech+Tips,+Tricks+&+Trivia)
-[22]:	https://github.com/sparanoid/chinese-copywriting-guidelines
+[1]:    https://www.terraform.io/docs/plugins/
+[2]:    https://github.com/rakutentech/terraform-provider-vsphere
+[3]:    https://github.com/hashicorp/terraform/tree/master/builtin/providers/aws
+[4]:    https://github.com/3pjgames/terraform-provider-ucloud
+[5]:    http://blog.codingnow.com/2016/10/gamesync.html
+[6]:    http://highscalability.com/blog/2016/10/12/lessons-learned-from-scaling-uber-to-2000-engineers-1000-ser.html
+[7]:    https://medium.com/@cep21/how-to-correctly-use-context-context-in-go-1-7-8f2c0fafdf39#.pmk4vjiow
+[8]:    http://stackoverflow.com/a/28007631/667158
+[9]:    https://twitter.com/brodiegames/status/786041246321999873
+[10]:   http://mp.weixin.qq.com/s?__biz=MzA4MDc5OTg5MA==&mid=2650586822&idx=4&sn=cca55822c77793d8aa093cfed8ea7ab5&chksm=8796af3bb0e1262dfc24fb4ed354f498e502d2dd98e7bb75d56564059ceab717b111cc1018af&scene=0#wechat_redirect
+[11]:   https://paulbakaus.com/2016/10/13/debunked-10-misconceptions-about-amp/?utm_source=wanqu.co&utm_campaign=Wanqu+Daily&utm_medium=website
+[12]:   https://medium.com/@gokulrajaram/all-you-ever-wanted-to-know-about-all-hands-but-were-afraid-to-ask-b13f7b97f2d9#.ovwq0mbix
+[13]:   http://stackoverflow.com/questions/32814161/how-to-make-spoiler-text-in-github-wiki-pages/39920717?stw=2#39920717
+[14]:   https://github.com/Microsoft/LightGBM
+[15]:   http://disney.github.io/
+[16]:   https://code.woboq.org/
+[17]:   http://a-sharper-scaling.com/
+[18]:   http://coala.io/
+[19]:   http://zh.dontstarve.wikia.com/wiki/Don't_Starve_%E4%B8%AD%E6%96%87%E7%B6%AD%E5%9F%BA
+[20]:   http://jmd.im/black.html
+[21]:   http://mvark.blogspot.jp/2016/10/tips-for-more-effective-white-boarding.html?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed:+WebDevelopmentTipsTricksTrivia+(Tech+Tips,+Tricks+&+Trivia)
+[22]:   https://github.com/sparanoid/chinese-copywriting-guidelines

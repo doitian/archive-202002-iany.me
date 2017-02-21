@@ -2,6 +2,7 @@
 title: "Mendeley: Cross Platform Research Management Tool"
 tags: [utility, productivity, app]
 date: "2011-05-18"
+description: "How Mendely managees documents and citations."
 ---
 
 [Mendeley][] is a research management tool for desktop & web. It has clients for

@@ -3,6 +3,7 @@ title: "[Outdated] Tmux And Rvmrc"
 tags: [tmux, rvm, ruby, console]
 date: "2011-06-27"
 lastmod: "2015-10-15"
+description: "Force rvm to load the file by appending cd ."
 ---
 
 > RVM has since moved to using .profile, so just put the "cd ." in .profile and it will work

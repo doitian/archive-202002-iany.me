@@ -4,6 +4,7 @@ tags: [mac, powerTool]
 date: "2014-01-17"
 image:
   feature: /images/201401/keyboard-on-mac.png
+description: "Automate disable/enable internal keyboard when an external keyboard is attached/detacched."
 ---
 
 I prefer using external keyboard with my MacBook. When no external monitors

@@ -2,6 +2,7 @@
 title: What I Touched This Week 2016-12-17
 date: 2016-12-17
 series: ["What I Touched"]
+description: "My weekly review report."
 ---
 
 This week I was setting up monitoring system using Prometheus.
@@ -29,11 +30,11 @@ Some gotchas:
 - Subscribed [Safari Books Online][7] and started reading 『_Mathematics for 3D Game Programming and Computer Graphics, Third Edition_』on it.
 - [Iconfont-阿里巴巴矢量图标库][8]。很丰富，质量也不错的矢量图标库。
 
-[1]:	https://docs.google.com/document/d/199PqyG3UsyXlwieHaqbGiWVa8eMWi8zzAn0YfcApr8Q/edit
-[2]:	https://github.com/miloyip/game-programmer
-[3]:	http://blog.csdn.net/bigcat133/article/details/46374357
-[4]:	http://blog.codingnow.com/2016/12/unity3d_remote_pvrtextool.html
-[5]:	https://blog.sindresorhus.com/macos-tips-tricks-13046cf377f8#.q1sqp8ig7
-[6]:	https://discourse.omnigroup.com/t/implementation-details-for-omnifocus-2-14-automation/24179
-[7]:	https://www.safaribooksonline.com
-[8]:	http://www.iconfont.cn/plus
+[1]:    https://docs.google.com/document/d/199PqyG3UsyXlwieHaqbGiWVa8eMWi8zzAn0YfcApr8Q/edit
+[2]:    https://github.com/miloyip/game-programmer
+[3]:    http://blog.csdn.net/bigcat133/article/details/46374357
+[4]:    http://blog.codingnow.com/2016/12/unity3d_remote_pvrtextool.html
+[5]:    https://blog.sindresorhus.com/macos-tips-tricks-13046cf377f8#.q1sqp8ig7
+[6]:    https://discourse.omnigroup.com/t/implementation-details-for-omnifocus-2-14-automation/24179
+[7]:    https://www.safaribooksonline.com
+[8]:    http://www.iconfont.cn/plus

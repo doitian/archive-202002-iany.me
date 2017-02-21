@@ -2,6 +2,7 @@
 title: ActiveRecord uniq, count and distinct
 tags: [rails]
 date: "2013-07-16"
+description: "Gotcha of the three functions uniq, count and distince"
 ---
 
 `ActiveRecord` has two methods to remove duplicates. Method `uniq` and option
