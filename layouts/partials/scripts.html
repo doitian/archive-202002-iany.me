@@ -2,7 +2,7 @@
 <script>window.jQuery || document.write('<script src="{{ "/js/vendor/jquery-1.9.1.min.js" | relURL }}"><\/script>')</script>
 <script src="{{ "/js/scripts.min.js" | relURL }}"></script>
 
-{{ if (not (eq .Params.share false)) }}
+{{ if (and .IsPage (not (eq .Params.share false))) }}
 <figure id="qrcode-popup" class="white-popup mfp-hide">
   {{ if eq .Lang "zh" }}
   <div id="qrcode">生成中...</div>
@@ -36,11 +36,11 @@ $('.qrcode a').magnificPopup({
 </script>
 {{ end }}
 
-
 {{ if eq .Params.mathjax true }}
 {{ partial "mathjax.html" . }}
 {{ end }}
 
+{{ if (and .IsPage (not (eq .Params.hljs false))) }}
 <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script>
 {{ with .Params.hljsLanguages }}
   {{ range . }}
@@ -48,4 +48,5 @@ $('.qrcode a').magnificPopup({
   {{ end }}
 {{ end }}
 <script>hljs.initHighlightingOnLoad();</script>
+{{ end }}
 
