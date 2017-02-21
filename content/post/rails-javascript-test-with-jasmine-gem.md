@@ -3,6 +3,7 @@ title: Rails JavaScript test with Jasmine Gem
 tags: [rails, javascript, test]
 date: "2013-01-31"
 title: "A trick to use just jasmine gem to test Javascript in Rails"
+hljs: true
 ---
 
 > [Jasmine][] is a behavior-driven development framework for testing JavaScript

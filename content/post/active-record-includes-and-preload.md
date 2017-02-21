@@ -3,6 +3,7 @@ title: ActiveRecord includes and preload
 tags: [rails]
 date: "2013-08-23"
 description: "Post about the differences of includes and preload"
+hljs: true
 ---
 
 `ActiveRecord` has two [query methods][] to eager load associations,

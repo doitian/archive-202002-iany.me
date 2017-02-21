@@ -5,6 +5,7 @@ tags = ["lua"]
 series = ["Lua C API"]
 toc = "right"
 isCJKLanguage = true
+hljs = true
 hljsLanguages = ["lua"]
 description = "介绍 Lua C API 使用方法，详细说明了 Lua 栈的操作"
 +++

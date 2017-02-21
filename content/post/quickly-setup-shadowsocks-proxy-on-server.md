@@ -3,6 +3,7 @@ title: Quickly Setup Shadowsocks Proxy on Server
 date: "2016-12-10"
 tags: [gfw, sysAdmin]
 description: "Setup an HTTP and HTTPS proxy using Shadowsocks server via Shadowsocks client and polipo proxy."
+hljs: true
 ---
 
 Sometimes I want to install some apps, but the site is blocked by GFW. I only have a Shadowsocks server, so I made some research how to setup up an HTTP and HTTPS proxy using Shadowsocks server.

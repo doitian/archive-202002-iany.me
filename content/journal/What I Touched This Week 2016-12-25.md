@@ -3,6 +3,8 @@ title: What I Touched This Week 2016-12-25
 date: 2016-12-25
 series: ["What I Touched"]
 description: "My weekly review report."
+hljs: true
+hljsLanguages: ["yaml"]
 ---
 
 This week I mainly worked on setting up monitoring system using prometheus and grafana.

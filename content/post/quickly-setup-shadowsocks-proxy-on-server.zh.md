@@ -4,6 +4,7 @@ date: "2016-12-10"
 tags: [gfw, sysAdmin]
 description: "使用 Shadowsocks 和 polipo 在服务器上搭建代理"
 isCJKLanguage: true
+hljs: true
 ---
 
 

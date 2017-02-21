@@ -3,6 +3,8 @@ title: What I Touched This 2 Weeks 2016-11-27
 date: 2016-11-27
 series: ["What I Touched"]
 description: "My weekly review report."
+hljs: true
+hljsLanguages: ["yaml"]
 ---
 
 This week I worked on syslog integration in [skynet][1] and delve into details of skynet. I also started using Gitlab CI.
@@ -14,7 +16,7 @@ This week I worked on syslog integration in [skynet][1] and delve into details o
 - [云风的 BLOG: 代理服务和过载保护][2]。使用 debug 命令 PING 可以检查服务是否还在，目前平均响应时间怎么样。命令 LINK 可以用来监控服务是否退出。
 * 弄了一套脚本来编译，安装 skynet，生成和管理  skynet 项目。大概用起来
 
-    ```
+    ``` sh
     # 创建项目 helloworld
     sx new helloworld
     # 启动 skynet 应用
@@ -30,49 +32,50 @@ This week I worked on syslog integration in [skynet][1] and delve into details o
 ## Gitlab CI
 
 *   Gitlab documentation does not mention how to setup docker registry key. Indeed, it requires a pair of RSA keys, use private key in Gitlab and public key in docker registry.
+
 *   In `.gitlab-ci.yml`, variables defined in job level is also effective in top fields, such as `before_script` and `services`. Here is an example to test Rails using MySQL and Postgres
-    
+
         image: rails
-        
+
         services:
         - redis
         - $DB
-        
+
             
         cache:
             key: bundle
             paths:
                 - vendor/bundle
-        
+
         variables:
         POSTGRES_DB: center_test
         POSTGRES_USER: runner
         POSTGRES_PASSWORD: ""
         MYSQL_DATABASE: center_test
         MYSQL_ROOT_PASSWORD: root
-        
+
         before_script:
         - cp config/database.ci-$DB.yml config/database.yml
         - cp .ci.env .env
         - bundle install --jobs $(nproc) --path=vendor/bundle
-        
+
         .test: &test_template
         script:
             - bundle exec rake db:create RAILS_ENV=test
             - RAILS_ENV=test bundle exec rake db:reset
             - bundle exec rake test
-        
+
         test_pg:
         <<: *test_template
         variables:
             DB: postgres
-        
+
         test_mysql:
         <<: *test_template
         variables:
             DB: mysql
 
--   [Using Docker Build - GitLab Documentation][3]. I use dind to build docker images in Gitlab CI. It requires starting docker in privilege mode, which breaks some containers such as mysql. A simple solution is registering 2 docker runners, one is in privilege and another is not. Tag runners and add tags in `.gitlab-ci.yml` to filter runner.
+*   [Using Docker Build - GitLab Documentation][3]. I use dind to build docker images in Gitlab CI. It requires starting docker in privilege mode, which breaks some containers such as mysql. A simple solution is registering 2 docker runners, one is in privilege and another is not. Tag runners and add tags in `.gitlab-ci.yml` to filter runner.
 *   In Mac, `gitlab-ci-multi-runner` must be started in user desktop environment. The runner may stuck at checkout code because the GUI is asking for keychain access. Just approve the access in desktop environment.
 
 ## DevOps

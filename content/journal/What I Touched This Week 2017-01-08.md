@@ -4,6 +4,8 @@ date: 2017-01-08
 series: ["What I Touched"]
 description: "My weekly review report."
 summary: false
+hljs: true
+hljsLanguages: ["yaml"]
 ---
 
 This week I was setting up cocos2d-x project automation build and dependencies management using [masterless saltstack][1].

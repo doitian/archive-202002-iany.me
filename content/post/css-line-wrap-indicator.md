@@ -3,6 +3,7 @@ title: CSS Line Wrap Indicator
 tags: [css, html]
 date: "2012-02-04"
 description: "Display line wrap indicator in gutter using CSS"
+hljs: true
 ---
 
 Many editor can wrap a line that reaches the window width and show an
@@ -75,7 +76,7 @@ I use following two icons. The height is 28px. So also set `span.line`
 - Left: ![left line wrap indicator](/images/201202/line-left.png)
 - Left: ![right line wrap indicator](/images/201202/line-right.png)
 
-```css
+``` css
 span.line {
   line-height: 28px;
 }
@@ -88,7 +89,7 @@ padding. I use padding instead of margin because later I'll set overflow to
 hidden to hide indicators outside of `span.line`, where margin is considered
 outside.
 
-~~~css
+~~~ css
 span.line {
   padding: 0 13px; /* 8px for indicator, 5px for space around text */
   position: relative;
@@ -119,7 +120,7 @@ left indicator is not shown on the first line and right indicator is not shown
 on the last line. But some indicators are moved out, use `overflow:hidden` to
 hide them.
 
-~~~css
+~~~ css
 span.line {
   overflow: hidden;
 }
@@ -138,7 +139,7 @@ Use border and background on `pre` to add different color to indicators
 padding and code block. Use negative margin to align indicators to the
 borders.
 
-```css
+``` css
 pre {
   border-style: solid;
   border-color: #EEE;
