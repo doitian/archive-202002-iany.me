@@ -3,7 +3,7 @@
 {{ with .Site.Params.author }}{{ with .twitter }}
 <meta name="twitter:creator" content="{{ . }}">
 {{ end }}{{ end }}
-<meta name="twitter:description" content="{{ with .Description }}{{ . }}{{ else }}{{ with .Summary }}{{ . | plainify }}{{ else }}{{ .Site.Params.description }}{{ end }}{{ end }}">
+<meta name="twitter:description" content="{{ $.Scratch.Get "Description" }}">
 {{ if isset ($.Scratch.Get "Params") "image" }}
     {{ $imageparams := index ($.Scratch.Get "Params") "image" }}
     {{ with $imageparams.thumb }}
@@ -18,7 +18,7 @@
 <!-- Open Graph -->
 <meta property="og:type" content="article">
 <meta property="og:title" content="{{ .Title }}">
-<meta property="og:description" content="{{ with .Description }}{{ . }}{{ else }}{{ with .Summary }}{{ . | plainify }}{{ else }}{{ .Site.Params.description }}{{ end }}{{ end }}">
+<meta property="og:description" content="{{ $.Scratch.Get "Description" }}">
 <meta property="og:url" content="{{ .Permalink }}">
 <meta property="og:site_name" content="{{ .Site.Title }}">
 {{ with .Site.Params.locale }}<meta property="og:locale" content="{{ . }}" />{{ end }}

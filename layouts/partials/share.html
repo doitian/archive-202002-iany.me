@@ -1,7 +1,25 @@
+{{ $featureImage := "" }}
+{{ if isset ($.Scratch.Get "Params") "image" }}
+  {{ $imageparams := index ($.Scratch.Get "Params") "image" }}
+  {{ with $imageparams.thumb }}
+    {{ $featureImage := . | absURL }}
+  {{ else }}
+    {{ $featureImage := $imageparams.feature | absURL }}
+  {{ end }}
+{{ end }}
+{{ $desc := $.Scratch.Get "Description" }}
 <div class="social-share">
   <ul class="socialcount socialcount-small inline-list">
+    {{ if eq .Lang "zh" }}
+    <li class="qrcode"><a href="#qrcode-popup" title="扫描二维码分享"><span class="count"><i class="fa fa-wechat"></i> 微信</span></a></li>
+    <li class="weibo"><a href="http://service.weibo.com/share/share.php?{{ querify "url" .Permalink "title" .Title "desc" $desc "pic" $featureImage | safeURL }}" target="_blank" title="分享到微博"><span class="count"><i class="fa fa-weibo"></i> 微博</span></a></li>
+    <li class="qq"><a href="http://connect.qq.com/widget/shareqq/index.html?{{ querify "url" "http://blog.iany.me" "title" .Title "source" (absURL "/") "pics" $featureImage "desc" $desc | safeURL }}" target="_blank" title="分享到 QQ"><span class="count"><i class="fa fa-qq"></i> QQ</span></a></li>
+    {{ else }}
+    <li class="qrcode"><a href="#qrcode-popup" title="Scan QR code"><span class="count"><i class="fa fa-qrcode"></i> QR</span></a></li>
+    <li class="twitter"><a href="https://twitter.com/intent/tweet?url={{ .Permalink }}" target="_blank" title="Share on Twitter"><span class="count"><i class="fa fa-twitter-square"></i> Tweet</span></a></li>
     <li class="facebook"><a href="https://www.facebook.com/sharer/sharer.php?u={{ .Permalink }}" target="_blank" title="Share on Facebook"><span class="count"><i class="fa fa-facebook-square"></i> Like</span></a></li>
-    <li class="twitter"><a href="https://twitter.com/intent/tweet?text={{ .Permalink }}" target="_blank" title="Share on Twitter"><span class="count"><i class="fa fa-twitter-square"></i> Tweet</span></a></li>
     <li class="googleplus"><a href="https://plus.google.com/share?url={{ .Permalink }}" target="_blank" title="Share on Google Plus"><span class="count"><i class="fa fa-google-plus-square"></i> +1</span></a></li>
+    {{ end }}
+    </li>
   </ul>
 </div><!-- /.social-share -->

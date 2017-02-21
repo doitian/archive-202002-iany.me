@@ -7,7 +7,16 @@
 <meta charset="utf-8">
 <meta name="language" content="{{ .Site.Language.LanguageName }}">
 <title>{{ if eq .IsHome false }}{{ .Title }} &#8211; {{ end }}{{ .Site.Title }}</title>
-<meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ with .Summary }}{{ . | plainify }}{{ else }}{{ .Site.Params.description }}{{ end }}{{ end }}">
+{{ with .Description }}
+  {{ $.Scratch.Set "Description" . }}
+{{ else }}
+  {{ with .Summary }}
+    {{ $.Scratch.Set "Description" ( . | plainify ) }}
+  {{ else }}
+    {{ $.Scratch.Set "Description" $.Site.Params.description }}
+  {{ end}}
+{{ end }}
+<meta name="description" content="{{ .Scratch.Get "Description" }}">
 {{- if .IsHome }}
     {{ $.Scratch.Set "Params" .Site.Params }}
 {{- else if .IsNode }}
@@ -24,6 +33,7 @@
 {{- with .Site.Params.bing_verify }}<meta name="msvalidate.01" content="{{ . }}">{{ end }}
 
 <link rel="canonical" href="{{ .Permalink }}">
+<meta name="site" content="{{ "/" | absURL }}">
 {{ if .RSSLink }}
   <link href="{{ .RSSLink | relURL | absLangURL }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
   <link href="{{ .RSSLink | relURL | absLangURL }}" rel="feed" type="application/rss+xml" title="{{ .Site.Title }}" />
