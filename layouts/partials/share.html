@@ -16,7 +16,7 @@
     <li class="qq"><a href="http://connect.qq.com/widget/shareqq/index.html?{{ querify "url" "http://blog.iany.me" "title" .Title "source" (absURL "/") "pics" $featureImage "desc" $desc | safeURL }}" target="_blank" title="分享到 QQ"><span class="count"><i class="fa fa-qq"></i> QQ</span></a></li>
     {{ else }}
     <li class="qrcode"><a href="#qrcode-popup" title="Scan QR code"><span class="count"><i class="fa fa-qrcode"></i> QR</span></a></li>
-    <li class="twitter"><a href="https://twitter.com/intent/tweet?url={{ .Permalink }}" target="_blank" title="Share on Twitter"><span class="count"><i class="fa fa-twitter-square"></i> Tweet</span></a></li>
+    <li class="twitter"><a href="https://twitter.com/intent/tweet?{{ querify "url" .Permalink "text" .Title | safeURL }}" target="_blank" title="Share on Twitter"><span class="count"><i class="fa fa-twitter-square"></i> Tweet</span></a></li>
     <li class="facebook"><a href="https://www.facebook.com/sharer/sharer.php?u={{ .Permalink }}" target="_blank" title="Share on Facebook"><span class="count"><i class="fa fa-facebook-square"></i> Like</span></a></li>
     <li class="googleplus"><a href="https://plus.google.com/share?url={{ .Permalink }}" target="_blank" title="Share on Google Plus"><span class="count"><i class="fa fa-google-plus-square"></i> +1</span></a></li>
     {{ end }}
