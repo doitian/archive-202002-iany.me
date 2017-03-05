@@ -1,6 +1,6 @@
 +++
 mathjax = false
-description = ""
+description = "Vcpkg 是微软推出的在 Windows 上管理 C/C++ 库的工具，和 CMake 能很好的集成。不过想要静态链接依赖库需要特殊处理。"
 draft = false
 tags = ["cpp", "windows"]
 date = "2017-03-05T12:13:07+08:00"
