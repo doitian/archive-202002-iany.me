@@ -4,7 +4,7 @@ description = ""
 draft = false
 tags = ["cpp", "windows"]
 date = "2017-03-05T12:13:07+08:00"
-title = "vcpkg static linking.zh"
+title = "使用 vcpkg 链接静态库"
 hljsLanguages = ["cmake"]
 hljs = true
 share = true
@@ -28,14 +28,14 @@ set(Boost_USE_STATIC_RUNTIME ON)
 
 但是设置了上面的参数后，在 Windows 下使用 vcpkg 会提示找不到静态库。看来是 Windows 下没有办法同时提供静态和动态库，所以 [vcpkg 需要额外安装静态库的版本][2]，以 boost 的 64 位的静态库为例，安装命令如下：
 
-	vcpkg install zlib:x64-windows-static
+    vcpkg install zlib:x64-windows-static
 
 而在使用 CMake 生成 Visual Studio 项目的时候也需要指定 `VCPKG_TARGET_TRIPLET`
 
-	cmake .. \
-	  -DCMAKE_TOOLCHAIN_FILE=/path/to/vcpkg.cmake \
-	  -DVCPKG_TARGET_TRIPLET=x64-windows-static \
-	  -G "Visual Studio 14 2015 Win64"
+    cmake .. \
+      -DCMAKE_TOOLCHAIN_FILE=/path/to/vcpkg.cmake \
+      -DVCPKG_TARGET_TRIPLET=x64-windows-static \
+      -G "Visual Studio 14 2015 Win64"
 
 不过这样生成的项目在链接阶段会报错的，因为 VC 的编译器在生成 obj 文件的时候就需要指定链接时是使用动态链接还是静态链接，默认 CMake 生成的项目都是使用动态链接，导致链接时 obj 文件和库的格式不符，这个可以参考 Stack Overflow 上这个问题 [CMake compile with /MT instead of /MD][3] 的回答来修改，最终的 CMake 如下
 
@@ -73,6 +73,7 @@ add_executable(static_link_test
 install(TARGETS static_link_test RUNTIME DESTINATION bin)
 ```
 
-[1]:	https://github.com/Microsoft/vcpkg
-[2]:	https://blogs.msdn.microsoft.com/vcblog/2016/11/01/vcpkg-updates-static-linking-is-now-available/
-[3]:	http://stackoverflow.com/questions/14172856/cmake-compile-with-mt-instead-of-md
+[1]:    https://github.com/Microsoft/vcpkg
+[2]:    https://blogs.msdn.microsoft.com/vcblog/2016/11/01/vcpkg-updates-static-linking-is-now-available/
+[3]:    http://stackoverflow.com/questions/14172856/cmake-compile-with-mt-instead-of-md
+`
