@@ -76,4 +76,3 @@ install(TARGETS static_link_test RUNTIME DESTINATION bin)
 [1]:    https://github.com/Microsoft/vcpkg
 [2]:    https://blogs.msdn.microsoft.com/vcblog/2016/11/01/vcpkg-updates-static-linking-is-now-available/
 [3]:    http://stackoverflow.com/questions/14172856/cmake-compile-with-mt-instead-of-md
-`
