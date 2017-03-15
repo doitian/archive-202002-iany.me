@@ -249,4 +249,5 @@ def start_build():
 if __name__ == '__main__':
     from dotenv import load_dotenv, find_dotenv
     load_dotenv(find_dotenv())
+    os.close(0)
     app.run(host='0.0.0.0', threaded=False, processes=1)
