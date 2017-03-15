@@ -11,6 +11,7 @@ from datetime import datetime
 from qcloud_cos import CosClient, StatFileRequest, UploadFileRequest
 from hashlib import sha1
 from threading import Thread, Lock, current_thread
+import requests
 
 app = Flask(__name__)
 env.shell = u'/bin/bash'
@@ -198,6 +199,17 @@ def _build(job_id):
         job['completed_at'] = _isoformat(completed_ts)
 
         _save()
+
+
+    if 'IFTTT_TOKEN' in os.environ:
+        try:
+            url = 'https://maker.ifttt.com/trigger/blog_posted/with/key/' + os.environ['IFTTT_TOKEN']
+            payload = {'value1': '{status} {duration}s: {git_message}'.format(**job)}
+            requests.post(url,
+                    data=json.dumps(payload),
+                    headers = {'content-type': 'application/json'})
+        except Exception:
+            pass
 
 
 def worker(job_id):
