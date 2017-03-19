@@ -62,3 +62,6 @@
 - id: series.What I Touched.HTML
   translation: |
     This is a post in series &quot;<a href="{{ .Count }}">What I Touched</a>&quot;
+- id: series.macOS Automation.HTML
+  translation: |
+    This is a post in series &quot;<a href="{{ .Count }}">macOS Automation</a>&quot;
