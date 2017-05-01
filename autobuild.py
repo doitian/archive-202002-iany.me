@@ -13,6 +13,9 @@ from hashlib import sha1
 from threading import Thread, Lock, current_thread
 import requests
 
+import socket
+socket.setdefaulttimeout(10.0)
+
 app = Flask(__name__)
 env.shell = u'/bin/bash'
 tzoffset = 8 * 60 * 60
@@ -92,9 +95,9 @@ def _cos_compare(client, bucket, cos_path, file_path=None):
 
     if stat_resp[u'code'] != 0:
         message = stat_resp.get(
-                u'message',
-                u'stat failed: {}'.format(cos_path)
-                )
+            u'message',
+            u'stat failed: {}'.format(cos_path)
+        )
         assert stat_resp[u'code'] == 0, message
 
     if file_path is None:
@@ -129,9 +132,9 @@ def _cos_file(job, client, bucket, cos_path, file_path=None):
     upload_resp = client.upload_file(upload_req)
 
     assert upload_resp[u'code'] == 0, upload_resp.get(
-            u'message',
-            u'upload failed: {}'.format(cos_path)
-            )
+        u'message',
+        u'upload failed: {}'.format(cos_path)
+    )
 
     job[u'files'][cos_path] = compare_result
     _save()
@@ -149,11 +152,11 @@ def _cos(job):
 
     gitcommit_file_path = os.path.abspath(u'gitcommit.txt')
     gitcommit_compare_result = _cos_compare(
-            client,
-            bucket,
-            u'/gitcommit.txt',
-            gitcommit_file_path
-            )
+        client,
+        bucket,
+        u'/gitcommit.txt',
+        gitcommit_file_path
+    )
     if gitcommit_compare_result == u'SKIPPED':
         job[u'files'][u'/gitcommit.txt'] = 'SKIPPED'
         job['steps']['cos'] = True
@@ -200,14 +203,15 @@ def _build(job_id):
 
         _save()
 
-
     if 'IFTTT_TOKEN' in os.environ:
         try:
-            url = 'https://maker.ifttt.com/trigger/blog_posted/with/key/' + os.environ['IFTTT_TOKEN']
-            payload = {'value1': '{status} {duration}s: {git_message}'.format(**job)}
+            url = 'https://maker.ifttt.com/trigger/blog_posted/with/key/' + \
+                os.environ['IFTTT_TOKEN']
+            payload = {
+                'value1': '{status} {duration}s: {git_message}'.format(**job)}
             requests.post(url,
-                    data=json.dumps(payload),
-                    headers = {'content-type': 'application/json'})
+                          data=json.dumps(payload),
+                          headers={'content-type': 'application/json'})
         except Exception:
             pass
 
@@ -226,9 +230,9 @@ def worker(job_id):
 @app.route('/')
 def get_status():
     return Response(
-            json.dumps(status, indent=2),
-            mimetype=u'text/json'
-            )
+        json.dumps(status, indent=2),
+        mimetype=u'text/json'
+    )
 
 
 @app.route('/', methods=['POST'])
