@@ -2723,14 +2723,14 @@ b, i, strong, em, blockquote, p, q, span, figure, img, h1, h2, header, input, a 
    Body
    ========================================================================== */
 body {
-  font-family: -apple-system, "Helvetica Neus", Helvetica, Arial, "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
   color: rgba(34, 34, 34, 0.8); }
 
 /* 
    Headings
    ========================================================================== */
 h1, h2, h3, h4, h5, h6 {
-  font-family: -apple-system, "Helvetica Neus", Helvetica, Arial, "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif; }
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif; }
 
 h1 {
   font-size: 28px;
