@@ -38,7 +38,6 @@ Glyph 中可见像素的最小包围框被称作 Bouncing Box (略作 bbox)。Bo
 之前的代码比较粗暴地把本体和描边中心对齐，然后也没改位图左上角相对原点的偏移。因为不同的字符描边在各个方向多出的尺寸并不是一致的，放在一起就明显会不齐了。
 
 {{% figure src="/images/201705/freetype-glyph-invalid-position.png" link="/images/201705/freetype-glyph-invalid-position.png" title="Glyph 没对齐" %}}
-![](Cocos2D-X%20TTF%20%E5%AD%97%E4%BD%93%E6%8E%92%E7%89%88/freetype-glyph-invalid-position.png)
 
 ## 测试代码
 
