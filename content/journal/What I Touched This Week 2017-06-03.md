@@ -28,5 +28,3 @@ description: "My weekly review report."
 - [facebook/react-vr: Create amazing 360 and VR content using React](https://github.com/facebook/react-vr)
 - [osquery](https://osquery.io/?ref=stackshare) queries system stats using SQL.
 - [Tad - A Desktop Viewer App for Tabular Data](http://tadviewer.com/). Group and aggregate tabular data, such as SQLite, CSV.
-
-## Misc
