@@ -1,6 +1,7 @@
 Flask==0.12
 Werkzeug==0.12.1
-qcloud_cos_v4==0.0.9
 Fabric==1.13.1
 python-dotenv==0.6.3
 requests==2.13.0
+qcloud-cos-v4==0.0.20
+qcloudapi-sdk-python==2.0.2
