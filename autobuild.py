@@ -9,6 +9,7 @@ from fabric.api import env, local as run, lcd as cd
 from time import time
 from datetime import datetime
 from qcloud_cos import CosClient, StatFileRequest, UploadFileRequest
+from QcloudApi.qcloudapi import QcloudApi
 from hashlib import sha1
 from threading import Thread, Lock, current_thread
 import requests
@@ -173,6 +174,29 @@ def _cos(job):
     job['steps']['cos'] = True
     _save()
 
+def _cdn(job):
+    secret_id = _u(os.environ['COS_SECRET_ID'])
+    secret_key = _u(os.environ['COS_SECRET_KEY'])
+    region = _u(os.environ['COS_REGION'])
+    config = {
+            'Region': region,
+            'secretId': secret_id,
+            'secretKey': secret_key,
+            'method': 'post'
+            }
+
+    module = 'cdn'
+    action = 'RefreshCdnUrl'
+
+    service = QcloudApi(module, config)
+    params = {}
+    index = 0
+    for path, _ in job['files'].iteritems():
+        params['urls.' + str(index)] = 'http://blog.iany.me' + path
+    resp = service.call(action, params)
+
+    job['steps']['cdn'] = True
+
 
 def _build(job_id):
     job = {'id': job_id, 'steps': {}}
@@ -187,6 +211,7 @@ def _build(job_id):
         _git(job)
         _hugo(job)
         _cos(job)
+        _cdn(job)
 
     except Exception as e:
         job['status'] = 'failed'
