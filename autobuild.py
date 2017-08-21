@@ -202,7 +202,7 @@ def _cdn(job):
         params['urls.' + str(index)] = _b('http://blog.iany.me' + path)
     resp = service.call(action, params)
 
-    job['steps']['cdn'] = True
+    job['steps']['cdn'] = not not (resp and resp['code'] == 0)
 
 
 def _build(job_id):
