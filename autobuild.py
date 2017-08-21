@@ -25,11 +25,18 @@ worker_mutex = Lock()
 seq_id = 0
 max_jobs = 3
 
-
 if sys.version_info < (3,):
     _u = unicode
+    _b = str
 else:
-    _u = str
+    def _u(text):
+        if isinstance(text, str):
+            return text
+        return str(text, 'utf8')
+    def _b(text):
+        if isinstance(text, bytes):
+            return text
+        return bytes(text, 'utf8')
 
 
 def _status():
@@ -175,9 +182,9 @@ def _cos(job):
     _save()
 
 def _cdn(job):
-    secret_id = _u(os.environ['COS_SECRET_ID'])
-    secret_key = _u(os.environ['COS_SECRET_KEY'])
-    region = _u(os.environ['COS_REGION'])
+    secret_id = os.environ['COS_SECRET_ID']
+    secret_key = os.environ['COS_SECRET_KEY']
+    region = os.environ['COS_REGION']
     config = {
             'Region': region,
             'secretId': secret_id,
@@ -192,7 +199,7 @@ def _cdn(job):
     params = {}
     index = 0
     for path, _ in job['files'].iteritems():
-        params['urls.' + str(index)] = 'http://blog.iany.me' + path
+        params['urls.' + str(index)] = _b('http://blog.iany.me' + path)
     resp = service.call(action, params)
 
     job['steps']['cdn'] = True
