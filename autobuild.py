@@ -97,9 +97,8 @@ def _cos_compare(client, bucket, cos_path, file_path=None):
     stat_req = StatFileRequest(bucket, cos_path)
     stat_resp = client.stat_file(stat_req)
 
-    if stat_resp[u'code'] == -2:
-        if stat_resp[u'message'].endswith(u'status_code:404'):
-            return u'CREATED'
+    if stat_resp[u'code'] == -197:
+        return u'CREATED'
 
     if stat_resp[u'code'] != 0:
         message = stat_resp.get(
