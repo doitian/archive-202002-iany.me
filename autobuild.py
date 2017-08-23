@@ -106,7 +106,7 @@ def _cos_compare(client, bucket, cos_path, file_path=None):
             u'message',
             u'stat failed: {}'.format(cos_path)
         )
-        assert stat_resp[u'code'] == 0, message
+        assert stat_resp[u'code'] == 0, "{}: {}".format(stat_resp[u'code'], message)
 
     if file_path is None:
         file_path = os.path.abspath(u'src/public' + cos_path)
