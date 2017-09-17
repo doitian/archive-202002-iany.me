@@ -11,7 +11,7 @@ from datetime import datetime
 from qcloud_cos import CosClient, StatFileRequest, UploadFileRequest
 from QcloudApi.qcloudapi import QcloudApi
 from hashlib import sha1
-from threading import Thread, Lock, current_thread
+from threading import Thread, Lock
 import requests
 
 import socket
@@ -33,6 +33,7 @@ else:
         if isinstance(text, str):
             return text
         return str(text, 'utf8')
+
     def _b(text):
         if isinstance(text, bytes):
             return text
@@ -180,6 +181,7 @@ def _cos(job):
     job['steps']['cos'] = True
     _save()
 
+
 def _cdn(job):
     secret_id = os.environ['COS_SECRET_ID']
     secret_key = os.environ['COS_SECRET_KEY']
@@ -201,7 +203,7 @@ def _cdn(job):
         params['urls.' + str(index)] = _b('http://blog.iany.me' + path)
     resp = service.call(action, params)
 
-    job['steps']['cdn'] = resp
+    job['steps']['cdn'] = {'params': params, 'resp': resp}
 
 
 def _build(job_id):
