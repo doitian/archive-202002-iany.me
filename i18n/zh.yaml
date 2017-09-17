@@ -53,12 +53,15 @@
   translation: |
     <noscript>请允许 JavaScript 查看 <a href="http://disqus.com/?ref_noscript">Disqus 上的评论</a>。</noscript>
     <a href="http://disqus.com/" class="dsq-brlink">评论由 <span class="logo-disqus">Disqus</span> 提供服务</a>
+- id: copyright.gameHTML
+  translation:
+    本文中出现的游戏相关资源、截图版权归游戏版权方所有
 - id: series.Lua C API.HTML
   translation: |
     这是系列文章『<a href="{{ .Count }}">Lua C API</a>』中的一篇。
 - id: series.macOS Automation.HTML
   translation: |
     这是系列文章『<a href="{{ .Count }}">macOS 自动化</a>』中的一篇。
-- id: copyright.gameHTML
-  translation:
-    本文中出现的游戏相关资源、截图版权归游戏版权方所有
+- id: series.Graylog.HTML
+  translation: |
+    这是系列文章『<a href="{{ .Count }}">Graylog 集中日志管理</a>』中的一篇。
