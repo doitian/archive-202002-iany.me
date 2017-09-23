@@ -201,6 +201,7 @@ def _cdn(job):
     index = 0
     for path, _ in job['files'].iteritems():
         params['urls.' + str(index)] = _b('http://blog.iany.me' + path)
+        index = index + 1
     resp = service.call(action, params)
 
     job['steps']['cdn'] = {'params': params, 'resp': resp}
