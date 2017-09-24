@@ -3,7 +3,7 @@ title: "Graylog 集中日志管理 - 安装"
 date: "2017-09-17T19:28:47+08:00"
 series: ["Graylog"]
 tags: ["graylog", "devops"]
-description: ""
+description: "Graylog 安装说明和可能出现的问题"
 comment: true
 share: true
 hljs: false
