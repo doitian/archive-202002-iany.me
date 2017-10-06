@@ -1,0 +1,8 @@
+#!/bin/bash
+
+set -e
+set -u
+[ -n "$DEBUG" ] && set -x
+
+git push
+git push github
