@@ -32,8 +32,6 @@ summary: true
 
 - [How to set syslog ident in Python](https://stackoverflow.com/a/41126591/667158)
 
-- [Scaling Event Sourcing for Netflix Downloads, Episode 2](https://medium.com/netflix-techblog/scaling-event-sourcing-for-netflix-downloads-episode-2-ce1b54d46eec)
-
 ## Projects & Tools
 
 - [mattgreen/watchexec: Executes commands or restart server in response to file modifications](https://github.com/mattgreen/watchexec)
