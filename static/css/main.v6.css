@@ -67,6 +67,19 @@ body {
    Reset CSS
    Adapted from http://github.com/necolas/normalize.css
    ========================================================================== */
+a,
+area,
+button,
+[role="button"],
+input:not([type=range]),
+label,
+select,
+summary,
+textarea {
+  -ms-touch-action: manipulation;
+      touch-action: manipulation;
+}
+
 *, *:after, *:before {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
