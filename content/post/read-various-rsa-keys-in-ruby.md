@@ -12,9 +12,9 @@ mathjax: false
 
 I recently worked in a Ruby on Rails project which should integrate with many different payment systems. There system mostly use RSA in encryption and signature. However they provide the RSA keys in different formats, it is a challenge to choose a right way to read the keys in Ruby.
 
-<!-- more -->
-
 RSA is an asymmetric cryptographic algorithm, thus it requires two keys, private key and public key. The key itself is just binary, but it can be encoded in different format.
+
+<!-- more -->
 
 # DER/PEM
 
