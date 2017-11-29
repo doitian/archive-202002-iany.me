@@ -2,12 +2,14 @@
 date = "2017-01-15T23:47:32+08:00"
 title = "About"
 share = false
-description = "I'm Ian Yang, Partner and CTO of 3pjgames. I also worked for Groupon, Intridea, iZENEsoft and Augmentum before."
+description = "I'm Ian Yang, Software Developer. I'm working in Game Development now. I also worked for Groupon, Intridea, iZENEsoft and Augmentum before."
 +++
 
-I'm Ian Yang, Partner and CTO of [3pjgames][1]. I also worked for [Groupon][2], [Intridea][3], [iZENEsoft][4] and [Augmentum][5] before.
+I'm Ian Yang, Software Developer. I'm working in Game Development now. I have worked for [Groupon][2], [Intridea][3], [iZENEsoft][4] and [Augmentum][5] before.
 
-I focus on game design and development now, especially the techniques to deliver high performance back-end, game automated build, test, publish and deployment.
+My current interests are high permance backend software development, machine learning and blockchain. 
+
+I have several year experiences in game design and development, especially the techniques to deliver high performance back-end, game automated build, test, publish and deployment.
 
 I also did several years web development for POS and payments system, as well as server-side application development in field advertising, information retrieval, machine learning and data mining.
 
@@ -25,12 +27,11 @@ I also did several years web development for POS and payments system, as well as
 - [Coursera][11]
 - [c\<\>de school][12]
 
-[1]:	https://www.3pjgames.com
 [2]:	http://www.groupon.com/
 [3]:	http://www.intridea.com
 [4]:	http://www.izenesoft.com
 [5]:	http://www.augmentum.com
-[6]:	https://dl.dropbox.com/u/328394/lead_software_engineer-ian_yang.pdf
+[6]:	http://shared.iany.me/2017/11/29-eaa93d/lead_software_engineer-ian_yang.pdf
 [7]:	http://www.linkedin.com/in/ianyang
 [8]:	https://twitter.com/doitian
 [9]:	https://github.com/doitian
