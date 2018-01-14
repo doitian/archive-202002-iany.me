@@ -1,8 +1,7 @@
 ---
 title: "理解 Asymmetric Revocable Commitments"
-date: 2018-01-14T15:33:59+08:00
+date: 2018-01-14T15:44:51+08:00
 tags: [blockchain]
-draft: true
 description: "通过一步一步分析每一步可能的结果，理解 Asymmetric Revocable Commitments 工作原理"
 comment: true
 share: true
@@ -29,7 +28,7 @@ Wikipedia 上有[介绍和例子]([Lightning Network - https://en.wikipedia.org/
 
 原始笔记如下
 
-```
+``` text
 ## Initial
 
 ### Alice closing (A1)
