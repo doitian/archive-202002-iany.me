@@ -1,5 +1,5 @@
 ---
-title: What I Touched This 2 Weeks 2016-11-27
+title: What I Touched This Week 2016-11-27
 date: 2016-11-27
 series: ["What I Touched"]
 description: "My weekly review report."
