@@ -2,7 +2,6 @@
 title: "Vim Marks Stack"
 date: 2018-05-31T11:30:42+08:00
 tags: [vim]
-draft: true
 description: "Use marks as a stack in Vim"
 comment: true
 share: true
