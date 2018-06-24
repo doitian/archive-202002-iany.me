@@ -48,8 +48,6 @@ summary: true
 
 # Bookmarks
 
-# Safari Tabs at 6/24/2018, 10:15:05 PM
-
 * [Netflix/zuul: Zuul is a gateway service that provides dynamic routing, monitoring, resiliency, security, and more.](https://github.com/Netflix/zuul)
 * [Rules of Machine Learning:  |  Machine Learning Rules  |  Google Developers](https://developers.google.com/machine-learning/rules-of-ml/)
 * [The online IDE for web applications. Powered by Visual Studio Code. - StackBlitz](https://stackblitz.com/)
