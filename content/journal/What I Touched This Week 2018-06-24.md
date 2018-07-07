@@ -12,8 +12,8 @@ summary: true
 
 ## Rust
 
-* [Exploring Rust fat pointers](https://iandouglasscott.com/2018/05/28/exploring-rust-fat-pointers/#disqus_thread)
-* [Typed Key Pattern](https://matklad.github.io//2018/05/24/typed-key-pattern.html#disqus_thread)
+* [Exploring Rust fat pointers](https://iandouglasscott.com/2018/05/28/exploring-rust-fat-pointers/)
+* [Typed Key Pattern](https://matklad.github.io/2018/05/24/typed-key-pattern.html)
 * [Pretty State Machine Patterns in Rust](https://hoverbear.org/2016/10/12/rust-state-machine-pattern/)
 
 
