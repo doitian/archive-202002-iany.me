@@ -1,5 +1,5 @@
 ---
-title: What I Touched This Week 2018-06-24
+title: What I Touched This Week 2018-07-01
 date: 2018-07-01
 series: ["What I Touched"]
 description: "My weekly review report."
