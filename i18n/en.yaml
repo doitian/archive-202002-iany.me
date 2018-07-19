@@ -65,3 +65,6 @@
 - id: series.macOS Automation.HTML
   translation: |
     This is a post in series &quot;<a href="{{ .Count }}">macOS Automation</a>&quot;
+- id: series.Blockchain Projects Review.HTML
+  translation: |
+    This is a post in series &quot;<a href="{{ .Count }}">Blockchain Projects Review</a>&quot;
