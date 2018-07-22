@@ -10,6 +10,7 @@ share: true
 hljs: false
 hljsLanguages: []
 mathjax: false
+summary: false
 ---
 
 [Official References](https://docs.decred.org/research/overview/)
