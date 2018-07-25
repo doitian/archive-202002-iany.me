@@ -22,7 +22,6 @@ series = "series"
 [params]
 description = "A personal blog with tech, game and etc."
 hiddenSections = ["page", "life", "journal"]
-cdn = "//cdn.iany.me"
 
 [params.sections.post]
 icon = "laptop"

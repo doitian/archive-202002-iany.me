@@ -41,14 +41,3 @@ And append following line to the file and save it.
 Then restart sudo session
 
     $ sudo -K
-
-You can [import the macros]({{ site.cdn }}/files/201401/Internal Keyboard.kmmacros) or create by
-yourself. You have to change the USB device name to match your external
-keyboard, which can be checked in system information.
-
-{% capture images %}
-  {{ site.cdn }}/images/201401/usb-device-name.png
-  {{ site.cdn }}/images/201401/enable.png
-  {{ site.cdn }}/images/201401/disable.png
-{% endcapture %}
-{% include gallery images=images caption="Popup snapshot" cols=3 %}
