@@ -35,7 +35,7 @@ I had to work on Windows for a project, thus did some research to make it suck l
 [3]:    http://stackoverflow.com/a/2860971/667158
 [4]:    https://www.howtogeek.com/howto/3218/how-to-drag-files-to-the-taskbar-to-open-them-in-windows-7/
 [5]:    https://github.com/Microsoft/vcpkg/blob/master/docs/EXAMPLES.md
-[6]:    http://blog.iany.me/zh/2017/02/lua-c-api-intro/
+[6]:    https://blog.iany.me/zh/2017/02/lua-c-api-intro/
 [7]:    http://stackoverflow.com/a/33673440/667158
 [8]:    https://omni-automation.com
 [9]:    https://github.com/muesli/beehive

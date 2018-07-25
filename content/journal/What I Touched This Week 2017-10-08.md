@@ -6,8 +6,8 @@ description: "My weekly review report."
 summary: true
 ---
 
-- [Graylog 集中日志管理 - 收集日志](http://blog.iany.me/zh/2017/09/centralized-logs-using-graylog-collecting/)
-- [Graylog 集中日志管理 - 日志处理](http://blog.iany.me/zh/2017/10/centralized-logs-using-graylog-processing/)
+- [Graylog 集中日志管理 - 收集日志](https://blog.iany.me/zh/2017/09/centralized-logs-using-graylog-collecting/)
+- [Graylog 集中日志管理 - 日志处理](https://blog.iany.me/zh/2017/10/centralized-logs-using-graylog-processing/)
 - To make android cmd tools work with Java 9
 
         export JAVA_OPTS="--add-modules=java.se.ee"

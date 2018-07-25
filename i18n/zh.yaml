@@ -46,13 +46,13 @@
   translation: 阅读时间~{{ .Count }}分钟
 - id: copyrightHTML
   translation: |
-    <p><span>除特别说明，所有内容使用<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">署名-相同方式共享 (CC-BY-SA)</a>.</p>
+    <p><span>除特别说明，所有内容使用<a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/">署名-相同方式共享 (CC-BY-SA)</a>.</p>
 
     <span>Powered by <a href="https://gohugo.io/" rel="nofollow">Hugo</a> with theme <a href="https://github.com/dldx/hpstr-hugo-theme" rel="nofollow">HPSTR</a>.</span>
 - id: disqusHTML
   translation: |
-    <noscript>请允许 JavaScript 查看 <a href="http://disqus.com/?ref_noscript">Disqus 上的评论</a>。</noscript>
-    <a href="http://disqus.com/" class="dsq-brlink">评论由 <span class="logo-disqus">Disqus</span> 提供服务</a>
+    <noscript>请允许 JavaScript 查看 <a href="https://disqus.com/?ref_noscript">Disqus 上的评论</a>。</noscript>
+    <a href="https://disqus.com/" class="dsq-brlink">评论由 <span class="logo-disqus">Disqus</span> 提供服务</a>
 - id: copyright.gameHTML
   translation:
     本文中出现的游戏相关资源、截图版权归游戏版权方所有

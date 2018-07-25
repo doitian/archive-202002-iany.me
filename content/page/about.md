@@ -25,15 +25,13 @@ I also did several years web development for POS and payments system, as well as
 ## My Completed Courses
 
 - [Coursera][11]
-- [c\<\>de school][12]
 
-[2]:	http://www.groupon.com/
+[2]:	https://www.groupon.com/
 [3]:	http://www.intridea.com
-[4]:	http://www.izenesoft.com
-[5]:	http://www.augmentum.com
+[4]:	https://www.linkedin.com/company/izenesoft-shanghai-co.-ltd/
+[5]:	https://www.augmentum.com
 [6]:	http://shared.iany.me/2017/11/29-eaa93d/lead_software_engineer-ian_yang.pdf
-[7]:	http://www.linkedin.com/in/ianyang
+[7]:	https://www.linkedin.com/in/ianyang
 [8]:	https://twitter.com/doitian
 [9]:	https://github.com/doitian
 [11]:	https://www.coursera.org/user/i/bbafd1ce323b828803f265dba73d9968
-[12]:	http://www.codeschool.com/users/iany

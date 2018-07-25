@@ -1,4 +1,4 @@
-baseurl = "http://blog.iany.me/"
+baseurl = "https://blog.iany.me/"
 defaultContentLanguage = "en"
 hasCJKLanguage = true
 copyright = "Except where otherwise noted, content on this site is licensed under CC-BY-SA"

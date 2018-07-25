@@ -18,7 +18,7 @@ summary: true
 
 ## Posts
 
-* [Decred Review](http://blog.iany.me/2018/07/decred-review/)
+* [Decred Review](https://blog.iany.me/2018/07/decred-review/)
 
 <!--more-->
 

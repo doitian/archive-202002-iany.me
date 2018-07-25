@@ -6,7 +6,7 @@ description: "My weekly review report."
 summary: true
 ---
 
-* [Vim Marks Stack – ~iany/blog](http://blog.iany.me/2018/05/vim-marks-stack/)
+* [Vim Marks Stack – ~iany/blog](https://blog.iany.me/2018/05/vim-marks-stack/)
 
 <!--more-->
 

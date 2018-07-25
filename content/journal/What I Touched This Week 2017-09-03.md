@@ -25,8 +25,8 @@ summary: false
 
 ## Posts
 
-- [Redis as Write Buffer](http://blog.iany.me/2017/08/redis-write-buffer/)
-- [Nginx UDP Load Balance](http://blog.iany.me/2017/08/nginx-udp-load-balance/)
+- [Redis as Write Buffer](https://blog.iany.me/2017/08/redis-write-buffer/)
+- [Nginx UDP Load Balance](https://blog.iany.me/2017/08/nginx-udp-load-balance/)
 
 ## Game Dev
 

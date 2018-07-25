@@ -52,13 +52,13 @@
   translation: English
 - id: copyrightHTML
   translation: |
-    <p><span>Except where otherwise noted, content on this site is licensed under <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">CC-BY-SA</a>.</p>
+    <p><span>Except where otherwise noted, content on this site is licensed under <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/">CC-BY-SA</a>.</p>
 
     <span>Powered by <a href="https://gohugo.io/" rel="nofollow">Hugo</a> with theme <a href="https://github.com/dldx/hpstr-hugo-theme" rel="nofollow">HPSTR</a>.</span>
 - id: disqusHTML
   translation: |
-    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-    <a href="http://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <a href="https://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
 - id: series.What I Touched.HTML
   translation: |
     This is a post in series &quot;<a href="{{ .Count }}">What I Touched</a>&quot;

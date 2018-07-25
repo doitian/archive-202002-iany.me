@@ -12,8 +12,8 @@
   <ul class="socialcount socialcount-small inline-list">
     {{ if eq .Lang "zh" }}
     <li class="qrcode"><a href="#qrcode-popup" title="扫描二维码分享"><span class="count"><i class="fa fa-wechat"></i> 微信</span></a></li>
-    <li class="weibo"><a href="http://service.weibo.com/share/share.php?{{ querify "url" .Permalink "title" .Title "desc" $desc "pic" $featureImage | safeURL }}" target="_blank" title="分享到微博"><span class="count"><i class="fa fa-weibo"></i> 微博</span></a></li>
-    <li class="qq"><a href="http://connect.qq.com/widget/shareqq/index.html?{{ querify "url" "http://blog.iany.me" "title" .Title "source" (absURL "/") "pics" $featureImage "desc" $desc | safeURL }}" target="_blank" title="分享到 QQ"><span class="count"><i class="fa fa-qq"></i> QQ</span></a></li>
+    <li class="weibo"><a href="https://service.weibo.com/share/share.php?{{ querify "url" .Permalink "title" .Title "desc" $desc "pic" $featureImage | safeURL }}" target="_blank" title="分享到微博"><span class="count"><i class="fa fa-weibo"></i> 微博</span></a></li>
+    <li class="qq"><a href="https://connect.qq.com/widget/shareqq/index.html?{{ querify "url" "https://blog.iany.me" "title" .Title "source" (absURL "/") "pics" $featureImage "desc" $desc | safeURL }}" target="_blank" title="分享到 QQ"><span class="count"><i class="fa fa-qq"></i> QQ</span></a></li>
     {{ else }}
     <li class="qrcode"><a href="#qrcode-popup" title="Scan QR code"><span class="count"><i class="fa fa-qrcode"></i> QR</span></a></li>
     <li class="twitter"><a href="https://twitter.com/intent/tweet?{{ querify "url" .Permalink "text" .Title | safeURL }}" target="_blank" title="Share on Twitter"><span class="count"><i class="fa fa-twitter-square"></i> Tweet</span></a></li>

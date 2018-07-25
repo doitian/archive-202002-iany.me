@@ -21,7 +21,7 @@ load_module /usr/lib/nginx/modules/ngx_stream_module.so;
 
 下面的片段配置了监听 UDP 1515，把请求平均的发给 3 台机器的 1514 UDP 端口。需要注意的，这个配置片段必须在 `nginx.conf` 的顶层，像 `site-enabled` 下的配置文件一般是嵌套在 `http` 下的，所以不能放那里面。
 
-配置里的 [proxy_responses](http://nginx.org/en/docs/stream/ngx_stream_proxy_module.html#proxy_responses) 是等待代理服务返回包并发回客户端的个数，这个需要根据场景配置。因为我是用来接受 `rsyslog` 的日志转发的，并不需要返回消息，也没有返回消息。同时请求量非常大，如果不设置为 0，Nginx 会因为不断创建连接，最终耗尽而无法响应新的请求。
+配置里的 [proxy_responses](https://nginx.org/en/docs/stream/ngx_stream_proxy_module.html#proxy_responses) 是等待代理服务返回包并发回客户端的个数，这个需要根据场景配置。因为我是用来接受 `rsyslog` 的日志转发的，并不需要返回消息，也没有返回消息。同时请求量非常大，如果不设置为 0，Nginx 会因为不断创建连接，最终耗尽而无法响应新的请求。
 
 ```
 stream {
