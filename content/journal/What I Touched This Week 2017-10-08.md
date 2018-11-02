@@ -3,7 +3,7 @@ title: What I Touched This Week 2017-10-08
 date: 2017-10-08
 series: ["What I Touched"]
 description: "My weekly review report."
-summary: true
+summary: false
 ---
 
 - [Graylog 集中日志管理 - 收集日志](https://blog.iany.me/zh/2017/09/centralized-logs-using-graylog-collecting/)

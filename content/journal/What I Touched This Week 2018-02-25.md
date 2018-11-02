@@ -3,7 +3,7 @@ title: What I Touched This Week 2018-02-25
 date: 2018-02-25
 series: ["What I Touched"]
 description: "My weekly review report."
-summary: true
+summary: false
 ---
 
 ## Tech Readings

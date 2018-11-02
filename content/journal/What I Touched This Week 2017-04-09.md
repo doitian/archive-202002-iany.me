@@ -3,6 +3,7 @@ title: What I Touched This Week 2017-04-09
 date: 2017-04-09
 series: ["What I Touched"]
 description: "Last week I made a tool to preview Live2D models in batch, and back port TTF outline patch to cocos2d-x quick community edition."
+summary: false
 ---
 
 Last week I made a tool to preview Live2D models in batch, and back port TTF outline patch to cocos2d-x quick community edition.

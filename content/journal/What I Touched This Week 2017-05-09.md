@@ -3,6 +3,7 @@ title: What I Touched This Week 2017-05-09
 date: 2017-05-09
 series: ["What I Touched"]
 description: "My weekly review report."
+summary: false
 ---
 
 - [macOS 如何在全屏 App 或拥挤的桌面间便捷拖动文件 - 少数派](https://sspai.com/post/39003?utm_content=buffer44e0b&utm_medium=social&utm_source=twitter.com&utm_campaign=buffer)。不使用第三方软件的文件拖动技巧。

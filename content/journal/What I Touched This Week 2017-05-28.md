@@ -3,6 +3,7 @@ title: What I Touched This Week 2017-05-28
 date: 2017-05-28
 series: ["What I Touched"]
 description: "My weekly review report."
+summary: false
 ---
 
 - [Bitcoin Paper](https://bitcoin.org/bitcoin.pdf)

@@ -3,6 +3,7 @@ title: What I Touched This Week 2017-06-03
 date: 2017-06-03 
 series: ["What I Touched"]
 description: "My weekly review report."
+summary: false
 ---
 
 - [Raymond Hettinger Modern Python Dictionaries A confluence of a dozen great ideas PyCon 2017 - YouTube](https://www.youtube.com/watch?v=npw4s1QTmPg)

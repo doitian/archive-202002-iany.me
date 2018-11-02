@@ -3,6 +3,7 @@ title: What I Touched This Week 2016-11-06
 date: 2016-11-06
 series: ["What I Touched"]
 description: "My weekly review report."
+summary: false
 ---
 
 This week I worked on rsyslog research and management. The work on terraform-provider-ucloud is postponed. 

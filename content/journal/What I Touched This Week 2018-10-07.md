@@ -3,7 +3,7 @@ title: What I Touched This Week 2018-10-07
 date: 2018-10-07
 series: ["What I Touched"]
 description: "My weekly review report."
-summary: true
+summary: false
 ---
 
 * [Code Must Be Clean. And Clear.](https://www.yegor256.com/2018/09/12/clear-code.html)

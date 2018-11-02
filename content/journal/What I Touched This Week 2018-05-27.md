@@ -3,7 +3,7 @@ title: What I Touched This Week 2018-05-27
 date: 2018-05-27
 series: ["What I Touched"]
 description: "My weekly review report."
-summary: true
+summary: false
 ---
 
 * [Convert `git diff` output to the format can be recognized by vim quickfix.](https://gist.github.com/doitian/4046a5d53233d8351c1bb981ae2d3b1d)

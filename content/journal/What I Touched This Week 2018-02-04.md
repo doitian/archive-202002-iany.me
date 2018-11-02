@@ -3,7 +3,7 @@ title: What I Touched This Week 2018-02-04
 date: 2018-02-04
 series: ["What I Touched"]
 description: "My weekly review report."
-summary: true
+summary: false
 ---
 
 * [A Beginner’s Guide To Quantum Computing - YouTube](https://www.youtube.com/watch?v=JRIPV0dPAd4&feature=youtu.be)

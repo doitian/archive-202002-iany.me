@@ -3,7 +3,7 @@ title: What I Touched This Week 2017-11-26
 date: 2017-11-26
 series: ["What I Touched"]
 description: "My weekly review report."
-summary: true
+summary: false
 ---
 
 # Maching Learning

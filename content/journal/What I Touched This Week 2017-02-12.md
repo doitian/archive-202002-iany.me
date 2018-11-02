@@ -3,6 +3,7 @@ date: "2017-02-12"
 title: "What I Touched This Week 2017-02-12"
 series: ["What I Touched"]
 description: "My weekly review report."
+summary: false
 ---
 
 This week I have worked on Lua API of Sentry using its Objective-C and Android client.

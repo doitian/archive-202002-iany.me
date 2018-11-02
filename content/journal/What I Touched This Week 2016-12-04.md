@@ -5,6 +5,7 @@ series: ["What I Touched"]
 description: "My weekly review report."
 hljs: true
 hljsLanguages: ["yaml"]
+summary: false
 ---
 
 This week I setup servers using [SaltStack][1] and continue automate building and deployment using Gitlab CI.

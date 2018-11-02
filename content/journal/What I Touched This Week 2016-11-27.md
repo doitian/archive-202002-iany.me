@@ -5,6 +5,7 @@ series: ["What I Touched"]
 description: "My weekly review report."
 hljs: true
 hljsLanguages: ["yaml"]
+summary: false
 ---
 
 This week I worked on syslog integration in [skynet][1] and delve into details of skynet. I also started using Gitlab CI.

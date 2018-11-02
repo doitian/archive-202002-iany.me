@@ -3,7 +3,7 @@ title: What I Touched This Week 2018-05-20
 date: 2018-05-20
 series: ["What I Touched"]
 description: "My weekly review report."
-summary: true
+summary: false
 ---
 
 * [Towards a Practice of Token Engineering – Ocean Protocol](https://blog.oceanprotocol.com/towards-a-practice-of-token-engineering-b02feeeff7ca)

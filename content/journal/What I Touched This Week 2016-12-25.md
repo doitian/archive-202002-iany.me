@@ -5,6 +5,7 @@ series: ["What I Touched"]
 description: "My weekly review report."
 hljs: true
 hljsLanguages: ["yaml"]
+summary: false
 ---
 
 This week I mainly worked on setting up monitoring system using prometheus and grafana.

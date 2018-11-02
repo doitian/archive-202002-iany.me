@@ -3,7 +3,7 @@ title: What I Touched This Week 2017-12-31
 date: 2017-12-31
 series: ["What I Touched"]
 description: "My weekly review report."
-summary: true
+summary: false
 ---
 
 - [Bindgen: awesome Rust tool for generating C bindings - Julia Evans](https://jvns.ca/blog/2017/12/21/bindgen-is-awesome/)

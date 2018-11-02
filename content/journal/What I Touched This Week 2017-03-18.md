@@ -3,6 +3,7 @@ title: What I Touched This Week 2017-03-18
 date: 2017-03-18
 series: ["What I Touched"]
 description: "My weekly review report."
+summary: false
 ---
 
 ## Programming

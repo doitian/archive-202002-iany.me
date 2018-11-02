@@ -3,7 +3,7 @@ title: What I Touched This Week 2018-10-21
 date: 2018-10-21
 series: ["What I Touched"]
 description: "My weekly review report."
-summary: true
+summary: false
 ---
 
 * [Office Hours #0: Debugging with GDB](http://smallcultfollowing.com/babysteps/blog/2018/09/21/office-hours-0-debugging-with-gdb/)
