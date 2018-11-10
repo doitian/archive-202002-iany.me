@@ -68,3 +68,6 @@
 - id: series.Blockchain Projects Review.HTML
   translation: |
     This is a post in series &quot;<a href="{{ .Count }}">Blockchain Projects Review</a>&quot;
+- id: series.Weekly Paper.HTML
+  translation: |
+    This is a post in series &quot;<a href="{{ .Count }}">Weekly Paper</a>&quot;
