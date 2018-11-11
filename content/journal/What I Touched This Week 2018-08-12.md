@@ -46,7 +46,7 @@ summary: false
 
 * [如何实践比尔·盖茨的读书方法，这是我的经验之谈 - 少数派](https://sspai.com/post/46007)
 
-# Bookmarks
+## Bookmarks
 
 - [faressoft/terminalizer: 🦄 Record your terminal and generate animated gif images](https://github.com/faressoft/terminalizer)
 * [Colorless - Color scheme generator for mobile apps](https://colorless.app/)

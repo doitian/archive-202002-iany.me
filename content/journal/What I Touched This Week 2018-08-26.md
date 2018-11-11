@@ -27,7 +27,7 @@ summary: false
 
 * [Ethereum Development Walkthrough (Part 2: Truffle, Ganache, Geth and Mist)](https://hackernoon.com/ethereum-development-walkthrough-part-2-truffle-ganache-geth-and-mist-8d6320e12269)
 
-# Programming
+## Programming
 
 * [Elegant Library APIs in Rust - Pascal’s Scribbles](https://deterministic.space/elegant-apis-in-rust.html#what-makes-an-api-elegant)
 * [How to alleviate the pain of Rust compile times](https://vfoley.xyz/rust-compile-speed-tips/)

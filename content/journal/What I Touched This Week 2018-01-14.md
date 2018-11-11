@@ -6,7 +6,7 @@ description: "My weekly review report."
 summary: false
 ---
 
-# Rust
+## Rust
 
 * [Making TRust-DNS faster than BIND9](https://bluejekyll.github.io/blog/rust/2017/12/29/making-trust-dns-fast.html)
 
@@ -17,13 +17,13 @@ summary: false
 
 <!--more-->
 
-# Blockchain
+## Blockchain
 
 * [Understanding How ECDSA Protects Your Data.: 15 Steps](http://www.instructables.com/id/Understanding-how-ECDSA-protects-your-data/)
 * [Cardano: Ethereum and NEO Killer or Overhyped and Overpriced?](https://hackernoon.com/cardano-ethereum-and-neo-killer-or-overhyped-and-overpriced-8fcd5f8abcdf)
 * [NEO versus Ethereum: Why NEO might be 2018’s strongest cryptocurrency](https://hackernoon.com/neo-versus-ethereum-why-neo-might-be-2018s-strongest-cryptocurrency-79956138bea3)
 
-# Misc
+## Misc
 
 * [I’m harvesting credit card numbers and passwords from your site. Here’s how.](https://hackernoon.com/im-harvesting-credit-card-numbers-and-passwords-from-your-site-here-s-how-9a8cb347c5b5)
 

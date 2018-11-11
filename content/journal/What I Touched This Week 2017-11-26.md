@@ -6,7 +6,7 @@ description: "My weekly review report."
 summary: false
 ---
 
-# Maching Learning
+## Maching Learning
 
 - [The Secret to Strong AI – Numenta](https://medium.com/@Numenta/the-secret-to-strong-ai-61d153e26273)
 
@@ -14,7 +14,7 @@ summary: false
 
 - [Backpropagation In Convolutional Neural Networks - DeepGrid](http://www.jefkine.com/general/2016/09/05/backpropagation-in-convolutional-neural-networks/)
 
-# Blockchain
+## Blockchain
 
 - [Slasher: A Punitive Proof-of-Stake Algorithm - Ethereum Blog]( https://blog.ethereum.org/2014/01/15/slasher-a-punitive-proof-of-stake-algorithm/)
 
@@ -26,7 +26,7 @@ summary: false
 
 <!--more-->
 
-# Misc
+## Misc
 
 - [Read Various RSA Keys in Ruby – ~iany/blog](https://blog.iany.me/2017/11/read-various-rsa-keys-in-ruby/)
 - [ZFS 文件恢复 – ~iany 博客](https://blog.iany.me/zh/2017/11/zfs-file-restore/)

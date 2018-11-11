@@ -16,12 +16,12 @@ I had to work on Windows for a project, thus did some research to make it suck l
 
 开始分享一些 Lua 的心得，这是第一篇 [Lua C API 简介][6]
 
-# Game Programming
+## Game Programming
 
 - [Your Game Doesn't Need UDP (Yet) | glyph | ThoughtStreams][11]
 - [Unity下XLua方案的各值类型GC优化深度剖析\_Gad-腾讯游戏开发者平台][12]
 
-# Misc
+## Misc
 
 - Diff images by [highlight differences using different colors][7].
 - [Universal JS automation in OmniGroup apps][8]

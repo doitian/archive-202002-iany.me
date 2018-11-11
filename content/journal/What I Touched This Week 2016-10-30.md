@@ -10,23 +10,23 @@ This week I work on [terraform-provider-ucloud][1], which already has implemente
 
 <!--more-->
 
-# terraform-provider-ucloud
+## terraform-provider-ucloud
 
 * [Paw 里进行 UCloud API 签名验证 – Medium][2]
 * [golang - 如何判断字符是不是中文？ - SegmentFault][3] 用`[\p{Han}]+`
 * [terraform/helper/resource/testing.go][4] is helper for provider testing. Set environment variable `TF_ACC` to run the acceptance test.
 * [dnaeon/go-vcr: Record and replay your HTTP interactions for fast, deterministic and accurate tests][5]
 
-# Game Development
+## Game Development
 
 * [【十一充电】十五年经验网易高级美术总监：详解次世代MMO流程管理及设计理念][6]
 
-# Management
+## Management
 
 * [Becoming a CTO // Juozas Kaziukėnas][7]
 * [Culture: Drafting your team’s Constitution][8] How Parsable Builds their Company Culture.
 
-# Tools
+## Tools
 
 * I switched to [Paste – smart clipboard history manager for Mac][9] from Copied. I like Paste UI and the simplicity to pin copied items into list.
 * [You don’t need more than one cursor in vim – Medium][10] Use `cgn` and `.` to replace is handy.
@@ -34,7 +34,7 @@ This week I work on [terraform-provider-ucloud][1], which already has implemente
 * [vitorgalvao][12] has shared [many useful Alfred workflows][13]. He is also a top contributor in [Packal][14].
 * [在服务器上快速使用 Shadowsocks 搭建一个代理 – Medium][15] Use polipo converting Shadowsocks proxy to HTTP proxy.
 
-# Misc
+## Misc
 
 * [没有了老师，你该如何学习？ – ThoughtWorks洞见][16]，[技术的执念 – ThoughtWorks洞见][17] 和 [The path of software development craftsmanship][18] 都提到了应该避免被层出不穷的技术牵着鼻子走，静下心来把时间投资在底层和顶层不怎么变的技术上，中间易变的用到什么学什么。
 * [Task Performance Indicator: A Management Metric for Customer Experience · An A List Apart Article][19]. It Introduced TPI to measure customer experience and how Cisco uses it to improve products.
@@ -45,7 +45,7 @@ This week I work on [terraform-provider-ucloud][1], which already has implemente
 * [Become a Better Coder by Keeping a Programming Journal][24] However I prefer digital journal, since it is simple to keep links and I can click to open them.
 * Podcast [Job Preservation][25]First of a short series about the business of dying.
 
-# Bookmarks
+## Bookmarks
 
 * [LightNote][26] This site is an attempt to teach you just enough essential music theory to take you from a tab-reader to a music creator!
 * [Kong - Open-Source API Management and Microservice Management][27]. API Gateway built on Nginx.

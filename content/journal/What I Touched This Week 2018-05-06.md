@@ -24,7 +24,7 @@ summary: false
 
 <!--more-->
 
-# Fail2ban Quick Start
+## Fail2ban Quick Start
 
 - Add regex in `filter.d`
 - Test regex with `fail2ban-regex`.
@@ -42,8 +42,6 @@ summary: false
 
 
 ## Bookmarks
-
-# Safari Tabs at 5/6/2018, 8:52:21 PM
 
 * [tarpc/pre-commit at master · google/tarpc](https://github.com/google/tarpc/blob/master/hooks/pre-commit)
 

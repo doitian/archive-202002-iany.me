@@ -42,7 +42,7 @@ summary: false
 
     > The answer: by planning ahead. And planning ahead the right way.
 
-# Bookmarks
+## Bookmarks
 
 * [Feed43 : Convert web pages into professionally looking RSS feeds](https://feed43.com/)
 * [An Introduction to the History of Graphic Design](http://www.designhistory.org/index.html)

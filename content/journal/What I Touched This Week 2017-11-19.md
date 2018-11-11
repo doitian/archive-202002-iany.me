@@ -6,12 +6,12 @@ description: "My weekly review report."
 summary: false
 ---
 
-# Machine Learning
+## Machine Learning
 
 - [What’s happening inside the Convolutional Neural Network? The answer is Convolution.](https://buzzrobot.com/whats-happening-inside-the-convolutional-neural-network-the-answer-is-convolution-2c22075dc68d)
 - [RedditSota/state-of-the-art-result-for-machine-learning-problems: This repository provides state of the art (SoTA) results for all machine learning problems.](https://github.com/RedditSota/state-of-the-art-result-for-machine-learning-problems#reinforcement-learning)
 
-# Blockchain
+## Blockchain
 
 - [Ethereum Casper 101 – jon choi – Medium](https://medium.com/@jonchoi/ethereum-casper-101-7a851a4f1eb0)
 - [Ganache | Truffle Suite](http://truffleframework.com/ganache/)
@@ -20,7 +20,7 @@ summary: false
 
 <!--more-->
 
-# Other
+## Other
 
 - [Easily print GitHub markdown as beautiful PDFs](http://gitprint.com/)
 - [jeanblanchard/docker-alpine-glibc: Minimal Alpine Linux Docker image with glibc](https://github.com/jeanblanchard/docker-alpine-glibc)

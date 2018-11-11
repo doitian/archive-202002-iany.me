@@ -38,7 +38,7 @@ summary: false
     - Which code is exercised by this test?
     - Which test covers this bit of code?
 
-# Misc
+## Misc
 
 * [Communication Multitasking: You Only Get 1h 12min/day Without Email](https://blog.rescuetime.com/communication-multitasking/)
 * [大型科技公司總是犯錯的原因：堆棧謬誤 | 香港矽谷](https://www.hksilicon.com/articles/1005351)
@@ -46,7 +46,7 @@ summary: false
 * [Exporting a Still Image (JPEG, TIFF, or PNG) from a Quicktime Movie — Parker Wilson](http://parkerwilson.com/blog/2012/07/28/exporting-a-still-image-from-a-quicktime-movie)
 * [Why I left Mac for Windows: Apple has given up – Charged Tech – Medium](https://medium.com/charged-tech/why-i-left-mac-for-windows-apple-has-given-up-b48c0eaac64)
 
-# Bookmarks
+## Bookmarks
 
 * [Netflix/zuul: Zuul is a gateway service that provides dynamic routing, monitoring, resiliency, security, and more.](https://github.com/Netflix/zuul)
 * [Rules of Machine Learning:  |  Machine Learning Rules  |  Google Developers](https://developers.google.com/machine-learning/rules-of-ml/)

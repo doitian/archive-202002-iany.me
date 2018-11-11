@@ -17,10 +17,10 @@ summary: false
 
     Crates used: [nom](https://github.com/Geal/nom), [regex](https://github.com/rust-lang/regex), [rayon](https://github.com/rayon-rs/rayon)
 
-# Papers
+## Papers
 
 * [Tezos: A Self-Amending Crypto-Ledger Position Paper](https://tezos.com/pdf/position_paper.pdf)
 
-# Bookmarks
+## Bookmarks
 
 - [Upcase, the learning platform from thoughtbot](https://thoughtbot.com/upcase/practice)

@@ -6,7 +6,7 @@ description: "My weekly review report."
 summary: false
 ---
 
-# Programming
+## Programming
 
 - [Source Directories Not Being Created In New Project – IDEs Support (IntelliJ Platform) | JetBrains](https://intellij-support.jetbrains.com/hc/en-us/community/posts/206806425-Source-Directories-Not-Being-Created-In-New-Project)
 
@@ -49,7 +49,7 @@ summary: false
 
 <!--more-->
 
-# Design
+## Design
 
 - [Sketch App Awesomeness 👌 – Design + Sketch – Medium](https://medium.com/sketch-app-sources/sketch-app-awesomeness-d6db04bf9ccb)
 
@@ -59,7 +59,7 @@ summary: false
 
     微信团队 Sketch 插件集
 
-# Misc
+## Misc
 
 - [The Stanley Parable：一场反设计与荒谬哲学的狂欢 - 知乎专栏](https://zhuanlan.zhihu.com/p/24265418?utm_content=bufferf48fc&utm_medium=social&utm_source=twitter.com&utm_campaign=buffer)
 
