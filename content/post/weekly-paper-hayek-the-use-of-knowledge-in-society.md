@@ -1,5 +1,5 @@
 ---
-title: "Weekly Paper: Helix"
+title: "Weekly Paper: 1945 - Hayek - The Use of Knowledge in Society"
 date: 2018-11-25T14:15:15+08:00
 tags: [economics]
 series: ["Weekly Paper"]
