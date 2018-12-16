@@ -3,6 +3,8 @@
 import os
 import sys
 import traceback
+import hashlib
+import hmac
 
 from flask import Flask, Response, request, json, jsonify
 from fabric.api import env, local as run, lcd as cd
@@ -275,14 +277,16 @@ def start_build():
         print("ERROR: not JSON request")
         return Response(status="405")
 
-    payload = request.get_json()
-    print("POST {}".format(payload))
+    payload_data = request.get_data()
+    print("POST {}".format(payload_data))
     if 'PUSH_TOKEN' in os.environ:
-        if ('token' not in payload or
-                payload['token'] != os.environ['PUSH_TOKEN']):
-            print("ERROR: Token not matched")
+        h = hmac.new(os.environ['PUSH_TOKEN'], payload_data, hashlib.sha1)
+        signature = 'sha1=' + h.hexdigest()
+        if signature != request.headers['X-Coding-Signature']:
+            print("ERROR: Token not matched, expected {}".format(signature))
             return Response(status="403")
 
+    payload = json.loads(payload_data)
     if ('ref' not in payload or payload['ref'] != 'refs/heads/master'):
         print("ERROR: ref is not master")
         return jsonify(job_id='')
