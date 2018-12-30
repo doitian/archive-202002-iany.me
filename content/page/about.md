@@ -2,10 +2,17 @@
 date = "2017-01-15T23:47:32+08:00"
 title = "About"
 share = false
-description = "I'm Ian Yang, Software Developer. I'm working in Game Development now. I also worked for Groupon, Intridea, iZENEsoft and Augmentum before."
+description = "I'm Ian Yang, Software Developer. I'm developing CKB for Nervos now. I also worked for Hooyagames, Groupon, Intridea, iZENEsoft and Augmentum before."
 +++
 
-I'm Ian Yang, Software Developer. I'm working in Game Development now. I have worked for [Groupon][2], [Intridea][3], [iZENEsoft][4] and [Augmentum][5] before.
+I'm Ian Yang, Software Developer. I'm developing CKB for [Nervos] now. I also worked for [Hooyagames], [Groupon], [Intridea], [iZENEsoft] and [Augmentum] before.
+
+[nervos]:		https://www.nervos.org
+[hooyagames]:	http://www.hooyagames.com
+[groupon]:		https://www.groupon.com/
+[intridea]:		http://www.intridea.com
+[izenesoft]:	https://www.linkedin.com/company/izenesoft-shanghai-co.-ltd/
+[augmentum]:	https://www.augmentum.com
 
 My current interests are high permance backend software development, machine learning and blockchain. 
 
@@ -17,21 +24,10 @@ I also did several years web development for POS and payments system, as well as
 
 ## Me, Elsewhere
 
-- Twitter: [@doitian][8]
-- GitHub: [doitian][9]
-- LinkedIn: [Ian Yang][7]
-- Resume: [software\_engineer-ian\_yang.pdf][6]
+- Twitter: [@doitian][twitter]
+- GitHub: [doitian][github]
+- LinkedIn: [Ian Yang][linkedin]
 
-## My Completed Courses
-
-- [Coursera][11]
-
-[2]:	https://www.groupon.com/
-[3]:	http://www.intridea.com
-[4]:	https://www.linkedin.com/company/izenesoft-shanghai-co.-ltd/
-[5]:	https://www.augmentum.com
-[6]:	http://shared.iany.me/2017/11/29-eaa93d/lead_software_engineer-ian_yang.pdf
-[7]:	https://www.linkedin.com/in/ianyang
-[8]:	https://twitter.com/doitian
-[9]:	https://github.com/doitian
-[11]:	https://www.coursera.org/user/i/bbafd1ce323b828803f265dba73d9968
+[twitter]:	https://twitter.com/doitian
+[github]:	https://github.com/doitian
+[linkedin]:	https://www.linkedin.com/in/ianyang

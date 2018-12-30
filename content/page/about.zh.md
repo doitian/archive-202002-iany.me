@@ -2,10 +2,17 @@
 date = "2017-01-15T23:47:32+08:00"
 title = "关于"
 share = false
-description = "我是 Ian Yang, 软件开发者。目前从事游戏开发。我也曾在 Groupon, Intridea, 载信和群硕工作过。"
+description = "我是 Ian Yang, 软件开发者。目前在 Nervos 开发 CKB。我也曾在 虎牙游戏, Groupon, Intridea, 载信和群硕工作过。"
 +++
 
-我是 Ian Yang, 软件开发者。目前从事游戏开发。我也曾在 [Groupon][2], [Intridea][3], [载信][4]和[群硕][5]工作过。
+我是 Ian Yang, 软件开发者。目前在 [Nervos] 开发 CKB。我也曾在 [虎牙游戏][hooyagames], [Groupon], [Intridea], [载信][izenesoft]和[群硕][augmentum]工作过。
+
+[nervos]:		https://www.nervos.org
+[hooyagames]:	http://www.hooyagames.com
+[groupon]:		https://www.groupon.com/
+[intridea]:		http://www.intridea.com
+[izenesoft]:	https://www.linkedin.com/company/izenesoft-shanghai-co.-ltd/
+[augmentum]:	https://www.augmentum.com
 
 目前的兴趣有高性能后端程序开发，机器学习以及区块链。
 
@@ -15,23 +22,10 @@ description = "我是 Ian Yang, 软件开发者。目前从事游戏开发。我
 
 ## 其它账号
 
-- Twitter: [@doitian][8]
-- GitHub: [doitian][9]
-- Coding.net: [doitian][13]
-- LinkedIn: [Ian Yang][7]
-- Resume: [software\_engineer-ian\_yang.pdf][6]
+- Twitter: [@doitian][twitter]
+- GitHub: [doitian][github]
+- LinkedIn: [Ian Yang][linkedin]
 
-## 我完成的课程
-
-- [Coursera][11]
-
-[2]:	https://www.groupon.com/
-[3]:	http://www.intridea.com
-[4]:	https://www.linkedin.com/company/izenesoft-shanghai-co.-ltd/
-[5]:	https://www.augmentum.com
-[6]:	http://shared.iany.me/2017/11/29-eaa93d/lead_software_engineer-ian_yang.pdf
-[7]:	https://www.linkedin.com/in/ianyang
-[8]:	https://twitter.com/doitian
-[9]:	https://github.com/doitian
-[11]:	https://www.coursera.org/user/i/bbafd1ce323b828803f265dba73d9968
-[13]:   https://coding.net/u/doitian
+[twitter]:	https://twitter.com/doitian
+[github]:	https://github.com/doitian
+[linkedin]:	https://www.linkedin.com/in/ianyang
