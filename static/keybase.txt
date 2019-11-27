@@ -1,0 +1,56 @@
+==================================================================
+https://keybase.io/doitian
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://blog.iany.me
+  * I am doitian (https://keybase.io/doitian) on keybase.
+  * I have a public key ASB_rvPjEBPWpzP_C_luLHOKH1FED6zSXD3ip-i3XSLVUAo
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "01207faef3e31013d6a733ff0bf96e2c738a1f51440facd25c3de2a7e8b75d22d5500a",
+      "host": "keybase.io",
+      "kid": "01207faef3e31013d6a733ff0bf96e2c738a1f51440facd25c3de2a7e8b75d22d5500a",
+      "uid": "849d9cd7c87ac436e9955efdaec48019",
+      "username": "doitian"
+    },
+    "merkle_root": {
+      "ctime": 1574828782,
+      "hash": "3d3764e0649ba926e4f561e966d1f4e6fc38291756d9806c62912ff6e066144981dceb05a874d8fa456a6d6408db82b370fa3e94fc765b22c42d03e97bf62114",
+      "hash_meta": "662a70ac2db0115d7e04302cf7d6809f7cde468494ddbcd3ecdb38b38013deb0",
+      "seqno": 11012455
+    },
+    "service": {
+      "entropy": "0eI7syvMGcJXEc8MIJZasFo3",
+      "hostname": "blog.iany.me",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 2
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "5.0.0"
+  },
+  "ctime": 1574828796,
+  "expire_in": 504576000,
+  "prev": "7ef9c141b06396198942b933039c1614efb2c5a5236ac61480cdcdb14203ff1e",
+  "seqno": 8,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgf67z4xAT1qcz/wv5bixzih9RRA+s0lw94qfot10i1VAKp3BheWxvYWTESpcCCMQgfvnBQbBjlhmJQrkzA5wWFO+yxaUjasYUgM3NsUID/x7EIP9jG6iqEez4GGZubSiMoFv8A9FSrM3gYdXITyLzrd59AgHCo3NpZ8RAguzXLResqjGu/XREurV+9jH2qv0VTvrcBJp3ts5M7V9TYni+8KTn4X90PQjvUucJw/HZ9ep79dPcdVrYNFVJD6hzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEIJJwCKzFNDG2nHk4AtxgSRw7jTsCdaHAjLMVa6eThlpro3RhZ80CAqd2ZXJzaW9uAQ==
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/doitian
+
+==================================================================
