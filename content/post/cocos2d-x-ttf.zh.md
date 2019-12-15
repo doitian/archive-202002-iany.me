@@ -43,7 +43,7 @@ Glyph 中可见像素的最小包围框被称作 Bouncing Box (略作 bbox)。Bo
 
 要测试的话，比较方便的是使用有 FreeType 库的脚本语言，比如 Python，下面的代码使用到了 freetype-py 来生成位图，然后使用 Pillow 生成图片。
 
-{{% codecaption name="main.py" link="https://github.com/doitian/freetype-label-test/blob/master/main.py" %}}
+{{< codecaption name="main.py" link="https://github.com/doitian/freetype-label-test/blob/master/main.py" >}}
 
 ``` python
 import freetype as ft
@@ -101,6 +101,6 @@ if __name__ == '__main__':
     main(2)
 ```
 
-{{% /codecaption %}}
+{{< /codecaption >}}
 
 完整项目代码在 [GitHub - doitian/freetype-label-test](https://github.com/doitian/freetype-label-test)

@@ -39,7 +39,7 @@ second.
 value object, which class constructor accepts date and time strings. See
 `CompoundDatetime#initialize` below.
 
-{{% codecaption name="compound_datetime.rb" link="https://github.com/doitian/rails-compound-input-demo/blob/master/composed_of/app/models/compound_datetime.rb" %}}
+{{< codecaption name="compound_datetime.rb" link="https://github.com/doitian/rails-compound-input-demo/blob/master/composed_of/app/models/compound_datetime.rb" >}}
 
 ``` ruby
 class CompoundDatetime
@@ -71,12 +71,12 @@ class CompoundDatetime
 end
 ```
 
-{{% /codecaption %}}
+{{< /codecaption >}}
 
 Then setup the mapping in model `Event`:
 
 
-{{% codecaption link="https://github.com/doitian/rails-compound-input-demo/blob/master/composed_of/app/models/event.rb" name="event.rb" %}}
+{{< codecaption link="https://github.com/doitian/rails-compound-input-demo/blob/master/composed_of/app/models/event.rb" name="event.rb" >}}
 
 ```ruby
 class Event < ActiveRecord::Base
@@ -91,11 +91,11 @@ class Event < ActiveRecord::Base
 end
 ```
 
-{{% /codecaption %}}
+{{< /codecaption >}}
 
 The form view just needs set correct name:
 
-{{% codecaption link="https://github.com/doitian/rails-compound-input-demo/blob/master/composed_of/app/views/events/_form.html.erb" name="events/_form.html.erb" %}}
+{{< codecaption link="https://github.com/doitian/rails-compound-input-demo/blob/master/composed_of/app/views/events/_form.html.erb" name="events/_form.html.erb" >}}
 
 ```
 <div class="field">
@@ -105,7 +105,7 @@ The form view just needs set correct name:
 </div>
 ```
 
-{{% codecaption %}}
+{{< codecaption >}}
 
 fields_for
 ----------
@@ -121,7 +121,7 @@ First create `CompoundDatetime` class which exposes date and time
 fields. `assign_attributes` handles the hash params passed from form. Method
 `persisted?` is required to quiet `NoMethodError`.
 
-{{% codecaption link="https://github.com/doitian/rails-compound-input-demo/blob/master/fields_for/app/models/compound_datetime.rb" name="compound_datetime.rb" %}}
+{{< codecaption link="https://github.com/doitian/rails-compound-input-demo/blob/master/fields_for/app/models/compound_datetime.rb" name="compound_datetime.rb" >}}
 
 ``` ruby
 class CompoundDatetime
@@ -156,11 +156,11 @@ class CompoundDatetime
 end
 ```
 
-{{% /codecaption %}}
+{{< /codecaption >}}
 
 The model just delegates the named attribute and `<field>_attributes=` method to `CompoundDatetime`.
 
-{{% codecaption link="https://github.com/doitian/rails-compound-input-demo/blob/master/fields_for/app/models/event.rb" name="event.rb" %}}
+{{< codecaption link="https://github.com/doitian/rails-compound-input-demo/blob/master/fields_for/app/models/event.rb" name="event.rb" >}}
 
 ```ruby
 class Event < ActiveRecord::Base
@@ -178,11 +178,11 @@ class Event < ActiveRecord::Base
 end
 ```
 
-{{% /codecaption %}}
+{{< /codecaption >}}
 
 The form view uses `fields_for` helper to nest fields of `compound_begining_time`.
 
-{{% codecaption link="https://github.com/doitian/rails-compound-input-demo/blob/master/fields_for/app/views/events/_form.html.erb" name="events/_form.html.erb" %}}
+{{< codecaption link="https://github.com/doitian/rails-compound-input-demo/blob/master/fields_for/app/views/events/_form.html.erb" name="events/_form.html.erb" >}}
 
 ```
 <div class="field">

@@ -10,7 +10,6 @@ share: true
 hljs: false
 hljsLanguages: []
 mathjax: true
-summary: true
 ---
 
 https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3243656

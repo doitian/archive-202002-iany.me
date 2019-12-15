@@ -22,7 +22,7 @@ description = "介绍 Lua C API 使用方法，详细说明了 Lua 栈的操作"
 
 先介绍如何在 C 中嵌入 Lua。下面的例子中初始化了 Lua 虚拟机，并执行了一段 Lua 代码。
 
-{{% codecaption name="lua-c-api-template.c" link="https://coding.net/u/doitian/p/lua-c-api-intro/git/blob/master/lua-c-api-template.c" %}}
+{{< codecaption name="lua-c-api-template.c" link="https://coding.net/u/doitian/p/lua-c-api-intro/git/blob/master/lua-c-api-template.c" >}}
 
 ~~~ c
 #include <lua.h>
@@ -51,7 +51,7 @@ int main(int argc, char* argv[]) {
 }
 ~~~
 
-{{% /codecaption %}}
+{{< /codecaption >}}
 
 上面代码要求使用至少 Lua 5.1，否则 `luaL_newstate` 需要改成 `lua_open`, `luaL_openlibs` 要拆成单独的各个标准库加载方法比如 `luaopen_io`。
 
@@ -72,7 +72,7 @@ Lua C API 的核心就是操作栈，所有的操作都是通过栈实现的。�
 
 执行该方法需要把全局变量的值压入栈，调用成功后会被自动弹出。下面是使用的例子，注释中是等价的 Lua 代码。完整代码点击文件名查看。
 
-{{% codecaption name="globals.c" link="https://coding.net/u/doitian/p/lua-c-api-intro/git/blob/master/globals.c" %}}
+{{< codecaption name="globals.c" link="https://coding.net/u/doitian/p/lua-c-api-intro/git/blob/master/globals.c" >}}
 
 ~~~ c
 // g_int = 10
@@ -101,7 +101,7 @@ lua_setfield(L, -2, "name");
 lua_setglobal(L, "g_table");
 ~~~
 
-{{% /codecaption %}}
+{{< /codecaption >}}
 
 以最复杂的 `g_table` 为例说明栈的变化。
 
@@ -138,7 +138,7 @@ end
 
 下面是 `lua_call` 和 `lua_pcall` 的例子。
 
-{{% codecaption name="call-lua-function.c" link="https://coding.net/u/doitian/p/lua-c-api-intro/git/blob/master/call-lua-function.c" %}}
+{{< codecaption name="call-lua-function.c" link="https://coding.net/u/doitian/p/lua-c-api-intro/git/blob/master/call-lua-function.c" >}}
 
 ~~~ c
 lua_getglobal(L, "identity"); // identity
@@ -166,7 +166,7 @@ if (status) {
 }
 ~~~
 
-{{% /codecaption %}}
+{{< /codecaption >}}
 
 其中 `lua_call` 调用的方法实际返回一个结果，但是声明了要两个返回结果，所以第二个是 nil。而 `lua_pcall` 通过 C 返回值来判断是否有错误。这两个方法都可以通过传 `LUA_MULTRET` 作为返回结果的数量，这样所有实际的返回值都会留在栈上，调用者需要自己对比栈上元素数量差来判断有多少个实际的返回值。
 
@@ -189,7 +189,7 @@ API `lua_pushcfunction` 的使用本身比较简单，关键是如果实现 C �
 
 下面是一个用 C 实现的 `string_split` 方法示例，其中 `string_split` 的具体实现可以点击文件名查看完整文件。
 
-{{% codecaption name="cfunction.c" link="https://coding.net/u/doitian/p/lua-c-api-intro/git/blob/master/cfunction.c" %}}
+{{< codecaption name="cfunction.c" link="https://coding.net/u/doitian/p/lua-c-api-intro/git/blob/master/cfunction.c" >}}
 
 ~~~ c
 /***
@@ -230,7 +230,7 @@ static int l_string_split(lua_State* L) {
 }
 ~~~
 
-{{% /codecaption %}}
+{{< /codecaption >}}
 
 ### Lua C 闭包方法
 
@@ -246,7 +246,7 @@ API `lua_pushcclosure` 同样将一个 C Function 压入栈，不过可以关联
 
 下面是一个用 C 闭包实现的随机数发生器的例子。
 
-{{% codecaption name="cclosure.c" link="https://coding.net/u/doitian/p/lua-c-api-intro/git/blob/master/cclosure.c" %}}
+{{< codecaption name="cclosure.c" link="https://coding.net/u/doitian/p/lua-c-api-intro/git/blob/master/cclosure.c" >}}
 
 ~~~ c
 // 算法提取自 POSIX.1-2001 rand()实现
@@ -281,7 +281,7 @@ static int l_random_generator(lua_State* L) {
 }
 ~~~
 
-{{% /codecaption %}}
+{{< /codecaption >}}
 
 ## C 模块
 
@@ -301,7 +301,7 @@ require "cjson.safe"
 
 下面把之前的 `string_split` 变成模块作为示例。这里只贴出了入口方法，完整文件点击文件名查看。其中的 `l_string_split` 就是上面定义的 C Function。注意入口方法必须 export 才能被动态加载，DLL 应该用 `__declspec(dllexport)`，so 应该用 `extern`。下面的例子定义了一个宏 `STRING_SPLIT_EXPORT`
 
-{{% codecaption name="string_split.c" link="https://coding.net/u/doitian/p/lua-c-api-intro/git/blob/master/csrc/string_split.c" %}}
+{{< codecaption name="string_split.c" link="https://coding.net/u/doitian/p/lua-c-api-intro/git/blob/master/csrc/string_split.c" >}}
 
 ~~~ c
 #ifdef _MSC_VER
@@ -327,7 +327,7 @@ STRING_SPLIT_EXPORT int luaopen_string_split(lua_State *L) {
 }
 ~~~
 
-{{% /codecaption %}}
+{{< /codecaption >}}
 
 测试的话，在编译出来的动态链接库所在目录执行正确版本的 Lua：
 
