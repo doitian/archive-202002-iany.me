@@ -34,9 +34,9 @@
 
 <link rel="canonical" href="{{ .Permalink }}">
 <meta name="site" content="{{ "/" | absURL }}">
-{{ if .RSSLink }}
-  <link href="{{ .RSSLink | relURL | absLangURL }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
-  <link href="{{ .RSSLink | relURL | absLangURL }}" rel="feed" type="application/rss+xml" title="{{ .Site.Title }}" />
+{{ with .OutputFormats.Get "rss" }}
+  <link href="{{ .Permalink | relURL | absLangURL }}" rel="alternate" type="application/rss+xml" title="{{ $.Site.Title }}" />
+  <link href="{{ .Permalink | relURL | absLangURL }}" rel="feed" type="application/rss+xml" title="{{ $.Site.Title }}" />
 {{ end }}
 <meta name="HandheldFriendly" content="True">
 <meta name="MobileOptimized" content="320">
@@ -47,7 +47,7 @@
 
 <meta http-equiv="cleartype" content="on">
 <!-- Hugo version -->
-{{ .Hugo.Generator }}
+<meta name="generator" content="Hugo 0.18.1" />
 <!-- Load Modernizr -->
 <script src="{{ "/js/vendor/modernizr-2.6.2.custom.min.js" | relURL }}"></script>
 

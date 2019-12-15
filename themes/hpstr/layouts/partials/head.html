@@ -23,9 +23,9 @@
 {{ with .Site.Params.bing_verify }}<meta name="msvalidate.01" content="{{ . }}">{{ end }}
 
 <link rel="canonical" href="{{ .Permalink }}">
-{{ if .RSSLink }}
-  <link href="{{ .RSSLink }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
-  <link href="{{ .RSSLink }}" rel="feed" type="application/rss+xml" title="{{ .Site.Title }}" />
+{{ with .OutputFormats.Get "rss" }}
+  <link href="{{ .Permalink }}" rel="alternate" type="application/rss+xml" title="{{ $.Site.Title }}" />
+  <link href="{{ .Permalink }}" rel="feed" type="application/rss+xml" title="{{ $.Site.Title }}" />
 {{ end }}
 <!-- http://t.co/dKP3o1e -->
 <meta name="HandheldFriendly" content="True">
@@ -39,7 +39,7 @@
 
 <meta http-equiv="cleartype" content="on">
 <!-- Hugo version -->
-{{ .Hugo.Generator }}
+<meta name="generator" content="Hugo 0.18.1" />
 <!-- Load Modernizr -->
 <script src="{{ "/js/vendor/modernizr-2.6.2.custom.min.js" | relURL }}"></script>
 

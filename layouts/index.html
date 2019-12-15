@@ -21,7 +21,7 @@
 </div><!-- /.entry-header -->
 
 <div id="main" role="main">
-{{ $paginator := .Paginate (where .Data.Pages "Section" "not in" $.Site.Params.hiddenSections) }}
+{{ $paginator := .Paginate (where .Site.RegularPages "Section" "not in" $.Site.Params.hiddenSections) }}
 {{ range $paginator.Pages }}
 <article class="hentry">
   <header>
@@ -36,9 +36,9 @@
         {{ end }}
       <span class="entry-section">
         <a href="{{ print "/" .Section "/" | relLangURL }}">
-          {{ with (index (index $.Site.Data.sections .Section) "icon") }}
+          {{ with (index $.Site.Data.sections .Section) }}{{ with (index . "icon") }}
           <i class="fa fa-fw fa-{{ . }}"></i>
-          {{ end }}
+          {{ end }}{{ end }}
           {{ print "sections." .Section | i18n }}
         </a>
       </span><!-- /.entry-section -->
@@ -50,15 +50,13 @@
     {{ end }}
   </header>
   <div class="entry-content">
-    {{ if (eq .Params.summary false) }}
-    {{ .Content }}
-    {{ else }}
+    {{ if .Truncated }}
     {{ .Summary }}
-      {{ if .Truncated }}
     <footer class="entry-meta">
       <a class="continue-reading btn-inverse" href="{{ .RelPermalink }}">{{ i18n "continueReading" }} &hellip;</a>
     </footer>
-      {{ end }}
+    {{ else }}
+    {{ .Content }}
     {{ end }}
   </div><!-- /.entry-content -->
 </article><!-- /.hentry -->

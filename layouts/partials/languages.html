@@ -1,7 +1,7 @@
-{{ if or .IsTranslated .RSSLink }}
+{{ if or .IsTranslated (.OutputFormats.Get "rss") }}
 <ul class="languages inline-list">
-  {{ if .RSSLink }}
-  <li class="active"><a href="{{ $.RSSLink | relURL | absLangURL }}" title="{{ i18n "subscribeRSS" }}">{{ "label.subscribe" | i18n }} <i class="fa fa-rss"></i></a></li>
+  {{ with .OutputFormats.Get "rss" }}
+  <li class="active"><a href="{{ .Permalink | relURL | absLangURL }}" title="{{ i18n "subscribeRSS" }}">{{ "label.subscribe" | i18n }} <i class="fa fa-rss"></i></a></li>
   {{ end }}
   {{ $translations := .Translations }}
   {{ range $.Site.Languages }}

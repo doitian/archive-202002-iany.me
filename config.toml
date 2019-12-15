@@ -8,6 +8,10 @@ disqusShortname = "ianyblog"
 footnoteReturnLinkContents = "↩"
 enableRobotsTXT = true
 
+[markup.highlight]
+codeFences = false
+
+
 [permalinks]
 post = "/:year/:month/:filename/"
 page = "/:filename/"

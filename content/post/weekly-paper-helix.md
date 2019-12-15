@@ -10,7 +10,6 @@ share: true
 hljs: false
 hljsLanguages: []
 mathjax: false
-summary: false
 ---
 
 [Orbs - Read the Helix Consensus Algorithm White Paper](https://orbs.com/helix-consensus-whitepaper/)
