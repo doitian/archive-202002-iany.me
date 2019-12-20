@@ -73,7 +73,7 @@ def _git(job):
         check_call('mv src.tmp src'.split())
 
     git_log = check_output(
-        'git -C src log -1 --pretty=oneline'.split(), encoding='utf-8')
+        'git -C src log -1 --pretty=oneline'.split()).decode('utf-8')
     with open('gitcommit.txt', 'w') as fd:
         fd.write(git_log)
     job['git_sha1'], job['git_message'] = git_log.split(' ', 1)
