@@ -2,10 +2,10 @@
 date = "2017-01-15T23:47:32+08:00"
 title = "About"
 share = false
-description = "I'm Ian Yang, Software Developer. I'm developing CKB for Nervos now. I also worked for Hooyagames, Groupon, Intridea, iZENEsoft and Augmentum before."
+description = "I'm Ian Yang, a software developer. I'm developing CKB for Nervos now. I also worked for Hooyagames, Groupon, Intridea, iZENEsoft and Augmentum before."
 +++
 
-I'm Ian Yang, Software Developer. I'm developing CKB for [Nervos] now. I also worked for [Hooyagames], [Groupon], [Intridea], [iZENEsoft] and [Augmentum] before.
+I'm Ian Yang, a software developer. I'm developing CKB for [Nervos] now. I also worked for [Hooyagames], [Groupon], [Intridea], [iZENEsoft] and [Augmentum] before.
 
 [nervos]:		https://www.nervos.org
 [hooyagames]:	http://www.hooyagames.com
