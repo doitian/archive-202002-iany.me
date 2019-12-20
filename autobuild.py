@@ -237,7 +237,7 @@ def start_build():
     payload_data = request.get_data()
     print("POST {}".format(payload_data))
     if 'PUSH_TOKEN' in os.environ:
-        h = hmac.new(os.environ['PUSH_TOKEN'], payload_data, hashlib.sha1)
+        h = hmac.new(bytes(os.environ['PUSH_TOKEN'], 'utf-8'), payload_data, hashlib.sha1)
         signature = 'sha1=' + h.hexdigest()
         if signature != request.headers['X-Coding-Signature']:
             print("ERROR: Token not matched, expected {}".format(signature))
