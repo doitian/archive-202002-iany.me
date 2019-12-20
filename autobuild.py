@@ -5,17 +5,20 @@ import sys
 import traceback
 import hashlib
 import hmac
-from subprocess import run, check_output
+import shutil
+import filecmp
+from subprocess import check_call, check_output
 from time import time
 from datetime import datetime
 from hashlib import sha1
 from threading import Thread, Lock
-from pathlib import Path
 
 import requests
+from tencentcloud.common import credential
+from tencentcloud.cdn.v20180606.cdn_client import CdnClient
+from tencentcloud.cdn.v20180606.models import PurgeUrlsCacheRequest, PurgePathCacheRequest
 from flask import Flask, Response, request, json, jsonify
-from qcloud_cos import CosConfig, CosS3Client, StatFileRequest, UploadFileRequest
-from QcloudApi.qcloudapi import QcloudApi
+from qcloud_cos import CosConfig, CosS3Client
 
 import socket
 socket.setdefaulttimeout(10.0)
@@ -26,36 +29,23 @@ bufsize = 8192
 worker_mutex = Lock()
 seq_id = 0
 max_jobs = 3
-
-if sys.version_info < (3,):
-    _u = unicode
-    _b = str
-else:
-    def _u(text):
-        if isinstance(text, str):
-            return text
-        return str(text, 'utf8')
-
-    def _b(text):
-        if isinstance(text, bytes):
-            return text
-        return bytes(text, 'utf8')
+dryrun = False
 
 
 def _status():
     status = None
-    if os.path.exists(u'status.json'):
-        with open(u'status.json', u'r') as f:
+    if os.path.exists('status.json'):
+        with open('status.json', 'r') as f:
             status = json.load(f)
 
     if not isinstance(status, dict):
         status = {}
 
-    jobs = status.get(u'jobs', [])
+    jobs = status.get('jobs', [])
     if not isinstance(jobs, list):
         jobs = []
 
-    status[u'jobs'] = jobs
+    status['jobs'] = jobs
     return status
 
 
@@ -63,7 +53,7 @@ status = _status()
 
 
 def _save():
-    with open('status.json', 'wb') as f:
+    with open('status.json', 'w') as f:
         json.dump(status, f)
 
 
@@ -74,14 +64,16 @@ def _isoformat(ts):
 
 
 def _git(job):
-    if os.path.exists(u'src'):
-        run(u'git -C src pull')
+    if os.path.exists('src'):
+        check_call('git -C src pull'.split())
     else:
-        run(u'rm -rf src src.tmp')
-        run(u'git clone git@git.coding.net:doitian/iany.me.git src.tmp')
-        run(u'mv src.tmp src')
+        check_call('rm -rf src src.tmp'.split())
+        check_call(
+            'git clone git@git.coding.net:doitian/iany.me.git src.tmp'.split())
+        check_call('mv src.tmp src'.split())
 
-    git_log = check_output(u'git -C src log -1 --pretty=oneline')
+    git_log = check_output(
+        'git -C src log -1 --pretty=oneline'.split(), encoding='utf-8')
     with open('gitcommit.txt', 'w') as fd:
         fd.write(git_log)
     job['git_sha1'], job['git_message'] = git_log.split(' ', 1)
@@ -90,96 +82,61 @@ def _git(job):
 
 
 def _hugo(job):
-    with Path(u'src'):
-        run(u'hugo')
-    job[u'steps'][u'hugo'] = True
+    shutil.rmtree('src/public_last', ignore_errors=True)
+    if os.path.exists('src/public'):
+        shutil.copytree('src/public', 'src/public_last')
+
+    cwd = os.getcwd()
+    try:
+        os.chdir('src')
+        check_call('hugo')
+    finally:
+        os.chdir(cwd)
+
+    shutil.copyfile('gitcommit.txt', 'src/public/gitcommit.txt')
+    job['steps']['hugo'] = True
     _save()
 
 
-def _cos_compare(client, bucket, cos_path, file_path=None):
-    stat_req = StatFileRequest(bucket, cos_path)
-    stat_resp = client.stat_file(stat_req)
-
-    if stat_resp[u'code'] == -197:
-        return u'CREATED'
-
-    if stat_resp[u'code'] != 0:
-        message = stat_resp.get(
-            u'message',
-            u'stat failed: {}'.format(cos_path)
-        )
-        assert stat_resp[u'code'] == 0, "{}: {}".format(stat_resp[u'code'], message)
-
-    if file_path is None:
-        file_path = os.path.abspath(u'src/public' + cos_path)
-    file_stat = os.stat(file_path)
-
-    if file_stat.st_size == stat_resp[u'data'][u'filesize']:
-        file_sha1 = sha1()
-        with open(file_path, u'rb') as fd:
-            chunk = fd.read(bufsize)
-            while chunk != '':
-                file_sha1.update(chunk)
-                chunk = fd.read(bufsize)
-        if file_sha1.hexdigest() == stat_resp[u'data'][u'sha']:
-            return u'SKIPPED'
-
-    return u'UPDATED'
-
-
-def _cos_file(job, client, bucket, cos_path, file_path=None):
-    if file_path is None:
-        file_path = os.path.abspath(u'src/public' + cos_path)
-
-    compare_result = _cos_compare(client, bucket, cos_path, file_path)
-
-    if compare_result == u'SKIPPED':
-        print('SKIP ' + cos_path)
-        return
-
+def _cos_put_file(job, client, bucket, local_path, cos_path):
     print('UPLOAD ' + cos_path)
-    upload_req = UploadFileRequest(bucket, cos_path, file_path, insert_only=0)
-    upload_resp = client.upload_file(upload_req)
 
-    assert upload_resp[u'code'] == 0, upload_resp.get(
-        u'message',
-        u'upload failed: {}'.format(cos_path)
-    )
+    if not dryrun:
+        client.put_object_from_local_file(
+            Bucket=bucket,
+            LocalFilePath=local_path,
+            Key=cos_path,
+        )
 
-    job[u'files'][cos_path] = compare_result
+    job['files'].append(cos_path)
     _save()
 
 
 def _cos(job):
-    job[u'files'] = {}
+    job['files'] = []
 
-    secret_id = _u(os.environ['COS_SECRET_ID'])
-    secret_key = _u(os.environ['COS_SECRET_KEY'])
-    region = _u(os.environ['COS_REGION'])
-    bucket = _u(os.environ['COS_BUCKET']) + u'-' + _u(os.environ['COS_APPID'])
-    config = CosConfig(Region=region, SecretId=secret_id, SecretKey=secret_key, Token=None)
+    secret_id = os.environ['COS_SECRET_ID']
+    secret_key = os.environ['COS_SECRET_KEY']
+    region = os.environ['COS_REGION']
+    bucket = os.environ['COS_BUCKET']
+    config = CosConfig(Region=region, SecretId=secret_id,
+                       SecretKey=secret_key, Token=None)
     client = CosS3Client(config)
 
-    gitcommit_file_path = os.path.abspath(u'gitcommit.txt')
-    gitcommit_compare_result = _cos_compare(
-        client,
-        bucket,
-        u'/gitcommit.txt',
-        gitcommit_file_path
-    )
-    if gitcommit_compare_result == u'SKIPPED':
-        job[u'files'][u'/gitcommit.txt'] = 'SKIPPED'
-        job['steps']['cos'] = True
-        return
+    min_mtime = os.stat('gitcommit.txt').st_mtime
 
-    top_dir = u'src/public'
-    for root, _, files in os.walk(u'src/public'):
+    top_dir = 'src/public'
+    for root, _, files in os.walk('src/public'):
         cos_dir = root[len(top_dir):] + '/'
         for basename in files:
+            local_path = os.path.join(root, basename)
             cos_path = cos_dir + basename
-            _cos_file(job, client, bucket, cos_path)
+            last_path = 'src/public_last' + cos_path
+            changed = os.stat(local_path).st_mtime >= min_mtime and (
+                not os.path.exists(last_path) or not filecmp.cmp(local_path, last_path, shallow=False))
+            if changed:
+                _cos_put_file(job, client, bucket, local_path, cos_path)
 
-    _cos_file(job, client, bucket, u'/gitcommit.txt', gitcommit_file_path)
     job['steps']['cos'] = True
     _save()
 
@@ -188,25 +145,24 @@ def _cdn(job):
     secret_id = os.environ['COS_SECRET_ID']
     secret_key = os.environ['COS_SECRET_KEY']
     region = os.environ['COS_REGION']
-    config = {
-            'Region': region,
-            'secretId': secret_id,
-            'secretKey': secret_key,
-            'method': 'post'
-            }
+    cred = credential.Credential(secret_id, secret_key)
+    client = CdnClient(cred, region)
 
-    module = 'cdn'
-    action = 'RefreshCdnUrl'
-
-    service = QcloudApi(module, config)
-    params = {}
-    index = 0
-    for path, _ in job['files'].iteritems():
-        params['urls.' + str(index)] = _b('http://blog.iany.me' + path)
-        index = index + 1
-    resp = service.call(action, params)
-
-    job['steps']['cdn'] = {'params': params, 'resp': resp}
+    if len(job['files']) == 0:
+        job['steps']['cdn'] = {'action': 'SKIPPED'}
+    elif len(job['files']) < 1000:
+        req = PurgeUrlsCacheRequest()
+        req.Urls = ['http://blog.iany.me' + path for path in job['files']]
+        if not dryrun:
+            client.PurgeUrlsCache(req)
+        job['steps']['cdn'] = {'action': 'PurgeUrlsCache'}
+    else:
+        req = PurgePathCacheRequest()
+        req.Paths = ['http://blog.iany.me/']
+        req.FlushType = 'flush'
+        if not dryrun:
+            client.PurgePathCache(req)
+        job['steps']['cdn'] = {'action': 'PurgePathCacheRequest'}
 
 
 def _build(job_id):
@@ -226,7 +182,7 @@ def _build(job_id):
 
     except Exception as e:
         job['status'] = 'failed'
-        job['error'] = e.message
+        job['error'] = '\n'.join(e.args)
         print('ERROR: ' + str(e))
         traceback.print_exc(file=sys.stdout)
     else:
@@ -245,29 +201,30 @@ def _build(job_id):
                 os.environ['IFTTT_TOKEN']
             payload = {
                 'value1': '{status} {duration}s: {git_message}'.format(**job)}
-            requests.post(url,
-                          data=json.dumps(payload),
-                          headers={'content-type': 'application/json'})
+            if not dryrun:
+                requests.post(url,
+                              data=json.dumps(payload),
+                              headers={'content-type': 'application/json'})
         except Exception:
             pass
 
 
 def worker(job_id):
-    print(u'JOB {} pending'.format(job_id))
+    print('JOB {} pending'.format(job_id))
     try:
         worker_mutex.acquire()
-        print(u'JOB {} started'.format(job_id))
+        print('JOB {} started'.format(job_id))
         _build(job_id)
     finally:
         worker_mutex.release()
-    print(u'JOB {} done'.format(job_id))
+    print('JOB {} done'.format(job_id))
 
 
 @app.route('/')
 def get_status():
     return Response(
         json.dumps(status, indent=2),
-        mimetype=u'text/json'
+        mimetype='text/json'
     )
 
 
@@ -304,7 +261,10 @@ if __name__ == '__main__':
     from dotenv import load_dotenv, find_dotenv
     load_dotenv(find_dotenv())
 
-    if sys.argv.length > 1 and sys.argv[1] == 'once':
+    if len(sys.argv) > 1 and sys.argv[1] == 'once':
+        _build(1)
+    elif len(sys.argv) > 1 and sys.argv[1] == 'dryrun':
+        dryrun = True
         _build(1)
     else:
         os.close(0)
