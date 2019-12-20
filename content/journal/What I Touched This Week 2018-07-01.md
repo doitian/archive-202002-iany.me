@@ -3,7 +3,6 @@ title: What I Touched This Week 2018-07-01
 date: 2018-07-01
 series: ["What I Touched"]
 description: "My weekly review report."
-summary: false
 ---
 
 - [Segregated Witness: A Fork Too Far](https://medium.com/the-publius-letters/segregated-witness-a-fork-too-far-87d6e57a4179)

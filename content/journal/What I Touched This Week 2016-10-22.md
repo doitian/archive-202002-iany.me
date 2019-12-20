@@ -3,7 +3,6 @@ title: What I Touched This Week 2016-10-22
 date: 2016-10-22
 series: ["What I Touched"]
 description: "My weekly review report."
-summary: false
 ---
 
 ## Programming

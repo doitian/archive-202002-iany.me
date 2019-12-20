@@ -3,7 +3,6 @@ title: What I Touched This Week 2018-12-31
 date: 2018-12-31
 series: ["What I Touched"]
 description: "My weekly review report."
-summary: false
 ---
 
 - [Handling intent for Grandma World](https://rachelbythebay.com/w/2018/12/28/intent/)

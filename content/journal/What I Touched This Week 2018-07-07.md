@@ -3,7 +3,6 @@ title: What I Touched This Week 2018-07-07
 date: 2018-07-07
 series: ["What I Touched"]
 description: "My weekly review report."
-summary: false
 ---
 
 ## Nervos

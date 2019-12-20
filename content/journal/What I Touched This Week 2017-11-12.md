@@ -3,7 +3,6 @@ title: What I Touched This Week 2017-11-12
 date: 2017-11-12
 series: ["What I Touched"]
 description: "My weekly review report."
-summary: false
 ---
 
 - [A tour of Postgres Index Types](https://www.citusdata.com/blog/2017/10/17/tour-of-postgres-index-types/)

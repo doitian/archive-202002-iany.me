@@ -3,7 +3,6 @@ title: What I Touched This Week 2018-08-12
 date: 2018-08-12
 series: ["What I Touched"]
 description: "My weekly review report."
-summary: false
 ---
 
 * [I’m a very slow thinker | Derek Sivers](https://sivers.org/slow)

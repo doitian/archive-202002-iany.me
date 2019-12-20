@@ -3,7 +3,6 @@ title: What I Touched This Week 2018-12-23
 date: 2018-12-23
 series: ["What I Touched"]
 description: "My weekly review report."
-summary: false
 ---
 
 * [The State of Hashing Algorithms — The Why, The How, and The Future](https://medium.com/zkcapital/the-state-of-hashing-algorithms-the-why-the-how-and-the-future-b21d5c0440de)

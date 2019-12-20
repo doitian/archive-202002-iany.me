@@ -3,7 +3,6 @@ title: What I Touched This Week 2018-12-09
 date: 2018-12-09
 series: ["What I Touched"]
 description: "My weekly review report."
-summary: false
 ---
 
 * [On-Chain versus Off-Chain Computation, Turing Completeness and Zero Knowledge Proofs](https://continuations.com/post/180584573645/on-chain-versus-off-chain-computation-turing)

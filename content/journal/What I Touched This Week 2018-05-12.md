@@ -3,7 +3,6 @@ title: What I Touched This Week 2018-05-12
 date: 2018-05-12
 series: ["What I Touched"]
 description: "My weekly review report."
-summary: false
 ---
 
 * [Rust in production at Figma – Figma Design](https://blog.figma.com/rust-in-production-at-figma-e10a0ec31929)

@@ -3,7 +3,6 @@ date: "2017-02-20"
 title: "What I Touched This Week 2017-02-20"
 series: ["What I Touched"]
 description: "My weekly review report."
-summary: false
 ---
 
 I had to work on Windows for a project, thus did some research to make it suck less.

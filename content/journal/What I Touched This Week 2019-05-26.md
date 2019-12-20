@@ -3,7 +3,6 @@ title: What I Touched This Week 2019-05-26
 date: 2019-05-26
 series: ["What I Touched"]
 description: "My weekly review report."
-summary: false
 ---
 
 * [Linux Performance Analysis in 60,000 Milliseconds – Netflix TechBlog – Medium](https://medium.com/netflix-techblog/linux-performance-analysis-in-60-000-milliseconds-accc10403c55)

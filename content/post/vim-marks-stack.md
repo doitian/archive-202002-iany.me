@@ -8,7 +8,6 @@ share: true
 hljs: false
 hljsLanguages: []
 mathjax: false
-summary: false
 ---
 
 I rarely used more than two marks in Vim, so why not use them as a stack and keep latest history?

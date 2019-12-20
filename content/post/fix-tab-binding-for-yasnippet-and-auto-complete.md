@@ -2,7 +2,6 @@
 title: Fix TAB Binding For yasnippet And auto-complete
 tags: [emacs]
 date: "2012-03-31"
-summary: false
 description: "There are two TAB's in Emacs, it is hard to make the TAB keybing works as expected in Emacs."
 hljs: true
 hljsLanguages: ["lisp"]

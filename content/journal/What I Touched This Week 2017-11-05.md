@@ -3,7 +3,6 @@ title: What I Touched This Week 2017-11-05
 date: 2017-11-05
 series: ["What I Touched"]
 description: "My weekly review report."
-summary: false
 ---
 
 - [learnbyexample/Command-line-text-processing: From finding text to search and replace, from sorting to beautifying text and more](https://github.com/learnbyexample/Command-line-text-processing)

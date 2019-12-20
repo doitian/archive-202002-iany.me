@@ -9,7 +9,6 @@ share: true
 hljs: false
 hljsLanguages: []
 mathjax: false
-summary: false
 ---
 
 | parent | table | struct | union | vector | string | enum | scalar |

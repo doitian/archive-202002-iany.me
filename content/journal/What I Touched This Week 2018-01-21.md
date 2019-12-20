@@ -3,7 +3,6 @@ title: What I Touched This Week 2018-01-21
 date: 2018-01-21
 series: ["What I Touched"]
 description: "My weekly review report."
-summary: false
 ---
 
 * [How to read and understand a scientific paper: a guide for non-scientists – Violent metaphors](https://violentmetaphors.com/2013/08/25/how-to-read-and-understand-a-scientific-paper-2/)

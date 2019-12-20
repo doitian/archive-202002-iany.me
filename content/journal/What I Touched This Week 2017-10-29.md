@@ -3,7 +3,6 @@ title: What I Touched This Week 2017-10-29
 date: 2017-10-29
 series: ["What I Touched"]
 description: "My weekly review report."
-summary: false
 ---
 
 - [Lua C API userdata 和 light userdata – ~iany 博客](https://blog.iany.me/zh/2017/10/lua-c-api-userdata/)

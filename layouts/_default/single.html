@@ -64,7 +64,7 @@
       {{ .Content }}
       <footer class="entry-meta">
           {{ if ne .Type "page" }}
-        <span class="entry-tags">{{ range .Params.tags }}<a href="{{ "/tags/" | relLangURL }}#{{ . | urlize }}" title="Pages tagged {{ . | urlize }}" class="tag"><span class="term">{{ . | urlize }}</span></a>{{ end }}</span>
+        <span class="entry-tags">{{ range .Params.tags }}<a href="{{ "/tags/" | relLangURL }}#{{ . | urlize }}" title="Pages tagged {{ . | urlize }}" class="tag"><span class="term">{{ . }}</span></a>{{ end }}</span>
         {{ end }}
         {{ if gt .Lastmod .Date }}<span>{{ i18n "updatedOn" }} <span class="entry-date date updated"><time datetime="{{ .Lastmod }}">{{ .Lastmod.Format (i18n "date.format") }}</time></span></span>
         <span class="author vcard"><span class="fn">{{ $.Site.Params.author.name }}</span></span>{{ end }}

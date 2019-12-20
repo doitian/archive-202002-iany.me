@@ -10,7 +10,6 @@ share: true
 hljs: false
 hljsLanguages: []
 mathjax: false
-summary: false
 ---
 
 > Economic problem of society is mainly one of rapid **adaptation to changes** in **the particular circumstances of time and place**, it would seem to follow that the ultimate decisions must be left to the people who are familiar with these circumstances, who know directly of the relevant changes and of the resources immediately available to meet them.  

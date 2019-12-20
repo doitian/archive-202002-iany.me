@@ -3,7 +3,6 @@ title: What I Touched This Week 2018-11-25
 date: 2018-11-25
 series: ["What I Touched"]
 description: "My weekly review report."
-summary: false
 ---
 
 * [Rewriting History: A Brief Introduction to Long Range Attacks](https://blog.positive.com/rewriting-history-a-brief-introduction-to-long-range-attacks-54e473acdba9)

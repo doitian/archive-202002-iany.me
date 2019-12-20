@@ -1,7 +1,7 @@
 ---
 title: Keystroke Sequence Shortcuts in Mac OS X
 date: "2014-10-13"
-tags: [macos, productivity]
+tags: [macOS, productivity]
 description: "Setup visual keystroke sequence shortcuts using Keyboard Maestro in Mac OS X."
 ---
 

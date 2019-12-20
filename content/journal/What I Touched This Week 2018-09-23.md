@@ -3,7 +3,6 @@ title: What I Touched This Week 2018-09-23
 date: 2018-09-23
 series: ["What I Touched"]
 description: "My weekly review report."
-summary: false
 ---
 
 * [An empirical analysis of anonymity in Zcash | the morning paper](https://blog.acolyer.org/2018/09/14/an-empirical-analysis-of-anonymity-in-zcash/)

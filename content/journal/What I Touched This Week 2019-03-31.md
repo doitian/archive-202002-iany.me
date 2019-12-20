@@ -3,7 +3,6 @@ title: What I Touched This Week 2019-03-31
 date: 2019-03-31
 series: ["What I Touched"]
 description: "My weekly review report."
-summary: false
 ---
 
 * [How to Mock Time in Rust Tests and Cargo Gotchas We Met](https://blog.iany.me/2019/03/how-to-mock-time-in-rust-tests-and-cargo-gotchas-we-met/)

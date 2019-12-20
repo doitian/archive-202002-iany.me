@@ -3,7 +3,6 @@ title: What I Touched This Week 2018-03-18
 date: 2018-03-18
 series: ["What I Touched"]
 description: "My weekly review report."
-summary: false
 ---
 
 * [类型论驿站写作计划](https://zhuanlan.zhihu.com/p/32182423) 作者分享了 Lambda 演算和 Coq 的学习笔记

@@ -3,7 +3,6 @@ title: What I Touched This Week 2019-03-02
 date: 2019-03-02
 series: ["What I Touched"]
 description: "My weekly review report."
-summary: false
 ---
 
 * My new post: [Rust Cell and RefCell](https://blog.iany.me/2019/02/rust-cell-and-refcell/)

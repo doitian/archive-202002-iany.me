@@ -3,7 +3,6 @@ title: What I Touched This Week 2018-03-25
 date: 2018-03-25
 series: ["What I Touched"]
 description: "My weekly review report."
-summary: false
 ---
 
 * [让一台家用打印机做一些有趣的创造：Creative Park - 少数派](https://sspai.com/post/43694)

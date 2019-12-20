@@ -3,7 +3,6 @@ title: What I Touched This Week 2017-03-25
 date: 2017-03-25
 series: ["What I Touched"]
 description: "My weekly review report."
-summary: false
 ---
 
 - [Choose SQL]( https://stateofprogress.blog/choose-sql-d017cfc08870#.u3uyxkxhr ). Optionions about choosing between SQL and NoSQL.

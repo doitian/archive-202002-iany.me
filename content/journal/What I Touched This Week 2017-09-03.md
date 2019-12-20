@@ -3,7 +3,6 @@ title: What I Touched This Week 2017-09-03
 date: 2017-09-03
 series: ["What I Touched"]
 description: "My weekly review report."
-summary: false
 ---
 
 - [Archiving OS X Mavericks tags (and other data) with git](http://info.michael-simons.eu/2013/10/25/archiving-os-x-mavericks-tags-and-other-data-with-git/)

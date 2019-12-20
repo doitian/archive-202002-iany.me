@@ -3,7 +3,6 @@ title: What I Touched This Week 2017-05-13
 date: 2017-05-13
 series: ["What I Touched"]
 description: "My weekly review report."
-summary: false
 ---
 
 - [Cocos2D-X TTF 字体排版 – ~iany 博客](https://blog.iany.me/zh/2017/05/cocos2d-x-ttf/)。如何使用 FreeType 库进行字符排版。

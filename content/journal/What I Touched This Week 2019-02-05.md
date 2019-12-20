@@ -3,7 +3,6 @@ title: What I Touched This Week 2019-02-05
 date: 2019-02-05
 series: ["What I Touched"]
 description: "My weekly review report."
-summary: false
 ---
 
 * [Managing Remote Teams - A Crash Course - Startup Lessons Learned](http://klinger.io/post/180989912140/managing-remote-teams-a-crash-course)

@@ -3,7 +3,6 @@ title: What I Touched This Week 2016-10-30
 date: 2016-10-30
 series: ["What I Touched"]
 description: "My weekly review report."
-summary: false
 ---
 
 This week I work on [terraform-provider-ucloud][1], which already has implemented resource UHost and SecurityGroup, data source host image. I plan to share my experience to write a terraform provider plugin in future posts.

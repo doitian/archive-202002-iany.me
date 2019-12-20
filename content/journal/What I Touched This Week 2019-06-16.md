@@ -3,7 +3,6 @@ title: What I Touched This Week 2019-06-16
 date: 2019-06-16
 series: ["What I Touched"]
 description: "My weekly review report."
-summary: false
 ---
 
 * macOS » Uninstall GoogleSoftwareUpdate

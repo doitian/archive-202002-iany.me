@@ -8,7 +8,6 @@ share: true
 hljs: false
 hljsLanguages: []
 mathjax: false
-summary: true
 ---
 
 I have read the post [Get Everything Done & Still Have Time to Play][1] by Jackie Ashton recently and adopted some strategies into my process.

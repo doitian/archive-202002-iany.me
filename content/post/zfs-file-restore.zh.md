@@ -1,14 +1,13 @@
 ---
 title: "ZFS 文件恢复"
 date: 2017-11-18T08:43:54+08:00
-tags: [sysAdmin]
+tags: ['system admin']
 description: "ZFS 查看文件错误并修复"
 comment: true
 share: true
 hljs: false
 hljsLanguages: []
 mathjax: false
-summary: false
 ---
 
 zfs 会在访问文件时记录下问题文件，也可用使用 `scrub` 来扫描文件，其中 `poolname` 是卷名。

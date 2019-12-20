@@ -3,7 +3,6 @@ title: What I Touched This Week 2017-09-24
 date: 2017-09-24
 series: ["What I Touched"]
 description: "My weekly review report."
-summary: false
 ---
 
 - [Rails Cookie 如何解密](https://blog.iany.me/zh/2017/09/rails-cookie-encryption/)

@@ -3,7 +3,6 @@ title: What I Touched This Week 2019-06-30
 date: 2019-06-30
 series: ["What I Touched"]
 description: "My weekly review report."
-summary: false
 ---
 
 * [Amazon Is Watching – OneZero](https://onezero.medium.com/amazon-is-watching-d51b20f1668a)

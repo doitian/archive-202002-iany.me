@@ -3,7 +3,6 @@ title: What I Touched This Week 2017-09-17
 date: 2017-09-17
 series: ["What I Touched"]
 description: "My weekly review report."
-summary: false
 ---
 
 - [wolfcw/libfaketime: libfaketime modifies the system time for a single application](https://github.com/wolfcw/libfaketime)

@@ -3,7 +3,6 @@ title: What I Touched This Week 2017-01-14
 date: 2018-01-14
 series: ["What I Touched"]
 description: "My weekly review report."
-summary: false
 ---
 
 ## Rust

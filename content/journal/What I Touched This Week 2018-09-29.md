@@ -3,7 +3,6 @@ title: What I Touched This Week 2018-09-29
 date: 2018-09-29
 series: ["What I Touched"]
 description: "My weekly review report."
-summary: false
 ---
 
 * [Software disenchantment](http://tonsky.me/blog/disenchantment/)

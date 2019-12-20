@@ -3,7 +3,6 @@ title: What I Touched This Week 2019-09-08
 date: 2019-09-08
 series: ["What I Touched"]
 description: "My weekly review report."
-summary: false
 ---
 
 * [LibraBFT算法简述 - 知乎](https://zhuanlan.zhihu.com/p/69941436)

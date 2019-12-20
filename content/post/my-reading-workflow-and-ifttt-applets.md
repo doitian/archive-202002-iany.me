@@ -9,7 +9,6 @@ share: true
 hljs: false
 hljsLanguages: []
 mathjax: false
-summary: true
 ---
 
 I categorize reading into 3 different categories:

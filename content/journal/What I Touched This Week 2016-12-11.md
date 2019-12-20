@@ -3,7 +3,6 @@ title: What I Touched This Week 2016-12-11
 date: 2016-12-11
 series: ["What I Touched"]
 description: "My weekly review report."
-summary: false
 ---
 
 This week I worked on setting up gralog2 for logging search and analysis.

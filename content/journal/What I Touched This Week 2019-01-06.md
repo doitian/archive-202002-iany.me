@@ -3,7 +3,6 @@ title: What I Touched This Week 2019-01-06
 date: 2019-01-06
 series: ["What I Touched"]
 description: "My weekly review report."
-summary: false
 ---
 
 - [硅谷产品大佬们写的书《Ship it》到底在讲什么？ - 少数派](https://sspai.com/post/52240)

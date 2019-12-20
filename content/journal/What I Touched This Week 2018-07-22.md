@@ -3,7 +3,6 @@ title: What I Touched This Week 2018-07-22
 date: 2018-07-22
 series: ["What I Touched"]
 description: "My weekly review report."
-summary: false
 ---
 
 * [Rules of optimization](http://www.humus.name/index.php?ID=383&page=News)

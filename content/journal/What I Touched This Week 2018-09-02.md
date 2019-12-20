@@ -3,7 +3,6 @@ title: What I Touched This Week 2018-09-02
 date: 2018-09-02
 series: ["What I Touched"]
 description: "My weekly review report."
-summary: false
 ---
 
 * [区块链安全，要从设计抓起](https://zhuanlan.zhihu.com/p/36391606)

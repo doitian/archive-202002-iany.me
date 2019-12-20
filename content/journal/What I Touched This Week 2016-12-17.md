@@ -3,7 +3,6 @@ title: What I Touched This Week 2016-12-17
 date: 2016-12-17
 series: ["What I Touched"]
 description: "My weekly review report."
-summary: false
 ---
 
 This week I was setting up monitoring system using Prometheus.

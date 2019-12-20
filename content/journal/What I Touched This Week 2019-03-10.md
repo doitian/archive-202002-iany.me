@@ -3,7 +3,6 @@ title: What I Touched This Week 2019-03-10
 date: 2019-03-10
 series: ["What I Touched"]
 description: "My weekly review report."
-summary: false
 ---
 
 * [Add MIPS64 cross-compilation target to Travis by Enet4 · Pull Request #110 · BurntSushi/byteorder](https://github.com/BurntSushi/byteorder/pull/110)

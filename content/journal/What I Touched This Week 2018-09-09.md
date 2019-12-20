@@ -3,7 +3,6 @@ title: What I Touched This Week 2018-09-09
 date: 2018-09-09
 series: ["What I Touched"]
 description: "My weekly review report."
-summary: false
 ---
 
 * [Advice for a new executive | Lara Hogan](https://larahogan.me/blog/advice-for-new-executive/)

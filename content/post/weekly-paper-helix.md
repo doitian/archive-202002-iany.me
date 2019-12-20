@@ -1,7 +1,7 @@
 ---
 title: "Weekly Paper: Helix"
 date: 2018-11-10T11:49:28+08:00
-tags: [consensus, distributedSystem]
+tags: [consensus, "distributed system"]
 series: ["Weekly Paper"]
 draft: false
 description: "Reading notes of paper: Helix, A Scalable and Fair Consensus Algorithm"

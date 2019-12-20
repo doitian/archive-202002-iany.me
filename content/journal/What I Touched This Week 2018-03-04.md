@@ -3,7 +3,6 @@ title: What I Touched This Week 2018-03-04
 date: 2018-03-04
 series: ["What I Touched"]
 description: "My weekly review report."
-summary: false
 ---
 
 - [Why I Quit Google to Work for Myself - Silly Bits](https://mtlynch.io/why-i-quit-google/)

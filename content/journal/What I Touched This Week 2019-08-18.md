@@ -3,7 +3,6 @@ title: What I Touched This Week 2019-08-18
 date: 2019-08-18
 series: ["What I Touched"]
 description: "My weekly review report."
-summary: false
 ---
 
 * [It’s the settlement assurances, stupid - Nic Carter - Medium](https://medium.com/@nic__carter/its-the-settlement-assurances-stupid-5dcd1c3f4e41)

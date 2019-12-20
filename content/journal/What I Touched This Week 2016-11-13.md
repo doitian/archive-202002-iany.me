@@ -3,7 +3,6 @@ title: What I Touched This Week 2016-11-13
 date: 2016-11-13
 series: ["What I Touched"]
 description: "My weekly review report."
-summary: false
 ---
 
 This week I continue work on log system. I wrote a tool to sync Gitlab Issues with a Excel file.

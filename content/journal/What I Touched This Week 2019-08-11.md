@@ -3,7 +3,6 @@ title: What I Touched This Week 2019-08-11
 date: 2019-08-11
 series: ["What I Touched"]
 description: "My weekly review report."
-summary: false
 ---
 
 * [Etsy’s experiment with immutable documentation - Code as Craft](https://codeascraft.com/2018/10/10/etsys-experiment-with-immutable-documentation/)

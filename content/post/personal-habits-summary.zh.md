@@ -3,7 +3,6 @@ title: "个人习惯总结"
 date: 2017-11-25T15:24:18+08:00
 tags: [productivity]
 description: "个人总结提升效率的一些习惯"
-summary: true
 comment: true
 share: true
 hljs: false

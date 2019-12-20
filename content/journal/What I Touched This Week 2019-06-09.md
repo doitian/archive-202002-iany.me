@@ -3,7 +3,6 @@ title: What I Touched This Week 2019-06-09
 date: 2019-06-09
 series: ["What I Touched"]
 description: "My weekly review report."
-summary: false
 ---
 
 * [tokio/azure-pipelines.yml at master · tokio-rs/tokio](https://github.com/tokio-rs/tokio/blob/master/azure-pipelines.yml)

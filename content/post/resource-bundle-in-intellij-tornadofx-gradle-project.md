@@ -9,7 +9,6 @@ mathjax = false
 share = true
 tags = ["java"]
 title = "Resource Bundle in IntelliJ TornadoFX Gradle Project"
-summary = false
 +++
 
 - Add properties files into `src/main/resources`

@@ -3,7 +3,6 @@ title: What I Touched This Week 2017-01-15
 date: 2017-01-15
 series: ["What I Touched"]
 description: "My weekly review report."
-summary: false
 ---
 
 This week I continue on cocos2d-x project automation build and dependencies management.

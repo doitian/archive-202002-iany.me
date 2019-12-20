@@ -3,7 +3,6 @@ title: What I Touched This Week 2017-07-03
 date: 2017-07-03
 series: ["What I Touched"]
 description: "My weekly review report."
-summary: false
 ---
 
 - [Supervise gitlab using supervisord so `SIDEKIQ_MEMORY_KILLER_GRACE_TIME` can be set to enable sidekiq memory killer.](https://gist.github.com/doitian/b0991368d91db3e7011733d6f812f592 )

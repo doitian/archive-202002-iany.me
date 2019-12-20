@@ -3,7 +3,6 @@ title: What I Touched This Week 2017-11-19
 date: 2017-11-19
 series: ["What I Touched"]
 description: "My weekly review report."
-summary: false
 ---
 
 ## Machine Learning

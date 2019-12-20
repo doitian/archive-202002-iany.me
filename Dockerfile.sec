@@ -1,7 +1,0 @@
-FROM zzrot/alpine-caddy
-
-WORKDIR /usr/src/app
-COPY usr/src/app /usr/src/app
-EXPOSE 2015
-
-CMD [ "caddy" ]

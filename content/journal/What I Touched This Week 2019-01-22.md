@@ -3,7 +3,6 @@ title: What I Touched This Week 2019-01-22
 date: 2019-01-22
 series: ["What I Touched"]
 description: "My weekly review report."
-summary: false
 ---
 
 * [Practical Byzantine Fault Tolerance | the morning paper](https://blog.acolyer.org/2015/05/18/practical-byzantine-fault-tolerance/)

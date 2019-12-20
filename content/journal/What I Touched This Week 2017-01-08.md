@@ -3,7 +3,6 @@ title: What I Touched This Week 2017-01-08
 date: 2017-01-08
 series: ["What I Touched"]
 description: "My weekly review report."
-summary: false
 hljs: true
 hljsLanguages: ["yaml"]
 ---

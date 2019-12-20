@@ -3,7 +3,6 @@ title: What I Touched This Week 2018-06-24
 date: 2018-06-24
 series: ["What I Touched"]
 description: "My weekly review report."
-summary: false
 ---
 
 * [Vim Marks Stack – ~iany/blog](https://blog.iany.me/2018/05/vim-marks-stack/)

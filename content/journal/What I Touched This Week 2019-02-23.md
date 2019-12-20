@@ -3,7 +3,6 @@ title: What I Touched This Week 2019-02-23
 date: 2019-02-23
 series: ["What I Touched"]
 description: "My weekly review report."
-summary: false
 ---
 
 * [Rust: Custom Exit Status Codes with ? in main](https://www.joshmcguigan.com/blog/custom-exit-status-codes-rust/)

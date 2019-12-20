@@ -1,8 +1,7 @@
 ---
 date: '2016-11-27'
 title: "Convert Web Page to Markdown using Ulysses or Bear"
-tags: ["powertool"]
-summary: false
+tags: ["power tool"]
 ---
 
 **Update 2017-05-09**: The bear current version made clipper easier to use.

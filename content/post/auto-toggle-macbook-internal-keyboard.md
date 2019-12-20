@@ -1,6 +1,6 @@
 ---
 title: Auto Toggle MacBook Internal Keyboard
-tags: [mac, powerTool]
+tags: [mac, power tool]
 date: "2014-01-17"
 image:
   feature: /images/201401/keyboard-on-mac.png

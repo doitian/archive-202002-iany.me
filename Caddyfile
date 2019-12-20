@@ -1,8 +1,0 @@
-0.0.0.0
-
-root public
-gzip
-minify
-expires {
-  match ^/(js|css|fonts)/ 1y
-}

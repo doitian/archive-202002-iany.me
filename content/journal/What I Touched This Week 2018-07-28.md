@@ -3,7 +3,6 @@ title: What I Touched This Week 2018-07-28
 date: 2018-07-28
 series: ["What I Touched"]
 description: "My weekly review report."
-summary: false
 ---
 
 * [Tokio internals: Understanding Rust's asynchronous I/O framework from the bottom up : Caffeinated Bitstream](https://cafbit.com/post/tokio_internals/)

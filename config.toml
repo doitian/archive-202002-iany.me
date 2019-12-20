@@ -7,6 +7,7 @@ theme = "hpstr"
 disqusShortname = "ianyblog"
 footnoteReturnLinkContents = "↩"
 enableRobotsTXT = true
+summaryLength = 999999999999
 
 [markup.highlight]
 codeFences = false

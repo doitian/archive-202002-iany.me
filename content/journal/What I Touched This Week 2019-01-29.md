@@ -3,7 +3,6 @@ title: What I Touched This Week 2019-01-29
 date: 2019-01-29
 series: ["What I Touched"]
 description: "My weekly review report."
-summary: false
 ---
 
 * [A Minimalist Lifestyle – Member Feature Stories – Medium](https://medium.com/s/story/a-minimalist-lifestyle-6c2872c28473)

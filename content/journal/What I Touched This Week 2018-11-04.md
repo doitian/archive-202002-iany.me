@@ -3,7 +3,6 @@ title: What I Touched This Week 2018-11-04
 date: 2018-11-04
 series: ["What I Touched"]
 description: "My weekly review report."
-summary: false
 ---
 
 * [Flatbuffers Compatible Table](https://blog.iany.me/2018/11/flatbuffers-compatible-table/)

@@ -3,7 +3,6 @@ title: What I Touched This Week 2018-05-06
 date: 2018-05-06
 series: ["What I Touched"]
 description: "My weekly review report."
-summary: false
 ---
 
 * [Cryptographic Right Answers — » Latacora](http://latacora.singles/2018/04/03/cryptographic-right-answers.html)

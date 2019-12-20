@@ -3,7 +3,6 @@ title: What I Touched This Week 2018-12-02
 date: 2018-12-02
 series: ["What I Touched"]
 description: "My weekly review report."
-summary: false
 ---
 
 * [Routing and extraction in Tide: a first sketch | Rust Network Services

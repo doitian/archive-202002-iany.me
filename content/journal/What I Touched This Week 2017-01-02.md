@@ -2,7 +2,6 @@
 title: What I Touched This Week 2017-01-02
 date: 2017-01-02
 series: ["What I Touched"]
-summary: false
 description: "My weekly review report."
 ---
 

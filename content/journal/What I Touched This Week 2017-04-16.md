@@ -3,7 +3,6 @@ title: What I Touched This Week 2017-04-16
 date: 2017-04-16
 series: ["What I Touched"]
 description: "My weekly review report."
-summary: False
 ---
 
 - [各种加密代理协议的简单对比 – Yachen Liu][1] 比较了常用的 HTTPS，SOCKS5-TLS 和 shadowsocks 等加密协议。

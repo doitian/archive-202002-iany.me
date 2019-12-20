@@ -9,7 +9,6 @@ share: true
 hljs: true
 hljsLanguages: [rust]
 mathjax: false
-summary: true
 ---
 
 How to mock time in Rust tests and Cargo gotchas we met.

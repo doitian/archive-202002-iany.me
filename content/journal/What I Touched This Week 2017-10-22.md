@@ -3,7 +3,6 @@ title: What I Touched This Week 2017-10-22
 date: 2017-10-22
 series: ["What I Touched"]
 description: "My weekly review report."
-summary: false
 ---
 
 - [Vim After 15 Years | Ian Langworth’s Things of Variable Interest](https://statico.github.io/vim3.html)
