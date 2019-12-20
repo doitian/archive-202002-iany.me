@@ -1,8 +1,7 @@
 /.env
 /src
 /gitcommit.txt
-/py2
-/py3
+/venv
 /status.json
 /content
 /public

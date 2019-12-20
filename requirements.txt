@@ -1,7 +1,6 @@
-Flask==0.12
-Werkzeug==0.12.1
-Fabric==1.13.1
-python-dotenv==0.6.3
-requests==2.13.0
-qcloud-cos-v4==0.0.20
-qcloudapi-sdk-python==2.0.2
+wheel==0.33.6
+cos-python-sdk-v5==1.7.6
+qcloudapi-sdk-python==2.0.15
+Flask==1.1.1
+python-dotenv==0.10.3
+requests==2.22.0

@@ -5,22 +5,22 @@ import sys
 import traceback
 import hashlib
 import hmac
-
-from flask import Flask, Response, request, json, jsonify
-from fabric.api import env, local as run, lcd as cd
+from subprocess import run, check_output
 from time import time
 from datetime import datetime
-from qcloud_cos import CosClient, StatFileRequest, UploadFileRequest
-from QcloudApi.qcloudapi import QcloudApi
 from hashlib import sha1
 from threading import Thread, Lock
+from pathlib import Path
+
 import requests
+from flask import Flask, Response, request, json, jsonify
+from qcloud_cos import CosConfig, CosS3Client, StatFileRequest, UploadFileRequest
+from QcloudApi.qcloudapi import QcloudApi
 
 import socket
 socket.setdefaulttimeout(10.0)
 
 app = Flask(__name__)
-env.shell = u'/bin/bash'
 tzoffset = 8 * 60 * 60
 bufsize = 8192
 worker_mutex = Lock()
@@ -81,7 +81,7 @@ def _git(job):
         run(u'git clone git@git.coding.net:doitian/iany.me.git src.tmp')
         run(u'mv src.tmp src')
 
-    git_log = run(u'git -C src log -1 --pretty=oneline', capture=True)
+    git_log = check_output(u'git -C src log -1 --pretty=oneline')
     with open('gitcommit.txt', 'w') as fd:
         fd.write(git_log)
     job['git_sha1'], job['git_message'] = git_log.split(' ', 1)
@@ -90,7 +90,7 @@ def _git(job):
 
 
 def _hugo(job):
-    with cd(u'src'):
+    with Path(u'src'):
         run(u'hugo')
     job[u'steps'][u'hugo'] = True
     _save()
@@ -153,12 +153,12 @@ def _cos_file(job, client, bucket, cos_path, file_path=None):
 def _cos(job):
     job[u'files'] = {}
 
-    appid = int(os.environ['COS_APPID'])
     secret_id = _u(os.environ['COS_SECRET_ID'])
     secret_key = _u(os.environ['COS_SECRET_KEY'])
     region = _u(os.environ['COS_REGION'])
-    bucket = _u(os.environ['COS_BUCKET'])
-    client = CosClient(appid, secret_id, secret_key, region=region)
+    bucket = _u(os.environ['COS_BUCKET']) + u'-' + _u(os.environ['COS_APPID'])
+    config = CosConfig(Region=region, SecretId=secret_id, SecretKey=secret_key, Token=None)
+    client = CosS3Client(config)
 
     gitcommit_file_path = os.path.abspath(u'gitcommit.txt')
     gitcommit_compare_result = _cos_compare(
@@ -303,5 +303,9 @@ def start_build():
 if __name__ == '__main__':
     from dotenv import load_dotenv, find_dotenv
     load_dotenv(find_dotenv())
-    os.close(0)
-    app.run(host='0.0.0.0', threaded=False, processes=1)
+
+    if sys.argv.length > 1 and sys.argv[1] == 'once':
+        _build(1)
+    else:
+        os.close(0)
+        app.run(host='0.0.0.0', threaded=False, processes=1)
