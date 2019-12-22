@@ -4,6 +4,8 @@ tags: [emacs]
 date: "2012-03-30"
 layout: post
 description: "Use popup as a backend of yasnippet prompt"
+hljs: true
+hljsLanguages: ["lisp"]
 ---
 
 [Yasnippet][] tries functions in `yas/prompt-functions` when it needs user to
@@ -28,7 +30,38 @@ very efficient, the items are filtered on-the-fly when typing.
 The integration is easy. Load `popup.el`, implement one prompt function and
 add it to `yas/prompt-functions`.
 
-{{< gist doitian 2245733 "yasnippet-popup-isearch-prompt.el" >}}
+{{< codecaption name="yasnippet-popup-isearch-prompt.el" link="https://gist.github.com/doitian/2245733" >}}
+
+~~~ lisp
+(require 'popup)
+(require 'yasnippet)
+
+;; add some shotcuts in popup menu mode
+(define-key popup-menu-keymap (kbd "M-n") 'popup-next)
+(define-key popup-menu-keymap (kbd "TAB") 'popup-next)
+(define-key popup-menu-keymap (kbd "<tab>") 'popup-next)
+(define-key popup-menu-keymap (kbd "<backtab>") 'popup-previous)
+(define-key popup-menu-keymap (kbd "M-p") 'popup-previous)
+
+(defun yas/popup-isearch-prompt (prompt choices &optional display-fn)
+  (when (featurep 'popup)
+    (popup-menu*
+     (mapcar
+      (lambda (choice)
+        (popup-make-item
+         (or (and display-fn (funcall display-fn choice))
+             choice)
+         :value choice))
+      choices)
+     :prompt prompt
+     ;; start isearch mode immediately
+     :isearch t
+     )))
+
+(setq yas/prompt-functions '(yas/popup-isearch-prompt yas/no-prompt))
+~~~
+
+{{< /codecaption >}}
 
 [yasnippet]: http://capitaomorte.github.com/yasnippet/index.html
 [popup]: https://github.com/m2ym/popup-el
