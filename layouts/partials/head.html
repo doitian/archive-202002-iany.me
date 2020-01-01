@@ -20,7 +20,7 @@
 {{- if .IsHome }}
     {{ $.Scratch.Set "Params" .Site.Params }}
 {{- else if .IsNode }}
-    {{ $.Scratch.Set "Params" (index .Site.Data.sections (lower .Title)) }}
+    {{ $.Scratch.Set "Params" (or (index .Site.Data.sections (lower .Title)) .Params) }}
 {{- else }}
     {{ $.Scratch.Set "Params" .Params }}
 {{- end }}
