@@ -9,7 +9,7 @@ comment: true
 share: true
 hljs: false
 hljsLanguages: []
-mathjax: true
+math: true
 ---
 
 https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3243656
@@ -51,37 +51,37 @@ Given:
 
 We need to find a funding distribution solution `$\left\{F^p\right\}^p$` which is a p-dimention vector. `$F^p$` is the funds allocated to project `p`. The solution maximize:
 
-``` mathjax
+``` math
 \[ \sum _ { p } \left(V _ { i } ^ { p } \left( F ^ { p } \right) - c _ { i } ^ { p }\right)  - t _ { i } \]
 ```
 
 where
 
-``` mathjax
+``` math
 \[ \sum _ { i } t _ { i } = \sum _ { p } \left( F ^ { p } - \sum _ { i } c _ { i } ^ { p } \right) \]
 ```
 
 Since V is concave, smooth and increasing, it is easy to find the maximum using the first order derivative, which gives
 
-``` mathjax
+``` math
 \[ V ^ { p ^ { \prime } } = 1 \]
 ```
 
 ### Capitalism
 
-``` mathjax
+``` math
 \[ F ^ { p } = \sum _ { i } c _ { i } ^ { p } \]
 ```
 
 Result
 
-``` mathjax
+``` math
 \[ V ^ { p ^ { \prime } } = N \]
 ```
 
 ### 1p1v
 
-``` mathjax
+``` math
 \[ N \cdot \operatorname { Median } _ { i } V _ { i } ^ { p ^ { \prime } } \left( F ^ { P } \right) = 1 \]
 ```
 
@@ -89,7 +89,7 @@ The optimal solution requires mean, where median is absolutly different with mea
 
 ### LR
 
-``` mathjax
+``` math
 \[ F ^ { p } = \left( \sum _ { i } \sqrt { c _ { i } ^ { p } } \right)
 ^ { 2 } \]
 ```
@@ -99,7 +99,7 @@ The optimal solution requires mean, where median is absolutly different with mea
 
 After incorporating the deficit:
 
-``` mathjax
+``` math
 \[ V ^ { p ^ { \prime } } \approx 1 + \Lambda \]
 ```
 
@@ -111,7 +111,7 @@ It is assumed that `$\Lambda$` is on the order of 1/N.
 
 CLR: linear combine LR and Capitalism until the deficit is under the budget.
 
-``` mathjax
+``` math
 \[ F ^ { p } = \alpha \left( \sum _ { i } \sqrt { c _ { i } ^ { p } } \right) ^ { 2 } + ( 1 - \alpha ) \sum _ { i } c _ { i } ^ { p } \]
 ```
 

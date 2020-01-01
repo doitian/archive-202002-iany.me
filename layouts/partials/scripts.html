@@ -36,8 +36,8 @@ $('.qrcode a').magnificPopup({
 </script>
 {{ end }}
 
-{{ if eq .Params.mathjax true }}
-{{ partial "mathjax.html" . }}
+{{ if eq .Params.math true }}
+{{ partial "math.html" . }}
 {{ end }}
 
 {{ if eq .Params.hljs true }}

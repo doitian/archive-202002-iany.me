@@ -4265,15 +4265,6 @@ pre > code {
 .footnotes > ol > li > p {
   display: inline;
 }
-code.has-jax {
-  font: inherit;
-  font-size: 100%;
-  background: inherit;
-  border: inherit;
-  color: #515151;
-  margin: 0;
-  padding: 0;
-}
 
 .entry-content code {
   white-space: pre-wrap;

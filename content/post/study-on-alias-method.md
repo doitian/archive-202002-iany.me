@@ -2,7 +2,7 @@
 redirect_from: "/blog/2010/05/study-on-alias-method/"
 title: Study on Alias Method
 date: "2010-05-29"
-mathjax: true
+math: true
 toc: right
 tags: [algorithm, probability]
 description: "A study on alias method, an algorithm that generates a descrete random variable in O(1) time."
@@ -31,7 +31,7 @@ value `$i$`, let `$Z$` be `$z_i$`. So `$Z$` can be generated from `$Y$`.
 Random variable `$X$` is uniformly distributed in `$(0, n)$`, which probability
 density function is
 
-~~~ mathjax
+~~~ math
 \[ f(x) = \left\{
  \begin{array}{rl}
   1/n & \text{if } 0 < x < n\\
@@ -41,7 +41,7 @@ density function is
 
 Now generate a variable `$Y'$` that
 
-~~~ mathjax
+~~~ math
 \[ Y' =  \left\{
  \begin{array}{rl}
   \lfloor x  \rfloor & \text{if } (x - \lfloor x \rfloor) < F(\lfloor x \rfloor)\\
@@ -53,21 +53,22 @@ Now generate a variable `$Y'$` that
 `$[i, i + 1)$` (`$i$` is an integer), `$y$` has the probability `$F(i)$` to be `$i$`,
 and probability `$1 - F(i)$` to be `$A(i)$`. Because `$x$` is uniformly distributed,
 
-~~~ mathjax
-\begin{align*}
-P\{x \in [i, i + F(i))\}     &= \int_i^{i+F(i)}\frac{1}{n}dx\\
+~~~ math
+\[\begin{aligned}
+P\{x \in [i, i + F(i))\}     &= \displaystyle\int_i^{i+F(i)}\frac{1}{n}dx\\
                              &= (i + F(i) - i) \times 1/n\\
                              &= F(i)/n,\\
-P\{x \in [i + F(i), i + 1)\} &= \int_{i+F(i)}^{i+1}\frac{1}{n}dx\\
+                             \\
+P\{x \in [i + F(i), i + 1)\} &= \displaystyle\int_{i+F(i)}^{i+1}\frac{1}{n}dx\\
                              &= (i + 1 - (i + F(i))) \times 1/n\\
                              &= (1-F(i))/n
-\end{align*}
+\end{aligned}\]
 ~~~
 
 Let's denote the set of values `$j$` that satisfies `$A(j) = i$` as `$A^{-1}(i)$`. The
 generated variable `$Y'$` has following probability mass function:
 
-~~~ mathjax
+~~~ math
 \[ P\{Y' = i\} = F(i)/n + \sum_{j \in A^{-1}(i)}\frac{1-F(j)}{n} \]
 ~~~
 
@@ -87,13 +88,13 @@ Algorithm
 
 Initialize the set `$S$` to be `${0,1,\ldots,n-1}$` and n variables `$p_i$` that with values:
 
-~~~ mathjax
+~~~ math
 \[ p_i = P\{Y=i\}, i \in S \]
 ~~~
 
 Denote the number of elements in `$S$` as `$\|S\|$`. We have a important invariant that
 
-~~~ mathjax
+~~~ math
 \[ \sum_{i \in S}{p_i} = \|S\| / n \]
 ~~~
 
@@ -127,7 +128,7 @@ The invariant holds at the beginning and at the end of each step, it guarantees
 that the algorithm can finish. It is easy to prove it using mathematical
 induction. So we only need to prove `$P\{Y'=i\}=P\{Y=i\}$` for any `$i$`, i.e.,
 
-~~~ mathjax
+~~~ math
 \[ P\{Y = i\} = F(i)/n + \sum_{j \in A^{-1}(i)}\frac{1-F(j)}{n} \]
 ~~~
 
@@ -147,7 +148,7 @@ Denote `$p'_i$` as the value of `$p_i$` when `$i$` is removed from set
 Now consider value `$i$` when `$P\{Y=i\}<1/n$`, `$P\{Y=i\}=1/n$` and
 `$P\{Y=i\}>1/n$`.
 
-#### P{Y=i} < 1/n
+#### P\{Y=i\} < 1/n
 
 If `$P\{Y=i\} < 1/n$`, from property 2 and property 3,
 `$F(i) = p'_i \times n = P\{Y=i\} \times n$`.
@@ -157,18 +158,18 @@ Apparently `$A^{-1}(i) = {}$`, because `$A$` is either set to value `$j$` where
 
 Thus
 
-~~~ mathjax
-\begin{align*}
+~~~ math
+\[\begin{aligned}
  &F(i)/n + \sum_{j \in A^{-1}(i)}\frac{1-F(j)}{n}\\
 =&F(i)/n\\
 =&P\{Y=i\} \times n / n\\
 =&P\{Y=i\}
-\end{align*}
+\end{aligned}\]
 ~~~
 
 which completes the proof.
 
-#### P{Y=i} = 1/n
+#### P\{Y=i\} = 1/n
 
 If `$P\{Y=i\} = 1/n$`, apparently `$A(i) = i$`. If there's another value
 `$j\neq~i$` also satisfies `$A(j) = i$`, from property 4, `$P\{Y=i\} > 1/n$`,
@@ -176,36 +177,36 @@ conflict with the condition. So `$A^{-1}(i) = {i}$`
 
 Thus
 
-~~~ mathjax
-\begin{align*}
+~~~ math
+\[\begin{aligned}
  &F(i)/n + \sum_{j \in A^{-1}(i)}\frac{1-F(j)}{n}\\
 =&F(i)/n + (1-F(i))/n\\
 =&1/n
-\end{align*}
+\end{aligned}\]
 ~~~
 
 which completes the proof.
 
-#### P{Y=i} > 1/n
+#### P\{Y=i\} > 1/n
 
 When `$P\{Y=i\} > 1/n$`, apparently i is not in `$A^{-1}(i)$`.
 
 Consider each value `$j$` in set `$A^{-1}(i)$`. Once `$j$` is removed from `$S$`, `$A(j)$` is set to
 `$i$` and `$1/n - p'_j$` is subtracted from `$p_i$`. Thus
 
-~~~ mathjax
+~~~ math
 \[ p'_i = P\{Y=i\} - \sum_{j \in A^{-1}(i)}(1/n - p'_j) \]
 ~~~
 
 Then
 
-~~~ mathjax
-\begin{align*}
+~~~ math
+\[\begin{aligned}
  &F(i)/n + \sum_{j \in A^{-1}(i)}\frac{1-F(j)}{n}\\
 =&p'_i \times n / n + \sum_{j \in A^{-1}(i)}\frac{1-(p'_j \times~n)}{n}\\
 =&P\{Y=i\} - \sum_{j \in A^{-1}(i)}(1/n - p'_j)\ + \sum_{j \in A^{-1}(i)}(1/n - p'_j)\\
 =&P\{Y=i\}
-\end{align*}
+\end{aligned}\]
 ~~~
 
 For all `$i$`, `$P\{Y'=i\} = P\{Y=i\}$`, the proof completes.

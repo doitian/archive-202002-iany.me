@@ -6,5 +6,5 @@ comment: true
 share: true
 hljs: false
 hljsLanguages: []
-mathjax: false
+math: false
 ---
