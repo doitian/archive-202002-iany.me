@@ -4278,12 +4278,6 @@ code.has-jax {
 .entry-content code {
   white-space: pre-wrap;
 }
-.entry-content pre > code {
-  white-space: pre;
-}
-.entry-content pre > code.language-text {
-  white-space: pre-wrap;
-}
 .entry-content table {
   border-color: #e6e6e6;
   border-style: solid;
