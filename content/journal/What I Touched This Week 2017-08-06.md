@@ -62,7 +62,7 @@ description: "My weekly review report."
 
 - [The Stanley Parable：一场反设计与荒谬哲学的狂欢 - 知乎专栏](https://zhuanlan.zhihu.com/p/24265418?utm_content=bufferf48fc&utm_medium=social&utm_source=twitter.com&utm_campaign=buffer)
 
-- [A safe and accurate .gitignore for #unity3d (Unity5 onwards) | T-machine.org](http://t-machine.org/index.php/2017/08/03/a-safe-and-accurate-gitignore-for-unity3d-unity5-onwards/)
+- [A safe and accurate .gitignore for Unity3D (Unity5 onwards) | T-machine.org](http://t-machine.org/index.php/2017/08/03/a-safe-and-accurate-gitignore-for-unity3d-unity5-onwards/)
 
 - [Powershell Cmdlets That'll Improve Your Windows Admin Skills](http://www.makeuseof.com/tag/powershell-cmdlets-windows-admin/)
 
