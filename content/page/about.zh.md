@@ -22,10 +22,16 @@ description = "我是 Ian Yang, 软件开发者。目前在 Nervos 开发 CKB。
 
 ## 其它账号
 
+- 链接分享: [RSS][feed rss] | [Telegram][feed telegram] | [Digest][feed digest]
+- Diigo: [doitian][diigo]
 - Twitter: [@doitian][twitter]
 - GitHub: [doitian][github]
 - LinkedIn: [Ian Yang][linkedin]
 
+[feed rss]: https://www.inoreader.com/stream/user/1005740962/tag/ianFeed/view/html?cs=m
+[feed telegram]: https://t.me/ianshare
+[feed digest]: https://ianyang.wordpress.com/category/shared-links/
+[diigo]: https://www.diigo.com/user/doitian
 [twitter]:	https://twitter.com/doitian
 [github]:	https://github.com/doitian
 [linkedin]:	https://www.linkedin.com/in/ianyang
