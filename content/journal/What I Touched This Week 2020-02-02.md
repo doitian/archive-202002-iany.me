@@ -165,13 +165,13 @@ description: "My weekly review report."
 
 -   [I learned how to read my coworkers from an FBI spymaster - Work Life by Atlassian](https://www.atlassian.com/blog/teamwork/behavior-analysis-fbi-counterintelligence)
 
-    -   "[trust is less about integrity and more about predictability](https://twitter.com/intent/tweet?source=webclient&amp;via=atlassian&amp;text=trust%20is%20less%20about%20integrity%20and%20more%20about%20predictability&amp;url=https://www.atlassian.com/blog/teamwork/behavior-analysis-fbi-counterintelligence)"
+    -   "trust is less about integrity and more about predictability"
 
-    -   "[Just because I like you doesn't mean I can trust you](https://twitter.com/intent/tweet?source=webclient&amp;via=atlassian&amp;text=Just%20because%20I%20like%20you%20doesn%E2%80%99t%20mean%20I%20can%20trust%20you&amp;url=https://www.atlassian.com/blog/teamwork/behavior-analysis-fbi-counterintelligence)"
+    -   "Just because I like you doesn't mean I can trust you"
 
-    -   "[Dreeke also places a high value on competence.](https://twitter.com/intent/tweet?source=webclient&amp;via=atlassian&amp;text=Dreeke%20also%20places%20a%20high%20value%20on%20competence.&amp;url=https://www.atlassian.com/blog/teamwork/behavior-analysis-fbi-counterintelligence)"
+    -   "Dreeke also places a high value on competence."
 
-    -   "[Finally, look for signs that they're keen to help you be successful.](https://twitter.com/intent/tweet?source=webclient&amp;via=atlassian&amp;text=Finally,%20look%20for%20signs%20that%20they%E2%80%99re%20keen%20to%20help%20you%20be%20successful.&amp;url=https://www.atlassian.com/blog/teamwork/behavior-analysis-fbi-counterintelligence)"
+    -   "Finally, look for signs that they're keen to help you be successful."
 
 -   [Elinor Ostrom and the solution to the tragedy of the commons | American Enterprise Institute - AEI](https://www.aei.org/articles/elinor-ostrom-and-the-solution-to-the-tragedy-of-the-commons/)
 
