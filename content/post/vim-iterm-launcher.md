@@ -20,4 +20,4 @@ Now the problem is that if I suspend Vim via <kbd>Ctrl-Z</kbd>, the terminal win
 
 After research and reading [a StackOverflow answer](https://stackoverflow.com/a/16215525/667158), I wrote [two scripts](https://gist.github.com/doitian/0c8775e88ceed7bac44c4fb4287822d5) to launch Vim in iTerm. I also added features in `iterm-vim-wrapper` to edit clipboard and empty scratch file in temporary directory.
 
-This is [an example](https://github.com/doitian/assets/files/4173958/Vim.File.Action.alfredworkflow.zip) which uses the scripts to create File Action in Alfred.
+This is [an example](https://github.com/doitian/assets/raw/master/2020/Vim%20File%20Action.alfredworkflow) which uses the scripts to create File Action in Alfred.
