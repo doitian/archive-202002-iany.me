@@ -1,7 +1,7 @@
 ---
 title: Quickly Setup Shadowsocks Proxy on Server
 date: "2016-12-10"
-tags: [gfw, system admin]
+tags: [gfw, systemAdmin]
 description: "Setup an HTTP and HTTPS proxy using Shadowsocks server via Shadowsocks client and polipo proxy."
 hljs: true
 ---

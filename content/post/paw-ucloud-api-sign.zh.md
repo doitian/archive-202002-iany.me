@@ -1,6 +1,6 @@
 ---
 title: "Paw 里进行 UCloud API 签名验证"
-tags: ["power tool", "api"]
+tags: [powerTool, api]
 date: 2016-10-25
 ---
 

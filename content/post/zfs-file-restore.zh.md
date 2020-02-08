@@ -1,7 +1,7 @@
 ---
 title: "ZFS 文件恢复"
 date: 2017-11-18T08:43:54+08:00
-tags: ['system admin']
+tags: ['systemAdmin']
 description: "ZFS 查看文件错误并修复"
 comment: true
 share: true
