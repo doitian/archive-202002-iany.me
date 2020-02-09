@@ -9,7 +9,7 @@ description: "My weekly review report."
 
 * [Javascript for Automation ➤ Clipboard Parser](https://gist.github.com/doitian/a2a0bfea5e01b946926449ce1b2a38fb)
 
-    Access rich information about the clipboard #macOS #automation · GitHub
+#     Access rich information about the clipboard
 
 ## Courses
 
