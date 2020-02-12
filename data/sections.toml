@@ -1,23 +1,35 @@
 [post]
+key = "post"
 title = "Tech"
+ordering = 1
 icon = "laptop"
 
 [life]
+key = "life"
 title = "Life"
+ordering = 2
 icon = "leaf"
 
 [game]
+key = "game"
 title = "Games"
+ordering = 3
 icon = "gamepad"
 
 [journal]
+key = "journal"
 title = "Journal"
+ordering = 9
 icon = "list-alt"
 
 [tag]
+key = "tag"
 title = "Tags"
 icon = "tags"
+ordering = 10
 
 [series]
+key = "series"
 title = "Series"
 icon = "book"
+ordering = 11

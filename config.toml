@@ -30,15 +30,6 @@ series = "series"
 description = "A personal blog with tech, game and etc."
 hiddenSections = ["page", "life", "journal"]
 
-[params.sections.post]
-icon = "laptop"
-[params.sections.life]
-icon = "leaf"
-[params.sections.journal]
-icon = "list-alt"
-[params.sections.game]
-icon = "gamepad"
-
 [params.author]
 name = "ian"
 bio = "Programmer, Husband, Father"

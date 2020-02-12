@@ -8,11 +8,15 @@
     </div><!-- /.header-title-wrap -->
   </header>
   <ul class="submenu inline-list">
-    {{ range $section, $sectionParams := .Site.Data.sections }}
-      {{ if first 1 (where $.Site.RegularPages "Section" $section) }}
-        {{ $sectionKey := $section | lower | singularize }}
-      <li><a href="#{{ $sectionKey }}"><i class="fa fa-fw fa-{{ $sectionParams.icon }}"></i> {{ i18n (print "sections." $sectionKey) }}</a></li>
+    {{ $sections := slice }}
+    {{ range $sectionParams := sort .Site.Data.sections "ordering" }}
+      {{ if first 1 (where $.Site.RegularPages "Section" $sectionParams.key) }}
+        {{ $sections = $sections | append $sectionParams.key }}
       {{ end }}
+    {{ end }}
+    {{ range $sectionKey := $sections }}
+      {{ $sectionParams := index $.Site.Data.sections $sectionKey }}
+      <li><a href="#{{ $sectionKey }}"><i class="fa fa-fw fa-{{ $sectionParams.icon }}"></i> {{ i18n (print "sections." $sectionKey) }}</a></li>
     {{ end }}
     <li><a href="{{ "/tags/" | relLangURL }}"><i class="fa fa-fw fa-tags"></i> {{ i18n "taxonomies.tag" }}</a></li>
     {{ if .IsTranslated }}
@@ -21,8 +25,7 @@
       {{ end }}
     {{ end }}
   </ul>
-  {{ range (where .Site.RegularPages "Section" "!=" "page").GroupBy "Section" }}
-    {{ $sectionKey := .Key | lower | singularize }}
+  {{ range $sectionKey := $sections }}
   <article>
     <h2>
       <a name="{{ $sectionKey }}" href="{{ print "/" $sectionKey "/" | relLangURL }}">
@@ -34,7 +37,7 @@
         {{ print "sections." $sectionKey | i18n}}
       </a>
     </h2>
-    {{ range .Pages.GroupByDate "2006" }}
+    {{ range (where $.Site.RegularPages "Section" $sectionKey).GroupByDate "2006" }}
     <h3>{{ .Key }}</h3>
     <ul>
       {{ range .Pages }}
