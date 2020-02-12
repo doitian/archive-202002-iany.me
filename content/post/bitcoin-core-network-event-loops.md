@@ -45,7 +45,7 @@ Then, the thread [sends](https://github.com/bitcoin/bitcoin/blob/1bc9988993ee84b
 
 [Message Handler Thread](https://github.com/bitcoin/bitcoin/blob/1bc9988993ee84bc814e5a7f33cc90f670a19f6a/src/net.cpp#L1978) handles the network messages without worrying the socket operations.
 
-The behavior of the Message Handler Thread is similar to the Socket Handler Thread. Both loops each connected peer in the round-robin way. And for each peer, they first process incoming messages, and then send outgoing messages. The difference is that Message Handler Thread reads messages from the queue `vProcessMsg` and queues outgoing messages in the queue `vSendMsg`.
+The behavior of the Message Handler Thread is similar to the Socket Handler Thread. Both loops each connected peer in the round-robin way. And for each peer, they first process incoming messages, and then send outgoing messages. The difference is that Message Handler Thread reads messages from the queue `vProcessMsg` and queues outgoing messages in the queue `vSendMsg`.
 
 {{< figure src="/images/202002/message-handler.png" link="/images/202002/message-handler.png" title="Message Handler" >}}
 
