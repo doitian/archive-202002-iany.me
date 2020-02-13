@@ -12,6 +12,8 @@ image:
   feature: /images/202002/two-loops.png
 ---
 
+This article is an analysis of the network event loops based on bitcoin core [v0.19.0](https://github.com/bitcoin/bitcoin/tree/v0.19.0).
+
 Bitcoin [starts two threads](https://github.com/bitcoin/bitcoin/blob/1bc9988993ee84bc814e5a7f33cc90f670a19f6a/src/net.cpp#L2211) to handle network messages, and each thread runs its own event loop.
 
 <!--more-->
