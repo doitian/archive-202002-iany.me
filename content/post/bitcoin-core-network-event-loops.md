@@ -7,6 +7,7 @@ share: true
 hljs: false
 hljsLanguages: []
 math: false
+series: ["Bitcoin Core Network"]
 image:
   feature: /images/202002/two-loops.png
 ---

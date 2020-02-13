@@ -71,3 +71,6 @@
 - id: series.Weekly Paper.HTML
   translation: |
     This is a post in series &quot;<a href="{{ .Count }}">Weekly Paper</a>&quot;
+- id: series.Bitcoin Core Network.HTML
+  translation: |
+    This is a post in series &quot;<a href="{{ .Count }}">Bitcoin Core Network</a>&quot;
