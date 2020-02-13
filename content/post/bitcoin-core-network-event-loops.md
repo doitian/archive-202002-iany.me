@@ -7,6 +7,8 @@ share: true
 hljs: false
 hljsLanguages: []
 math: false
+image:
+  feature: /images/202002/two-loops.png
 ---
 
 Bitcoin [starts two threads](https://github.com/bitcoin/bitcoin/blob/1bc9988993ee84bc814e5a7f33cc90f670a19f6a/src/net.cpp#L2211) to handle network messages, and each thread runs its own event loop.
