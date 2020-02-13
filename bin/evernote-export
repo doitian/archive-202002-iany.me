@@ -1,0 +1,13 @@
+#!/bin/bash
+
+echo '---
+layout: evernote
+title: Evernote
+share: false
+description: "Export as Evernote"
+---' > content/page/evernote.md
+
+hugo
+
+rm -f content/page/evernote.md
+mv public/evernote/index.html ~/Downloads/blog.enex

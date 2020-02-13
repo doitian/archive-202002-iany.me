@@ -1,0 +1,7 @@
+{{- printf "<?xml version=\"1.0\" encoding=\"utf-8\"?>" | safeHTML }}
+<!DOCTYPE en-export SYSTEM "http://xml.evernote.com/pub/evernote-export3.dtd">
+<en-export export-date="20200213T024143Z" application="Evernote" version="Evernote Mac 7.14 (458244)">
+{{ range where $.Site.RegularPages "Section" "journal" }}
+  <note><title>{{ .Title }}</title><content>{{ printf "<![CDATA[<?xml version=\"1.0\" encoding=\"UTF-8\"?>" | safeHTML }}<!DOCTYPE en-note SYSTEM "http://xml.evernote.com/pub/enml2.dtd"><en-note>{{ .Content | safeHTML }}</en-note>]]></content><created>20200212T190926Z</created><updated>20200212T190926Z</updated><note-attributes><source>~iany/journal</source><source-url>{{ .Permalink }}</source-url><reminder-order>0</reminder-order></note-attributes></note>
+{{ end }}
+</en-export>
