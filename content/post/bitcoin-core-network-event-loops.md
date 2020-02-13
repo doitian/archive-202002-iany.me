@@ -10,6 +10,7 @@ math: false
 series: ["Bitcoin Core Network"]
 image:
   feature: /images/202002/two-loops.png
+toc: right
 ---
 
 This article is an analysis of the network event loops based on bitcoin core [v0.19.0](https://github.com/bitcoin/bitcoin/tree/v0.19.0).
