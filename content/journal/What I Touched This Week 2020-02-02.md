@@ -53,7 +53,7 @@ description: "My weekly review report."
 
     -   "考虑到 Plasma 链可以任意增长，而以太坊区块已经接近其容量，几乎不可能将整个 Plasma 链倾倒到以太坊的主网上。因此，几乎可以肯定的是，大量退出会把以太坊挤爆。这就是所谓批量退出问题。"
 
-## 2019-ncov
+## COVID-19
 
 -   [The Lancet Coronavirus ](https://www.thelancet.com/coronavirus)
 

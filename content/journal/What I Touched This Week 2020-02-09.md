@@ -41,7 +41,7 @@ description: "My weekly review report."
 -   [spacejam/extreme: extremely boring async function runner!](https://github.com/spacejam/extreme)
 -   [Why Discord is switching from Go to Rust - Discord Blog](https://blog.discordapp.com/why-discord-is-switching-from-go-to-rust-a190bbca2b1f)
 
-# 2019-ncov
+# COVID-19
 -   ❤️ [Sp. 005 Everything about the Novel Coronavirus (2019-nCoV)](https://www.youtube.com/watch?v=0ySYM4kRJVY)
 -   ❤️ [【BBC】人体的奥妙细胞内部隐藏的生命暗战_腾讯视频](https://v.qq.com/x/page/d0170ll8uv0.html)
 -   ❤️ [Bill Gates: The next outbreak? We're not ready ](https://www.ted.com/talks/bill_gates_the_next_outbreak_we_re_not_ready)
