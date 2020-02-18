@@ -105,20 +105,17 @@ static int file_open(lua_State* L) {
 }
 ```
 
+{{< /codecaption >}}
+
 为了释放资源，必须提供相应的 API，在使用完毕时调用。
 
 ```c
-static int file_open(lua_State* L) {
-  const char* path = lua_tostring(L, 1);
-  const char* mode = "w+";
-  FILE* file = fopen(path, mode);
-  if (file == NULL) {
-    lua_pushstring(L, strerror(errno));
-    lua_error(L);
-    return 0;
+static int file_close(lua_State* L) {
+	FILE* f = lua_touserdata(L, 1);
+	if (f != NULL) {
+	  fclose(f);
   }
-  lua_pushlightuserdata(L, file);
-	return 1;
+	return 0;
 }
 ```
 
