@@ -1,5 +1,7 @@
 # Blog
 
-个人博客，使用 [Hugo](https://gohugo.io) 创建。
+Personal blog powered by [Hugo](https://gohugo.io).
 
-博客发布用了个 Python 写的 WEB 服务器，见 autobuild 分支。利用 coding.net 的 webhook 在代码仓库有更新后立即构建并上传到腾讯云对象存储上。 
+---
+
+I save blog posts in [doitian/knowledge-base](https://github.com/doitian/knowledge-base) now and use a [script](https://github.com/doitian/blog-autobuild/blob/master/x.py) to translate the articles from iA Writer to Hugo.
